@@ -1,0 +1,31 @@
+﻿.productQuantityTextBox {
+    margin: 0 0 0 4px;
+}
+.nopAjaxCartProductListAddToCartButton {
+    float: right;
+}
+.miniProductDetailsView .product-overview-line .add-to-cart {
+    float: right;
+}
+.miniProductDetailsView .overview .prices {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+.ajaxCart .attributes dt {
+    float: right;
+    clear: right;
+}
+    .ajaxCart .attributes dt > * {
+        float: right;
+        margin: 0 0 0 5px;
+    }
+.ajaxCart .attributes dd {
+    float: right;
+}
+.ajaxCart .attributes .option-list li > * {
+    float: right;
+}
+.ajaxCart .overview,
+.miniProductDetailsView .giftcard {
+    text-align: right;
+}

@@ -1,0 +1,23 @@
+﻿/*** QUANTITY BOX & BUY BUTTON ***/
+
+.ajax-cart-button-wrapper input[type="text"] {
+	margin: 0 0 0 -5px;
+}
+
+/*** GROUPED PRODUCTS WINDOW ***/
+
+.miniProductDetailsView .overview {
+    float: right;
+    text-align: right;
+    margin-right: 0 !important;
+}
+.miniProductDetailsView .attributes select {
+	padding: 6px 6px 6px 10px;
+}
+.miniProductDetailsView .add-to-cart {
+    margin: 0 35px 0 0 !important;
+}
+.miniProductDetailsView .add-to-cart > * {
+    float: right;
+    margin: 0;
+}

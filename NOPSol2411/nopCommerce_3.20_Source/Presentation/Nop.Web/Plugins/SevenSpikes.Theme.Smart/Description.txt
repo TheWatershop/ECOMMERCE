@@ -1,0 +1,8 @@
+Group: 7Spikes
+FriendlyName: Nop Smart Theme
+SystemName: SevenSpikes.Theme.Smart
+Version: 3.20
+SupportedVersions: 3.20
+Author: Seven Spikes
+DisplayOrder: 1
+FileName: SevenSpikes.Theme.Smart.dll

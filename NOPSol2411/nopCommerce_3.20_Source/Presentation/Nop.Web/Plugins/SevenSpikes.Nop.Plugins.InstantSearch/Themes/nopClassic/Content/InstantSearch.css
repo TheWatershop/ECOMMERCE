@@ -1,0 +1,99 @@
+﻿/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.search-box-text:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+span.search-box-text {
+    display: block;
+    padding: 0;
+    border: none;
+    background: none;
+    float: left;
+    width: inherit;
+    height: inherit;
+    box-shadow: none;
+}
+input.search-box-text {
+    width: 230px !important;
+    background: #fff;
+    color: #333;
+    border: 1px solid #999;
+    height: 18px;
+    padding: 1px 0 0 5px;
+    margin-right: 0;
+    box-shadow: none;
+    line-height: 18px;
+}
+.instant-search-busy {
+    background: #fff url('../../../images/ajax-loader-small.gif') no-repeat 100% !important;
+}
+#instant-search-categories {
+	float: left;
+	width: 120px;
+	height: 21px;
+	margin-right: 5px;
+	border: 1px solid #999;
+	padding: 1px;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+    background-color: #7692B9;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px !important;
+    width: 300px !important;
+	height: auto !important;
+    border-top: none;
+}
+.instantSearch .k-list {
+    padding: 0;
+    margin: 0;
+}
+.instantSearch .k-list-container {
+	position: relative !important;
+	border-radius: 4px;
+    width: 300px !important;
+    height: auto !important;
+}
+.instantSearch .k-item {
+    overflow: hidden;
+    display: block;
+    margin-bottom: 1px;
+    background: #fff;
+}
+.instant-search-item {
+    overflow: hidden;
+    padding: 10px 5px;
+    cursor: pointer;
+    min-height: 75px;
+}
+.instantSearch .k-item.k-state-hover .instant-search-item, 
+.instantSearch .k-item.k-state-focused .instant-search-item{
+    background: #eee;
+}
+.instant-search-item .img-block {
+    width: 70px;
+    height: 70px;
+    float: left;
+    overflow: hidden;
+}
+.instant-search-item .detail {
+    float: right;
+    width: 210px;
+    line-height: 17px;
+}
+.instant-search-item .detail .title {
+    text-align: left;
+    font-size: 1.2em;
+    padding-bottom: .25em;
+    color: black;
+}
+.instant-search-item .detail .price {
+    color: #666;
+    text-align: left;
+}

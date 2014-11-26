@@ -1,0 +1,46 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/********* START BUTTON *********/
+
+.quick-view-button {
+    right: 50%;
+	left: auto;
+    margin: -25px -25px 0 0;
+}
+
+@media screen and (min-width: 769px) {
+
+.product-list .quick-view-button {
+	right: 15%;
+}
+
+}
+
+/********** GALLERY & OVERVIEW *********/
+
+.quickViewWindow .links-panel a {
+	background: url('images/rtl-arrow.png') right center no-repeat;
+}
+.quickViewWindow .overview .add-to-cart-panel {
+    margin-right: 0;
+}
+.quickViewWindow .back-in-stock-subscription {
+	clear: right;
+}
+.quickViewWindow .product-variant {
+	margin-left: 0;
+    margin-right: 2px;
+}
+.quickViewWindow .product-variant:nth-child(3n+1) {
+	margin-right: 0;
+}
+
+/********* GIFTCARD *********/
+
+.quickViewWindow .giftcard label {
+	margin: 0 0 0 10px;
+	text-align: left;
+}

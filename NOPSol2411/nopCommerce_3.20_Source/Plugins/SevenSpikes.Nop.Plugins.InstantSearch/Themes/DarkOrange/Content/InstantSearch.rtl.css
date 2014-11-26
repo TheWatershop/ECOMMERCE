@@ -1,0 +1,23 @@
+﻿.search-box-button {
+    margin: 0 2px 0 0;
+}
+.search-box input.search-box-text.instant-search-busy {
+    background: #e3e3e3 url('../../../images/ajax-loader-small.gif') no-repeat 1px center;
+}
+
+#instant-search-categories {
+    margin-left: 0;
+    margin-right: 1px;
+}
+
+/* AUTOCOMPLETE */
+
+.instant-search-item .img-block {
+    float: right;
+}
+.instant-search-item .detail {
+    float: left;
+}
+    .instant-search-item .detail > * {
+        text-align: right !important;
+    }

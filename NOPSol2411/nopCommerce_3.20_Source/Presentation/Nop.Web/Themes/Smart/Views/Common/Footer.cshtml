@@ -1,0 +1,112 @@
+﻿@model FooterModel
+@using Nop.Web.Models.Common;
+@using Nop.Core.Infrastructure;
+@using Nop.Core;
+@using Nop.Services.Configuration;
+
+@{
+    var workingLanguageId = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Id;
+    var storeId = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.Id;
+    var pinterestUrl = EngineContext.Current.Resolve<ISettingService>().GetSettingByKey("smartthemesettings.pinteresturl", String.Empty, storeId, true);
+    var vimeoUrl = EngineContext.Current.Resolve<ISettingService>().GetSettingByKey("smartthemesettings.vimeourl", String.Empty, storeId, true);
+    var removeCopyright = EngineContext.Current.Resolve<ISettingService>().GetSettingByKey("smartthemesettings.removecopyright", false, storeId, true);    
+}
+
+<div class="footer">
+    <div class="footer-upper">
+        <div class="footbox">
+            <h3 class="title">@T("Payment Methods")</h3>
+            @Html.Action("TopicBlock", "Topic", new { systemName = "PaymentMethods" })
+        </div>
+        <div class="footbox">
+            <h3 class="title">Contact Us</h3>
+            <ul class="contacts">
+                <li class="phone"><span>@T("SevenSpikes.Themes.Smart.Common.Phone")</span></li>
+                <li class="email"><span>@T("SevenSpikes.Themes.Smart.Common.Email")</span></li>
+            </ul>
+        </div>
+        <div class="footbox">
+            <h3 class="title">@T("Footer.FollowUs")</h3>
+            <ul class="social">
+                @if (!String.IsNullOrEmpty(Model.FacebookLink))
+                {
+                    <li><a target="_blank" class="facebook" href="@Model.FacebookLink"></a></li>
+                }
+                @if (!String.IsNullOrEmpty(Model.TwitterLink))
+                {
+                    <li><a target="_blank" class="twitter" href="@Model.TwitterLink"></a></li>
+                }
+                @if (!String.IsNullOrEmpty(Model.GooglePlusLink))
+                {
+                    <li><a target="_blank" class="google" href="@Model.GooglePlusLink"></a></li>
+                }
+                @if (!String.IsNullOrEmpty(pinterestUrl))
+                {
+                    <li><a target="_blank" class="pinterest" href="@pinterestUrl"></a></li>
+                }
+                @if (!String.IsNullOrEmpty(vimeoUrl))
+                {
+                    <li><a target="_blank" class="vimeo" href="@vimeoUrl"></a></li>
+                }
+                @if (!String.IsNullOrEmpty(Model.YoutubeLink))
+                {
+                    <li><a target="_blank" class="youtube" href="@Model.YoutubeLink"></a></li>
+                }
+                <li><a target="_blank" class="rss" href="@Url.RouteUrl("BlogRSS", new { languageId = workingLanguageId })"></a></li>
+            </ul>
+            @Html.Action("NewsletterBox", "Newsletter")
+        </div>
+    </div>
+    <div class="footer-middle">
+        <div class="footlist">
+            <h3 class="title">@T("SevenSpikes.Themes.Smart.Common.LegalInformation")</h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "privacyinfo" })">@T("PrivacyNotice")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "conditionsofUse" })">@T("ConditionsOfUse")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "securepayment" })">@T("SevenSpikes.Themes.Smart.Common.SecurePayment")</a></li>
+            </ul>
+        </div>
+        <div class="footlist">
+            <h3 class="title">@T("SevenSpikes.Themes.Smart.Common.ShippingReturns")</h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "internationalshipping" })">@T("SevenSpikes.Themes.Smart.Common.InternationalShipping")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "shippinginfo" })">@T("ShippingReturns")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "deliveryinformation" })">@T("SevenSpikes.Themes.Smart.Common.DeliveryInformation")</a></li>
+            </ul>
+        </div>
+       @* <div class="footlist">
+            <h3 class="title">@T("SevenSpikes.Themes.Smart.Common.AffiliateExtras")</h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "brands" })">@T("SevenSpikes.Themes.Smart.Common.Brands")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "giftvouchers" })">@T("SevenSpikes.Themes.Smart.Common.GiftVouchers")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "becomeaffiliate" })">@T("SevenSpikes.Themes.Smart.Common.BecomeAffiliate")</a></li>
+            </ul>
+        </div>*@
+        <div class="footlist">
+            <h3 class="title">@T("SevenSpikes.Themes.Smart.Common.ServiceSupport")</h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "customerassistance" })">@T("SevenSpikes.Themes.Smart.Common.CustomerAssistance")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SystemName = "faq" })">@T("SevenSpikes.Themes.Smart.Common.FAQ")</a></li>
+                <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-lower">
+        <div class="center">
+            @if (!removeCopyright)
+            {
+                <div class="footer-powered-by">
+                    Website Built and Designed by <a href="http://www.cybereaglemanagement.com.au/">Cyber Eagle Management</a>
+                </div>
+            }
+            <div class="footer-disclaimer">
+                @T("Content.CopyrightNotice", DateTime.Now.Year.ToString(), Model.StoreName)
+            </div>
+           
+            @Html.Action("StoreThemeSelector", "Common")
+            
+        </div>
+    </div>
+    @Html.Action("ChangeDeviceBlock", "Common")
+    @Html.Widget("footer")
+</div>

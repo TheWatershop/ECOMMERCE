@@ -1,0 +1,98 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.search-box-text:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+span.search-box-text {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+input.search-box-text {
+    padding: 1px 1px 1px 5px;
+    width: 291px !important;
+    height: 19px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: #fff;
+    color: #333;
+    line-height: 21px;
+}
+input.search-box-text.instant-search-busy {
+    background: #f8f8f8 url('../../../images/ajax-loader-small.gif') no-repeat 279px center;
+}
+#instant-search-categories {
+	float: left;
+	width: 120px;
+	height: 23px;
+	margin-right: 5px;
+	border: 1px solid #ddd;
+	padding: 1px;
+}
+.search-box-button {
+    margin: 0;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+    overflow: hidden;
+    padding: 10px !important;
+    width: 356px !important;
+    height: auto !important;
+    border-radius: 0 4px 4px 4px;
+    background: #eee;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.instantSearch .k-list {
+    margin: 0;
+    padding: 0;
+}
+.instantSearch .k-list-container {
+    width: 356px !important;
+    height: auto !important;
+	border-radius: 4px;
+    position: static !important;
+}
+.instantSearch .k-item {
+    display: block;
+    overflow: hidden;
+}
+.instant-search-item {
+    overflow: hidden;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.instantSearch .k-item.k-state-hover .instant-search-item, 
+.instantSearch .k-item.k-state-focused .instant-search-item{
+    padding: 9px 4px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: #f7f7f7;
+}
+.instant-search-item .img-block {
+    float: left;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+}
+.instant-search-item .detail {
+    float: right;
+    width: 260px;
+    line-height: 17px;
+    text-align:left;
+}
+.instant-search-item .detail .title {
+    padding-bottom: .25em;
+    color: #5C5B5B;
+    font-size: 1.2em;
+}
+.instant-search-item .detail .price {
+    color: #b80709;
+}

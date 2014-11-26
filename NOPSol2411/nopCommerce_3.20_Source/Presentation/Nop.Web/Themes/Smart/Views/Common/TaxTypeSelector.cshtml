@@ -1,0 +1,53 @@
+﻿@model TaxTypeSelectorModel
+@using Nop.Core.Domain.Tax;
+@using Nop.Web.Models.Common;
+@using Nop.Web.Framework.Themes;
+@using Nop.Core.Infrastructure;
+@using Nop.Core;
+@if (Model.Enabled)
+{
+    var webHelper = EngineContext.Current.Resolve<IWebHelper>();
+
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Core/Scripts/jquery.styleSelect.min.js");
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Core/Scripts/jquery.jscrollpane.min.js");
+
+    var taxTypes = new List<SelectListItem>();
+    taxTypes.Add(new SelectListItem()
+    {
+        Text = T("Tax.Inclusive").Text,
+        Value = webHelper.ModifyQueryString(Url.RouteUrl("ChangeTaxType", new { customertaxtype = ((int)TaxDisplayType.IncludingTax) }), "returnurl=" + HttpUtility.UrlEncode(HttpContext.Current.Request.RawUrl), null),
+        Selected = Model.CurrentTaxType == TaxDisplayType.IncludingTax
+    });
+    taxTypes.Add(new SelectListItem()
+    {
+        Text = T("Tax.Exclusive").Text,
+        Value = webHelper.ModifyQueryString(Url.RouteUrl("ChangeTaxType", new { customertaxtype = ((int)TaxDisplayType.ExcludingTax) }), "returnurl=" + HttpUtility.UrlEncode(HttpContext.Current.Request.RawUrl), null),
+        Selected = Model.CurrentTaxType == TaxDisplayType.ExcludingTax
+    });
+
+    if (taxTypes.Count > 0)
+    {
+        <div class="tax-display-type-selector">
+            <div class="header-taxdisplaytypeselector">
+
+                @Html.DropDownList("customerTaxType", taxTypes, new { onchange = "setLocation(this.value);" })
+
+                <script type="text/javascript">
+
+                    $(document).ready(function () {
+
+
+                        var options = {
+                            styleClass: "new_select",
+                            jScrollPane: 1
+                        }
+
+                        $("#customerTaxType").styleSelect(options);
+
+                    });
+
+                </script>
+            </div>
+        </div>
+    }
+}

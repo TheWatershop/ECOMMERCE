@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Children>
+      <LocaleResource Name="Themes">
+        <Children>
+          <LocaleResource Name="Admin">
+            <Children>
+              <LocaleResource Name="SettingsSubmenu">
+                <Value>Settings</Value>
+              </LocaleResource>
+              <LocaleResource Name="Settings">
+                <Children>
+                  <LocaleResource Name="RemoveCopyright">
+                    <Value>Remove Copyright</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Remove Copyright notice after a copyright removal key had been purchased by www.nopCommerce.com</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnabledAsWidget">
+                    <Value>Enable the theme plugin as widget</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If you check this opton you will enable the widget of the theme plugin.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Picture">
+                    <Value>Logo Image</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Choose the logo image.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="PinterestUrl">
+                    <Value>Follow us pinterest url</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Insert your follow us URL address on pinterest. If left empty the icon in the footer will not be displayed.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="VimeoUrl">
+                    <Value>Follow us vimeo url</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Insert your follow us URL address on vimeo. If left empty the icon in the footer will not be displayed.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="CustomHeadStyles">
+                    <Value>Custom Head Styles</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Insert your custom css styles that will be added in the head after all other css files. This way you can further customize the theme. Example: .footer { display: none; }</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+          <LocaleResource Name="ProductCompareName">
+            <Value>Name</Value>
+          </LocaleResource>
+          <LocaleResource Name="Common">
+            <Children>
+              <LocaleResource Name="MenuTitle">
+                <Value>Menu</Value>
+              </LocaleResource>
+              <LocaleResource Name="Filters">
+                <Value>Filters</Value>
+              </LocaleResource>
+              <LocaleResource Name="CloseMenu">
+                <Value>Close</Value>
+              </LocaleResource>
+              <LocaleResource Name="BackSublist">
+                <Value>Back</Value>
+              </LocaleResource>
+              <LocaleResource Name="Personal">
+                <Value>Personal menu</Value>
+              </LocaleResource>              
+            </Children>
+          </LocaleResource>          
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

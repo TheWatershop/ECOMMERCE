@@ -1,0 +1,58 @@
+﻿@model CustomerComponentListModel
+@using Nop.Web.Models.Catalog;
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Account").Text);
+}
+@using Nop.Web.Models.Customer;
+@section left
+{
+    @Html.Partial("MyAccountNavigation", Model.NavigationModel, new ViewDataDictionary())
+}
+<div class="page account-page order-list-page">
+    <div class="page-title">
+        <h1>@T("Account.MyAccount") - @T("Account.CustomerComponents")</h1>
+    </div>
+    <div class="page-body">
+         <div class="order-list">
+            @if (Model.Components.Count > 0)
+            {
+                foreach (var Component in Model.Components)
+                {
+                <div class="section order-item">
+                    <div class="title">
+                        <strong>@T("Account.CustomerOrders.OrderNumber"): @Component.Id</strong>
+                    </div>
+                    <ul class="info">
+                        <li>
+                            Product Id: <b><u><a href="@Url.RouteUrl("Product", new { SeName = Component.ProductName.Replace(" ", string.Empty) })">@Component.ProductId</a></u></b>
+                        </li>
+                        <li>
+                            Product Name: @Component.ProductName</li>
+                        <li>
+                            Quantity: @Component.Quantity</li>
+                        <li>
+                            Expiry Date: @Component.ExpiryDate</li>
+                        <li>
+                            Parent Name: @Component.ParentItemName</li>
+                        <li>
+                            Item Location: @Component.Location</li>
+                        <li>
+                            Item Sub-Location: @Component.Sub_Location
+                        </li>
+                    </ul>
+                    <div class="buttons"> 
+                        <input type="button" value="Reorder" class="button-2 order-details-button" data-productid="@Component.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Component.ProductId, shoppingCartTypeId = 1, ParentItemId = Component.ParentItemId, ORQuantity = Component.Quantity })', '#product-details-form');return false;" />
+                    </div>
+                </div>
+                }
+            }
+            else
+            {
+                @T("Account.CustomerOrders.NoOrders")
+            }
+        </div>
+    </div>
+</div>

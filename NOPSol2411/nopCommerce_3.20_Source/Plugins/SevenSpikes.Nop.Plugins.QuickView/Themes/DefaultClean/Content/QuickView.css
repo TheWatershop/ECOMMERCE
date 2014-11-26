@@ -1,0 +1,238 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+
+/**************************** DEFAULT CLEAN ***************************/
+
+
+
+/********** START BUTTON *********/
+
+.quick-view-button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #d3d3d3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d3d3d3));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#d3d3d3 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#d3d3d3 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#d3d3d3 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#d3d3d3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=0 );
+}
+.product-grid .quick-view-button {
+    top: 116px;
+    left: 33px;
+}
+.product-list .quick-view-button {
+    bottom: 10px;
+    left: 34px;
+}
+.quick-view-button:hover {
+    background: #d3d3d3;
+    background: -moz-linear-gradient(top,  #d3d3d3 0%, #ffffff 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#ffffff)); 
+    background: -webkit-linear-gradient(top,  #d3d3d3 0%,#ffffff 100%); 
+    background: -o-linear-gradient(top,  #d3d3d3 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top,  #d3d3d3 0%,#ffffff 100%); 
+    background: linear-gradient(to bottom,  #d3d3d3 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#ffffff',GradientType=0 ); 
+}
+.quick-view-button a {
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+/********** END BUTTON *********/
+
+.quickViewWindow input {
+    margin:0;
+}
+.quickViewWindow ul{
+    list-style:none;
+}
+
+/********** START PRODUCT OVERVIEW *********/
+
+.quickViewWindow .overview #accordion > h3 span.ui-icon-circle-arrow-s {
+    background: url(images/minus.png) no-repeat center;
+}
+.quickViewWindow .overview #accordion > h3 span.ui-icon-circle-arrow-e {
+    background: url(images/plus.png) no-repeat center;
+}
+.quickViewWindow .overview .left .stock {
+    line-height: 24px;
+}
+.quickViewWindow .overview .left .download-sample {
+    margin-bottom: 8px;
+}
+.quickViewWindow .overview .left .download-sample-button a {
+    text-shadow: 1px 1px 0 #bbb;
+    color: #060;
+}
+.quickViewWindow .overview .left .download-sample-button a:hover {
+    text-decoration: underline;
+}
+.quickViewWindow .overview .add-to-wishlist {
+    overflow: hidden;
+}
+.quickViewWindow .overview .add-to-wishlist-button {
+    float: right;
+}
+.quickViewWindow .overview #accordion .purchase-area .prices{
+    float: left;
+    line-height: 30px;
+}
+.quickViewWindow .overview #accordion .purchase-area .add-to-cart {
+    float: right;
+}
+.quickViewWindow .overview #accordion .purchase-area .add-to-cart div * {
+    float: left;
+}
+.quickViewWindow .overview #accordion .purchase-area .add-to-cart .add-to-cart-button {
+    padding: 7px 10px;
+}
+.quickViewWindow .overview #accordion .purchase-area .add-to-cart .qty-input {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    padding: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.quickViewWindow .overview #accordion .purchase-area .add-to-cart .qty-label {
+    line-height: 30px;
+}
+.quickViewWindow .overview .full-description {
+    border: none;
+}
+
+/********** END PRODUCT ESSENTIAL *********/    
+
+/********** START RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+.quickViewWindow .product-grid .item-box {
+    text-align: center;
+    height: 145px;
+    padding: 0;
+}
+.quickViewWindow .product-grid .item-box .product-item{
+    width: auto ;
+    height: auto;
+    text-align: inherit;
+}
+.quickViewWindow .product-grid .item-box .picture {
+    border: none;
+    margin-bottom: 5px;
+    float: none;
+    overflow: hidden;
+    background: none;
+}
+.quickViewWindow .product-grid .product-item {
+    border: none;
+}
+.quickViewWindow .product-grid .item-box .product-title a {
+    padding: 0;
+}
+
+/********** END RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+/********* START VARIANTS IN GRID ********/
+
+.quickViewWindow .overview .variants-in-grid .product-variant-list .product-variant .prices .product-price {
+    font-size: 12px;
+    color: #ed2525;
+    font-weight: bold;
+}
+.quickViewWindow .overview #accordion .prices .product-price {
+    font-size: 12px;
+    color: #B80709;
+}
+.quickViewWindow .overview #accordion .prices .old-product-price {
+    color: #5C5B5B;
+    text-decoration: line-through;
+}
+
+/********* END VARIANTS IN GRID ********/
+
+/********* START GIFTCARD *********/
+
+.quickViewWindow .giftcard label {
+    text-align:left;
+}
+.quickViewWindow .giftcard input[type=text],
+.quickViewWindow .giftcard textarea {
+    border-radius: 5px;
+}
+
+/********* END GIFTCARD *********/
+
+/********* START ATTRIBUTES *********/
+
+.quickViewWindow .attributes {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d5d5d5;
+}
+.quickViewWindow .attributes dl {
+    overflow: hidden;
+}
+    .quickViewWindow .attributes dl > * {
+        margin-bottom: 3px;
+        list-style: none;
+    }
+.quickViewWindow .attributes dt {
+    float: left;
+    clear: left;
+    width: 120px;
+}
+    .quickViewWindow .attributes dt label{
+        display: block;
+        float: left;
+        margin-right: 5px;
+    }
+.quickViewWindow .attributes dd {
+    float: left;
+}
+    .quickViewWindow .attributes dd select {
+        margin-right: 5px;
+        max-width: 255px;
+    }
+.quickViewWindow .attributes .option-list li {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.quickViewWindow .attributes .option-list li > * {
+    display:block;
+    float:left;
+    line-height: 13px;
+}
+.quickViewWindow .attributes .option-list li > *:first-child {
+    margin-right: 5px;
+}
+.quickViewWindow .attributes textarea {
+    padding: 4px;
+    width: 280px;
+    height: 140px;
+    border-radius: 5px;
+    resize: none;
+}
+.quickViewWindow .attributes input[type=text] {
+    padding: 2px;
+    width: 140px;
+}
+.quickViewWindow .attributes .qq-upload-button {
+    border-radius: 5px;
+}
+    .quickViewWindow .attributes .qq-upload-list {
+        margin: 0;
+    }
+    .quickViewWindow .attributes .required {
+        color: red;
+    }
+
+/********* END ATTRIBUTES *********/

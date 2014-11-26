@@ -1,0 +1,29 @@
+﻿@** Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+
+@model global::Nop.Web.Models.Catalog.ProductDetailsModel
+@using Nop.Web.Models.Catalog;
+@{    
+        //register CSS and JS files for file uploader button
+    <link href="@Url.Content("~/Content/fileuploader/fileuploader.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/fileuploader.js")"></script>
+}
+@if (!String.IsNullOrEmpty(Model.Name))
+{
+    <h1 class="product-name">
+        @Model.Name
+    </h1>
+}
+
+<div class="product-details-page">
+    @using (Html.BeginRouteForm("Product", new { SeName = Model.SeName }, FormMethod.Post, new { id = "product-details-form" }))
+    {
+        foreach (var associatedProduct in Model.AssociatedProducts)
+        {
+            var dataDictVariant = new ViewDataDictionary { { "ProductId", Model.Id } };
+        @Html.Partial("ProductVariantOverview", associatedProduct, dataDictVariant)
+        }
+    }
+</div>
+

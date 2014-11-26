@@ -1,0 +1,132 @@
+﻿@** Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+@using Nop.Core;
+@using Nop.Core.Infrastructure;
+
+@model SevenSpikes.Nop.Plugins.AjaxFilters.Models.NopAjaxFiltersModel
+@{
+    var storeLocation = Url.RouteUrl("HomePage"); //Nop.Core.Infrastructure.EngineContext.Current.Resolve<Nop.Core.IWebHelper>().GetStoreLocation();
+}
+<script type="text/javascript">
+    var nop_store_directory_root = "@(storeLocation)";
+</script>
+@{
+    if (Model.NopAjaxFiltersSettingsModel.EnablePriceRangeFilter ||
+        Model.NopAjaxFiltersSettingsModel.EnableAttributesFilter ||
+        Model.NopAjaxFiltersSettingsModel.EnableSpecificationsFilter ||
+        Model.NopAjaxFiltersSettingsModel.EnableManufacturersFilter ||
+        Model.NopAjaxFiltersSettingsModel.EnableVendorsFilter)
+    {
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Core/Scripts/kendo.public.min.js");
+
+        /*Kendo UI specific css files.
+
+        kendo.common.min.css - it contains common kendo styles
+        kendo.default.min.css - it contains deafult kendo theme specific styles. You can use the kendo theme builder for new themes - http://demos.kendoui.com/themebuilder/index.html
+
+        */
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/jquery.query-2.1.7.js");
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/jquery.json-2.2.min.js");
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/JQueryTemplates/jDropDown.jquery.0.1.min.js");
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/jquery.tmpl.min.js");
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/jquery.address-1.4.min.js");
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Core/Scripts/SevenSpikesExtensions.js");
+        Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/Filters.min.js");
+    }
+    else
+    {
+        // no filters enabled, so simply return
+        return;
+    }
+
+
+    MvcHtmlString priceRangeFilter = MvcHtmlString.Empty;
+    MvcHtmlString specificationsFilter = MvcHtmlString.Empty;
+    MvcHtmlString attributesFilter = MvcHtmlString.Empty;
+    MvcHtmlString manufacturersFilter = MvcHtmlString.Empty;
+    MvcHtmlString vendorsFilter = MvcHtmlString.Empty;
+
+    if (Model.NopAjaxFiltersSettingsModel.EnablePriceRangeFilter)
+    {
+        priceRangeFilter = Html.Action("GetPriceRangeFilter", "PriceRangeFilterSlider7Spikes");
+    }
+
+    if (Model.NopAjaxFiltersSettingsModel.EnableSpecificationsFilter)
+    {
+        specificationsFilter = Html.Action("GetSpecificationFilter", "SpecificationFilter7Spikes");
+    }
+
+    if (Model.NopAjaxFiltersSettingsModel.EnableAttributesFilter)
+    {
+        attributesFilter = Html.Action("GetProductAttributeFilter", "AttributeFilter7Spikes");
+    }
+
+    if (Model.NopAjaxFiltersSettingsModel.EnableManufacturersFilter)
+    {
+        manufacturersFilter = Html.Action("GetManufacturerFilter", "ManufacturerFilter7Spikes");
+    }
+
+    if (Model.NopAjaxFiltersSettingsModel.EnableVendorsFilter && Model.CategoryId > 0)
+    {
+        vendorsFilter = Html.Action("GetVendorFilter", "VendorFilter7Spikes");
+    }
+    else if (Model.NopAjaxFiltersSettingsModel.EnableVendorsFilter && Model.ManufacturerId > 0)
+    {
+        vendorsFilter = Html.Action("GetVendorFilterForManufacturer", "VendorFilter7Spikes");
+    }
+
+    bool noFilters = MvcHtmlString.IsNullOrEmpty(priceRangeFilter) && MvcHtmlString.IsNullOrEmpty(specificationsFilter)
+        && MvcHtmlString.IsNullOrEmpty(attributesFilter) && MvcHtmlString.IsNullOrEmpty(manufacturersFilter);
+
+    if (noFilters && @Model.NopAjaxFiltersSettingsModel.DisableDropdownNavigationWithAjaxWhenThereAreNoFilters)
+    {
+        return;
+    }
+    else
+    {
+        // Include css files only if there are products for filtering and at least one of the filter panel is visible
+        var theme = Model.NopAjaxFiltersSettingsModel.Theme;
+
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Themes/" + theme + "/Content/AjaxFilters.css");
+
+        var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+        if (supportRtl)
+        {
+            Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Themes/" + theme + "/Content/AjaxFilters.rtl.css");
+        }
+    }
+
+
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/FiltersQuery.min.js");
+}
+<div class="nopAjaxFilters7Spikes" data-categoryId="@Model.CategoryId" data-manufacturerId="@Model.ManufacturerId" data-vendorId="@Model.VendorId"
+    data-getFilteredProductsUrl="@Url.Action("GetFilteredProducts", "Catalog7Spikes")"
+    data-productsListPanelSelector="@Model.NopAjaxFiltersSettingsModel.ProductsListPanelSelector"
+    data-productsGridPanelSelector="@Model.NopAjaxFiltersSettingsModel.ProductsGridPanelSelector"
+    data-pagerPanelSelector="@Model.NopAjaxFiltersSettingsModel.PagerPanelSelector"
+    data-sortOptionsDropDownSelector="@Model.NopAjaxFiltersSettingsModel.SortOptionsDropDownSelector"
+    data-viewOptionsDropDownSelector="@Model.NopAjaxFiltersSettingsModel.ViewOptionsDropDownSelector"
+    data-productsPageSizeDropDownSelector="@Model.NopAjaxFiltersSettingsModel.ProductPageSizeDropDownSelector"
+    data-filtersUIMode="@Model.NopAjaxFiltersSettingsModel.FiltersUIMode.ToString().ToLower()"
+    data-defaultViewMode="@Model.DefaultViewMode"
+    data-scrollToElement="@Model.NopAjaxFiltersSettingsModel.ScrollToElementOnThePageAfterFiltration"
+    data-scrollToElementSelector="@Model.NopAjaxFiltersSettingsModel.ElementToScrollAfterFiltrationSelector" >
+    @if (!noFilters) 
+    { 
+    <div class="filtersTitlePanel">
+        <p class="filtersTitle">@T("SevenSpikes.NopAjaxFilters.Client.Common.FilterBy"):</p>
+        <a class="clearFilterOptionsAll">@T("SevenSpikes.NopAjaxFilters.Client.Common.ClearAll")</a>
+    </div>
+    <div class="filtersPanel">
+        @priceRangeFilter
+        @specificationsFilter
+        @attributesFilter
+        @manufacturersFilter
+        @vendorsFilter
+    </div>
+    }
+</div>
+@Html.Hidden("availableSortOptionsJson", Model.AvailableSortOptionsJson)
+@Html.Hidden("availableViewModesJson", Model.AvailableViewModesJson)
+@Html.Hidden("availablePageSizesJson", Model.AvailablePageSizesJson)

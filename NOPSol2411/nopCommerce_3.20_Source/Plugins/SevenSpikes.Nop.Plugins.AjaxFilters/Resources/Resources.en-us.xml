@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Value></Value>
+    <Children>
+      <LocaleResource Name="NopAjaxFilters">
+        <Value>Nop Ajax Filters</Value>
+        <Children>
+          <LocaleResource Name="Client">
+            <Value></Value>
+            <Children>
+              <LocaleResource Name="PriceRangeFilter">
+                <Value></Value>
+                <Children>
+                  <LocaleResource Name="Title">
+                    <Value>Price range</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Min">
+                    <Value>Min</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Max">
+                    <Value>Max</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Common">
+                <Children>
+                  <LocaleResource Name="FilterBy">
+                    <Value>Filter by</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ClearAll">
+                    <Value>Clear All</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Clear">
+                    <Value>Clear</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="All">
+                    <Value>All</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="NoResultsFoundTitle">
+                    <Value>NO RESULTS FOUND</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="NoResultsFoundMessage">
+                    <Value>There are no products for the filters that you selected. Please widen your search criteria.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+          <LocaleResource Name="Admin">
+            <Value>Nop Ajax Filters</Value>
+            <Children>
+              <LocaleResource Name="Submenus">
+                <Value>Submenu names</Value>
+                <Children>
+                  <LocaleResource Name="Settings">
+                    <Value>Settings</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Settings">
+                <Value>Nop Ajax Filters Settings</Value>
+              </LocaleResource>
+              <LocaleResource Name="Theme">
+                <Value>Theme</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>The theme for the filters. The theme name correponds to the name of a folder inside the Themes folder. </Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="GeneralSettings">
+                <Value>General Settings</Value>
+              </LocaleResource>
+              <LocaleResource Name="AjaxFiltersAvailabilitySettings">
+                <Value>Ajax Filters Availability Settings</Value>
+              </LocaleResource>
+              <LocaleResource Name="AjaxFiltersSelectorsSettings">
+                <Value>Ajax Filters Selectors Settings</Value>
+              </LocaleResource>
+              <LocaleResource Name="FiltersUIMode">
+                <Value>Filters UI Mode</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>The user interface mode of the Ajax Filters (checkboxes or dropdowns).</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnableAjaxFilters">
+                <Value>Enable Ajax Filters</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable the Ajax Filters.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ShowFiltersOnCategoryPage">
+                <Value>Show Ajax Filters on Category Page</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Show Ajax Filters on Category Page.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="CategoriesWithoutFilters">
+                <Value>Category Ids (split by comma)</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enter the ids, split by comma, of all the categories in which you don't want filters to be shown.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ShowFiltersOnManufacturerPage">
+                <Value>Show Ajax Filters on Manufacturer Page</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Show Ajax Filters on Manufacturer Page.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ShowFiltersOnVendorPage">
+                <Value>Show Ajax Filters on Vendor Page</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Show Ajax Filters on Vendor Page.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnableAjaxFiltersAsWidget">
+                <Value>Enable Ajax Filters As Widget</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable the Ajax Filters plugin as a widget.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnablePriceRangeFilter">
+                <Value>Enable Price Range Filter</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable filtering based on product price.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ClosePriceRangeFilterBox">
+                <Value>Close Price Range Filter Box By Default</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Check if you want the price range filter box to be closed by default.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnableSpecificationsFilter">
+                <Value>Enable Specifications Filter</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable filtering based on product specifications. </Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="CloseSpecificationsFilterBox">
+                <Value>Close Specifications Filter Boxes By Default</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Check if you want the specifications filter boxes to be closed by default.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnableAttributesFilter">
+                <Value>Enable Attributes Filter</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable filtering based on product attributes.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="CloseAttributesFilterBox">
+                <Value>Close Attributes Filter Boxes By Default</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Check if you want the attributes filter boxes to be closed by default.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnableManufacturersFilter">
+                <Value>Enable Manufacturers Filter</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable filtering based on product manufacturers.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="CloseManufacturersFilterBox">
+                <Value>Close Manufacturers Filter Boxes By Default</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Check if you want the manufacturers filter boxes to be closed by default.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="EnableVendorsFilter">
+                <Value>Enable Vendors Filter</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Enable filtering based on product vendors.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="CloseVendorsFilterBox">
+                <Value>Close Vendors Filter Boxes By Default</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Check if you want the vendors filter boxes to be closed by default.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ProductsListPanelSelector">
+                <Value>Products List Panel Selector</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Html selector for the panel that contains the product list.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ProductsGridPanelSelector">
+                <Value>Products Grid Panel Selector</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Html selector for the panel that contains the product grid.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="PagerPanelSelector">
+                <Value>Pager Panel Selector</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Html selector for the panel that contains the paging.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="SortOptionsDropDownSelector">
+                <Value>Sort Options Dropdown Selector</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Html selector for the panel that contains the sorted options for the dropdown list.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ViewOptionsDropDownSelector">
+                <Value>View Options Dropdown Selector</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Html selector for the panel that contains the view options for the dropdown (grid or list).</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ProductPageSizeDropDownSelector">
+                <Value>Product Page Size Dropdown Selector</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Html selector for the panel that contains the product page size dropdown.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="SystemSettingsInfo">
+                <Value>System Settings (please do not edit unless you have css style names for the product or pager panels different from the default):</Value>
+              </LocaleResource>
+              <LocaleResource Name="CreateOrUpdate">
+                <Value>Create or Update</Value>
+              </LocaleResource>
+              <LocaleResource Name="WidgetZone">
+                <Value>Widget Zone</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>The names of the widget zone in which the Ajax Filters can be added. NOTE: The Ajax Filters can be added only to one widget zone.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="DefaultProductSortOption">
+                <Value>Default Product Sort Option</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Here you can control the default product sort option on category and manufacturer pages.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ScrollToElementOnThePageAfterFiltration">
+                <Value>Scroll To Element On The Page After Filtration</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>If you enable this setting, after each filtration the page will be scrolled to the element specified below.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ElementToScrollAfterFiltrationSelector">
+                <Value>Scroll To This Element After Filtration</Value>
+                <Children>
+                  <LocaleResource Name="Hint">
+                    <Value>Here you can list your element selectors, divided by commas. We scroll to the first found element. Default behaviour is scroll to .product-selectors.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ClickToConfigure">
+                <Value>To configure the plugin either click HERE or go to Plugins -> Nop Ajax Filters -> Settings</Value>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  <LocaleResource Name="Enums">
+    <LocaleResource Name="SevenSpikes.Nop.Plugins.AjaxFilters.Domain.FiltersUIMode">
+      <Children>
+        <LocaleResource Name="UseCheckboxes">
+          Use Checkboxes
+        </LocaleResource>
+        <LocaleResource Name="UserDropdowns">
+          Use Dropdowns
+        </LocaleResource>
+      </Children>
+    </LocaleResource>
+  </LocaleResource>
+
+</Language>

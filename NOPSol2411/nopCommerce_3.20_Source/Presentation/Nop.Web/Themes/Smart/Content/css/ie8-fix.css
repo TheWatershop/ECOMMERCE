@@ -1,0 +1,20 @@
+.smart-theme-roller {
+    left: -250px !important;
+}
+.smart-theme-roller.opened {
+    left: 0 !important;
+}
+
+.item-box .picture a,
+.item-box .picture {
+    position: static !important;
+}
+
+    .item-box .picture a img {
+        margin: 40px auto 0 !important;
+        max-height: 230px !important;
+    }
+
+.mega-menu .dropdown {
+    background: #333 !important;
+}

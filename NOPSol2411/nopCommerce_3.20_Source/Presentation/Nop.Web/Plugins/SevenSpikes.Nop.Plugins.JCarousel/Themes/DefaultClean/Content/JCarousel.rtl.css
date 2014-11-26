@@ -1,0 +1,22 @@
+.jcarousel-direction-rtl{
+    direction: rtl;
+}
+.nop-jcarousel * {
+    text-align: right !important;
+}
+.nop-jcarousel .jcarousel-item .prices > * {
+    float: right !important;
+}
+
+/* VERTICAL */
+
+.nop-jcarousel .jcarousel-next-horizontal {
+    left: 11px !important;
+    right: inherit !important;
+    background: url('images/prev-horizontal.png') top no-repeat !important;
+}
+.nop-jcarousel .jcarousel-prev-horizontal {
+    right: 11px !important;
+    left: inherit !important;
+    background: url('images/next-horizontal.png') top no-repeat !important;
+}

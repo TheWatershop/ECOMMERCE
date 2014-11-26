@@ -1,0 +1,37 @@
+﻿.footable-row-detail {
+	text-align: right;
+}
+.cart td, .data-table td, .compare-products-table td, .forums-table-section td {
+    border-width: 1px 0 0 1px;
+}
+.cart th:first-child,
+.data-table th:first-child,
+.compare-products-table tr:first-child td:first-child,
+.forums-table-section th:first-child{
+	border-radius: 0 8px 0 0;
+}
+.cart th:last-child,
+.data-table th:last-child,
+.compare-products-table tr:first-child td:last-child,
+.forums-table-section th:last-child{
+	border-radius: 8px 0 0 0;
+}
+.cart tr:last-child td:first-child,
+.data-table tr:last-child td:first-child,
+.compare-products-table tr:last-child td:first-child,
+.forums-table-section tr:last-child td:first-child{
+	border-radius: 0 0 8px 0;
+}
+.cart tr:last-child td:last-child,
+.data-table tr:last-child td:last-child,
+.compare-products-table tr:last-child td:last-child,
+.forums-table-section tr:last-child td:last-child{
+	border-radius: 0 0 0 8px;
+}
+.compare-products-table .overview img{
+	left: 0;
+	right: 0;
+}
+.footable-row-detail-cell{
+	text-align: right !important;
+}

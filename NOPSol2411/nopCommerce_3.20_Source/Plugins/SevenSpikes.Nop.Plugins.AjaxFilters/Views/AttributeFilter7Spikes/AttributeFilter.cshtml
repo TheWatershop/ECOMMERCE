@@ -1,0 +1,146 @@
+﻿@** Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+
+@{
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/AttributeFilter.min.js");
+}
+
+@model AttributeFilterModel7Spikes
+
+@using System.Text;
+@using SevenSpikes.Nop.Plugins.AjaxFilters.Models.AttributeFilter;
+@using SevenSpikes.Nop.Plugins.AjaxFilters.Common;
+@using SevenSpikes.Nop.Plugins.AjaxFilters.Domain;
+
+
+@if (Model.NopAjaxFiltersSettings.FiltersUIMode == FiltersUIMode.UseDropdowns)
+{
+    var stringBuilder = new StringBuilder();
+
+    foreach (AttributeFilterGroup attributeFilterGroup in Model.AttributeFilterGroups)
+    {
+        stringBuilder.Append("#attributeFiltersDropDown");
+        stringBuilder.Append(attributeFilterGroup.Id);
+        stringBuilder.Append(",");
+    }
+
+    string attributeFilterPanelsSelector = stringBuilder.ToString().TrimEnd(new[] { ',' });
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("@attributeFilterPanelsSelector").jDropDown();
+        })
+
+    </script>
+}
+
+
+    @{
+        int optionsGroupIndex = 0;
+        int currentZIndex = Model.AttributeFilterGroups.Count + 100;
+
+        string toggleStateClass = "toggleControl";
+        string toggleStateStyles = "";
+        if (Model.NopAjaxFiltersSettings.CloseAttributesFilterBox == true)
+        {
+            toggleStateClass = "toggleControl closed";
+            toggleStateStyles = "display: none;";
+        }
+    }
+
+    @foreach (AttributeFilterGroup attributeFilterGroup in Model.AttributeFilterGroups)
+    {
+        string colorOptionsClass = "";
+        bool hasColorOptionsInGroup = attributeFilterGroup.FilterItems.Any(filterItem => filterItem.ColorSquaresRgb != null);
+        if (hasColorOptionsInGroup)
+        {
+            colorOptionsClass = "colorOptions";
+        }               
+        
+        
+        Func<int, HelperResult> attributeOptionsHtml = 
+        @<text>
+        @foreach (AttributeFilterItem attributeFilterItem in attributeFilterGroup.FilterItems)
+        {
+            string filterItemCssClass = "filterItemUnselected";
+
+            if (attributeFilterItem.FilterItemState == FilterItemState.Checked)
+            {
+                filterItemCssClass = "filterItemSelected";
+            }
+
+            string productVariantAttributeIds = String.Empty;
+
+            foreach (int productVariantAttributeId in attributeFilterItem.ProductVariantAttributeIds)
+            {
+                productVariantAttributeIds += productVariantAttributeId + ",";
+            }
+
+            productVariantAttributeIds = productVariantAttributeIds.TrimEnd(new[] { ',' });
+            if (hasColorOptionsInGroup && Model.NopAjaxFiltersSettings.FiltersUIMode != FiltersUIMode.UseDropdowns)
+            {
+                string filterItemStyle = "";
+                string defaultColorClass = "defaultColor";
+                if (attributeFilterItem.ColorSquaresRgb != null)
+                {
+                    filterItemStyle = string.Format("background-color:{0}", attributeFilterItem.ColorSquaresRgb);
+                    defaultColorClass = "";
+                }
+<li>
+    <a class="@filterItemCssClass" data-option-ids="@productVariantAttributeIds" data-optionsGroupId="@String.Concat(attributeFilterGroup.Id, "-", attributeFilterItem.Name)">
+        <span class="color-container @defaultColorClass" title="@attributeFilterItem.Name">
+                            <span class="color" style="@(filterItemStyle);">&nbsp;</span></span>@attributeFilterItem.Name</a>
+                </li>
+                
+            }
+            else
+            {
+<li>
+                    <a class="@filterItemCssClass" data-option-ids="@productVariantAttributeIds" data-optionsGroupId="@String.Concat(attributeFilterGroup.Id, "-", attributeFilterItem.Name)">@attributeFilterItem.Name</a>
+                </li>
+            }
+
+        }
+        </text>;
+    
+        <div class="block filter-block attributeFilterPanel7Spikes">
+            <div class="title">
+                <a class="@toggleStateClass">@attributeFilterGroup.Name</a>
+                <a class="clearFilterOptions">@T("SevenSpikes.NopAjaxFilters.Client.Common.Clear")</a>
+            </div>
+
+
+            @if (Model.NopAjaxFiltersSettings.FiltersUIMode == FiltersUIMode.UseCheckboxes)
+            {
+                <div class="filtersGroupPanel @colorOptionsClass" data-optionsGroupId="@attributeFilterGroup.Id" style="@toggleStateStyles">
+                    <ul>
+                        @attributeOptionsHtml(0)
+                    </ul>
+                </div>
+            }
+            else if (Model.NopAjaxFiltersSettings.FiltersUIMode == FiltersUIMode.UseDropdowns)
+            {
+                <div class="filtersGroupPanel filtersDropDownPanel" data-optionsGroupId="@attributeFilterGroup.Id" style="z-index: @currentZIndex; @toggleStateStyles">
+                    <div id="@String.Concat("attributeFiltersDropDown", attributeFilterGroup.Id)" class="filtersDropDown">
+                        <div>
+                            <p></p>
+                        </div>
+                        <ul>
+                            <li class="selected">
+                                <a class="allFilterDropDownOptions">@T("SevenSpikes.NopAjaxFilters.Client.Common.All")</a>
+                            </li>
+                            @attributeOptionsHtml(0)
+                        </ul>
+                    </div>
+                </div>
+            }
+
+        </div>
+    
+            optionsGroupIndex++;
+            currentZIndex--;
+
+    }

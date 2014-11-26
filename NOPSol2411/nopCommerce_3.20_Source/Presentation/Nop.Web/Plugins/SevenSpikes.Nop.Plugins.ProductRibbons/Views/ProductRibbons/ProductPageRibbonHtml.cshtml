@@ -1,0 +1,8 @@
+﻿@** Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+@using SevenSpikes.Nop.Plugins.ProductRibbons
+@model SevenSpikes.Nop.Plugins.ProductRibbons.Models.ProductPageRibbonModel
+<div class="product-ribbon @Model.Position" style="@Model.ContainerStyle" data-productRibbonId="@Model.ProductRibbonId" data-productId="@Model.ProductId">
+@Html.Partial(Constants.ViewBasePageRibbonHtml, Model)
+</div>

@@ -1,0 +1,85 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media screen and (min-width: 240px) {
+
+    .priceRangeMinPanel,
+    .priceRangeCurrentPricesPanel .currentMinPrice {
+	    float: right;
+    }
+    .clearFilterOptionsAll,
+    .priceRangeMaxPanel,
+    .priceRangeCurrentPricesPanel .currentMaxPrice {
+	    float: left;
+    }
+    .filter-block,
+	.filter-block .title,
+	.jDropDown div {
+	    text-align: right;
+    }
+    .filter-block a.toggleControl.closed{
+	    background-position: right -18px;
+    }
+    .filter-block a.clearFilterOptions,
+    .filter-block a.clearPriceRangeFilter{
+	    left: 6px;
+	    right: auto;
+    }
+    .filtersGroupPanel li a:before{
+	    margin-left: 8px;
+	    margin-right: 0;
+    }
+    .colorOptions .color-container{
+	    margin-left: 8px;
+	    margin-right: 0;
+    }
+    .jDropDown div:after{
+	    left: 5px;
+	    right: auto;
+    }
+    .jDropDown ul{
+	    right: -1px;
+	    left: auto;
+	    text-align: right;
+    }
+
+    /* AJAX LOADER */
+
+	.productPanelAjaxBusy{
+		right: 0;
+		left: auto;
+	}
+	.ajaxFilters .k-window-actions{
+		left: 10px;
+		right: auto;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .nopAjaxFilters7Spikes .close-filters {
+	    text-align: left;
+    }
+    .nopAjaxFilters7Spikes{
+	    right: 0;
+	    left: auto;
+        -webkit-transform: translate(320px);
+        -moz-transform: translate(320px);
+        -ms-transform: translate(320px);
+        transform: translate(320px);
+    }
+    .nopAjaxFilters7Spikes .close-filters:before{
+	    right: 10px;
+	    left: auto;
+    }
+
+}

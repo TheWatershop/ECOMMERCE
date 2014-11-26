@@ -1,0 +1,55 @@
+﻿@** Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+
+@model global::Nop.Web.Models.Catalog.ProductDetailsModel
+@using Nop.Web.Models.Catalog;
+
+<div class="product-overview-line">
+    <div class="product-essential">
+        <!--product pictures-->
+        <div class="gallery">
+            <div class="picture">
+                <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" />
+            </div>
+        </div>
+        <div class="overview">
+            @if (!String.IsNullOrEmpty(Model.Name))
+            {
+                <h1 class="product-variant-name">
+                    @Model.Name
+                </h1>
+            }
+             @if (!String.IsNullOrEmpty(Model.ShortDescription))
+            {
+                <div class="short-description">
+                    @Html.Raw(Model.ShortDescription)
+                </div>
+            }
+            @{
+                
+                var dataDictPrice = new ViewDataDictionary();
+                dataDictPrice.TemplateInfo.HtmlFieldPrefix = string.Format("price_{0}", Model.Id);
+                @Html.Partial("_ProductPrice", Model.ProductPrice, dataDictPrice)
+
+                var dataDictAttributes = new ViewDataDictionary { TemplateInfo = { HtmlFieldPrefix = string.Format("attributes_{0}", Model.Id) } };
+                @Html.Partial("_ProductAttributes", Model.ProductVariantAttributes, dataDictAttributes)    
+                            
+                var dataDictAddToCart = new ViewDataDictionary();
+                dataDictAddToCart.Add("ProductId", ViewData["ProductId"]);
+                dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
+                @Html.Partial("MiniProductDetailsViewProductAddToCart", Model.AddToCart, dataDictAddToCart)
+            }
+            <span class="message-error"></span>
+        </div>
+    </div>
+    <div class="product-collateral">
+        <!--product tier prices-->
+        @Html.Action("ProductTierPrices", "Catalog", new { productId = Model.Id })
+
+        @{
+            var dataDictGiftCard = new ViewDataDictionary { TemplateInfo = { HtmlFieldPrefix = string.Format("giftcard_{0}", Model.Id) } };
+            @Html.Partial("_GiftCardInfo", Model.GiftCard, dataDictGiftCard)
+        }
+    </div>
+</div>

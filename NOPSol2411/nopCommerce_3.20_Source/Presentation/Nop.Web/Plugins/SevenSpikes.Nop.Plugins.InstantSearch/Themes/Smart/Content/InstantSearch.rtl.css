@@ -1,0 +1,53 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*=====================================================
+    
+    MAIN CSS / SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+
+span.search-box-text {
+	float: right;
+}
+input.search-box-text.narrow {
+	padding-left: 85px;
+    padding-right: 8px;
+}
+input.instant-search-busy,
+input.narrow.instant-search-busy {
+	background-position: 5px center !important;
+}
+#instant-search-categories {
+    right: auto;
+    left: 41px;
+	background-position: right center;
+}
+
+/* AUTOCOMPLETE */
+
+.instant-search-item .img-block {
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+@media screen and (min-width: 481px) {
+
+input.search-box-text.narrow {
+	padding-left: 115px;
+	padding-right: 8px;
+}
+
+}
+
+@media screen and (min-width: 1001px) {
+
+.instantSearch {
+	margin-left: -41px !important;
+}
+
+}

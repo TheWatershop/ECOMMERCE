@@ -1,0 +1,16 @@
+C:\Users\yo\Downloads\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+C:\Users\yo\Downloads\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.dll
+C:\Users\yo\Downloads\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.pdb
+C:\Users\yo\Downloads\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+C:\Users\yo\Downloads\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+C:\Users\Deza\Desktop\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.dll
+C:\Users\Deza\Desktop\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.pdb
+C:\Users\Deza\Desktop\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+C:\Users\Deza\Desktop\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+C:\Users\Deza\Desktop\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+C:\Users\handson\Desktop\NopVersions\NOPSol2411\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.dll.config
+C:\Users\handson\Desktop\NopVersions\NOPSol2411\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.dll
+C:\Users\handson\Desktop\NopVersions\NOPSol2411\nopCommerce_3.20_Source\Presentation\Nop.Web\bin\Nop.Admin.pdb
+C:\Users\handson\Desktop\NopVersions\NOPSol2411\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+C:\Users\handson\Desktop\NopVersions\NOPSol2411\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+C:\Users\handson\Desktop\NopVersions\NOPSol2411\nopCommerce_3.20_Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb

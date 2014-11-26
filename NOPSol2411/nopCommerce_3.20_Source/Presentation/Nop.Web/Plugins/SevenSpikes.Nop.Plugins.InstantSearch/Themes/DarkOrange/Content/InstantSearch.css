@@ -1,0 +1,93 @@
+﻿/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.search-box {
+    width: auto;
+}
+input.search-box-text:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+span.search-box-text {
+    display: block;
+    padding: 0;
+    border: none;
+    margin: 0;
+    width: 224px !important;
+}
+input.search-box-text {
+    margin: 0;
+    width: 220px !important;
+}
+#instant-search-categories {
+	width: 110px;
+	height: 18px;
+	margin-left: 1px;
+	background: #e3e3e3;
+	border: none;
+	padding: 1px;
+}
+.search-box-button {
+    margin: 0 0 0 2px;
+}
+.instant-search-busy {
+    background: #e3e3e3 url('../../../images/ajax-loader-small.gif') no-repeat 98% center;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+    background: #e3e3e3;
+    width: 250px !important;
+    border-radius: 0 4px 4px 4px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    padding: 2px !important;
+    height: auto !important;
+}
+.instantSearch .k-list {
+    padding: 0;
+    margin: 0;
+}
+.instantSearch .k-list-container {
+	width: auto !important;
+    height: auto !important;
+    position: static !important;
+}
+.instantSearch .k-item {
+    overflow: hidden;
+    display: block;
+}
+.instant-search-item {
+    overflow: hidden;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.instantSearch .k-item.k-state-hover .instant-search-item, 
+.instantSearch .k-item.k-state-focused .instant-search-item{
+    border: 1px solid #999;
+    border-radius: 5px;
+    background: #f7f7f7;
+    padding: 9px 4px;
+}
+.instant-search-item .img-block {
+    width: 70px;
+    height: 70px;
+    float: left;
+    overflow: hidden;
+}
+.instant-search-item .detail {
+    float: right;
+    width: 165px;
+    line-height: 17px;
+}
+.instant-search-item .detail .title {
+    text-align: left;
+    font-size: 1.2em;
+    padding-bottom: .25em;
+}
+.instant-search-item .detail .price {
+    color: green;
+    text-align:left;
+}

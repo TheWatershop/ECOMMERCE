@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="ActivityLog">
+    <Value>Activity Log</Value>
+    <Children>
+      <LocaleResource Name="EditJCarouselSettings">
+        <Value>JCarousel settings has been edited.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes">
+    <Value>SevenSpikes</Value>
+    <Children>
+      <LocaleResource Name="JCarousel">
+        <Value>Nop JCarousel</Value>
+        <Children>
+          <LocaleResource Name="Admin">
+            <Value>Admin</Value>
+            <Children>
+              <LocaleResource Name="Submenus">
+                <Value>Submenu names</Value>
+                <Children>
+                  <LocaleResource Name="Settings">
+                    <Value>Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ManageSettings">
+                    <Value>Manage JCarousels</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="GeneralSettings">
+                <Value>JCarousel General Settings</Value>
+                <Children>
+                  <LocaleResource Name="GeneralSection">
+                    <Value>Generel</Value>
+                    <Children>
+                      <LocaleResource Name="EnabledAsWidget">
+                        <Value>Enable the JCarousel as widget.</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>When you check this option, the JCarousel widget will be enabled.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="JCarouselItemMinWidth">
+                        <Value>JCarousel item min width.</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Set the minimum width of the JCarousel item.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="AdditionalProducts">
+                <Value>Add Additional Products</Value>
+                <Children>
+                  <LocaleResource Name="SaveBeforeEdit">
+                    <Value>You need to save the JCarousel before you can add product mappings.</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Description">
+                    <Value>If you have chosen a product data source you can add additional products to this Carousel.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="AdditionalCategories">
+                <Value>Add Additional Categories</Value>
+                <Children>
+                  <LocaleResource Name="SaveBeforeEdit">
+                    <Value>You need to save the JCarousel before you can add category mappings.</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Description">
+                    <Value>If you have chosen a category data source you can add additional categories to this Carousel.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="AdditionalManufacturers">
+                <Value>Add Additional Manufacturers</Value>
+                <Children>
+                  <LocaleResource Name="SaveBeforeEdit">
+                    <Value>You need to save the JCarousel before you can add manufacturer mappings.</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Description">
+                    <Value>If you have chosen a manufacturer data source you can add additional manufacturers to this Carousel.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="StoreMapping">
+                <Value>Stores</Value>
+                <Children>
+                  <LocaleResource Name="SaveBeforeEdit">
+                    <Value>You need to save the JCarousel before you can edit Stores.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Settings">
+                <Value>Settings</Value>
+                <Children>
+                  <LocaleResource Name="Common">
+                    <Value>Nop JCarousel Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="GeneralSettings">
+                    <Value>General Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="JCarouselAdvancedSettings">
+                    <Value>JCarousel Advanced Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CarouselOrientation">
+                    <Value>Rotate the JCarousel to vertical position (default: horizontal)</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies wether the carousel appears in horizontal or vertical orientation. Changes the carousel from a left/right style to a up/down style carousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="NumberOfVisibleItems">
+                    <Value>Number of visible items in the JCarousel</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specify the number of visible items at a time, that are going to be shown in the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="StartIndex">
+                    <Value>Item start index</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The index of the item to start with.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ScrollItems">
+                    <Value>Number of items to scroll by</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The number of items to scroll by.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="AnimationSpeed">
+                    <Value>The speed of the scroll animation</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The speed of the scroll animation in terms ("none", "slow" or "fast"). If set to "none", animation is turned off.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Easing">
+                    <Value>Easing effect</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The name of the easing effect that you want to use.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="AdvancedSettings">
+                    <Value>Advanced Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Skin">
+                    <Value>Skin</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specufies a custom class name for the current JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Autoscroll">
+                    <Value>Autoscroll the content after (seconds)</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies after how many seconds to periodically autoscroll the content. If set to 0 (default) then autoscrolling is turned off.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ImageSize">
+                    <Value>Image size (pixels)</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies a custom JCarousel image size. If set to 0 the image size will be the default nopcommerce picture tumbnail image size.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="WrapItems">
+                    <Value>Wrap items</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies whether to wrap at the first/last item (or both) and jump back to the start/end. Options are "none", "first", "last", "both" or "circular". If set to "none", wrapping is turned off (default).</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="DataSourceType">
+                    <Value>Data source type</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies predefined type of data that will populate the JCarousel plugin e.g. "Featured Products", "Related Products", etc.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="NumberOfItems">
+                    <Value>Maximum number of items</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The maximum number of items that will contain the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowShortDescription">
+                    <Value>Show short description</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the short description will be shown in the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowDetailsButton">
+                    <Value>Show details button</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked a details button will be shown in the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Name">
+                    <Value>Name</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies the name of the JCarousel.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="Required">
+                        <Value>Name of the JCarousel is REQUIRED.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowItemsName">
+                    <Value>Show item name</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the names of the products will be shown in the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowTitle">
+                    <Value>Show title</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the title of the JCarousel will be shown.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowProdictsPrice">
+                    <Value>Show product price</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the price of the products will be shown in the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowProdictsOldPrice">
+                    <Value>Show product old price</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the old price of the products will be shown in the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Title">
+                    <Value>Title</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specify a title, that will be displayed before the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="WidgetZoneNames">
+                    <Value>Widget Zones</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The names of the widget zone in which the JCarousel is added.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="BackToList">
+                <Value>Back to carousel list</Value>
+              </LocaleResource>
+              <LocaleResource Name="DataSourceTypes">
+                <Children>
+                  <LocaleResource Name="HomePageFeaturedProducts">
+                    <Value>Home Page Featured Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="BestSellersProducts">
+                    <Value>Best Sellers Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="RecentlyAddedProducts">
+                    <Value>Recently Added Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="RecentlyViewedProducts">
+                    <Value>Recently Viewed Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="RelatedProducts">
+                    <Value>Related Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AlsoPurchasedProducts">
+                    <Value>Also Purchased Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CategoryFeaturedProducts">
+                    <Value>Category Featured Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ManufacturerFeaturedProducts">
+                    <Value>Manufacturer Featured Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="None">
+                    <Value>None</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Manufacturers">
+                    <Value>Manufacturers</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductsFromTheSameCategory">
+                    <Value>Products From The Same Category</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="SiblingCategories">
+                    <Value>Sibling Categories</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="HomePageCategories">
+                    <Value>Home Page Categories</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="SubCategories">
+                    <Value>Sub Categories</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="DetailsButton">
+                <Value>Details</Value>
+              </LocaleResource>
+              <LocaleResource Name="Created">
+                <Value>JCarousel successfully created.</Value>
+              </LocaleResource>
+              <LocaleResource Name="Edited">
+                <Value>JCarousel successfully edited.</Value>
+              </LocaleResource>
+              <LocaleResource Name="Deleted">
+                <Value>JCarousel successfully deleted.</Value>
+              </LocaleResource>
+              <LocaleResource Name="EditJCarouselDetails">
+                <Value>Edit JCarousel details</Value>
+              </LocaleResource>
+              <LocaleResource Name="AddNew">
+                <Value>Add new JCarousel</Value>
+              </LocaleResource>
+              <LocaleResource Name="ClickToConfigure">
+                <Value>To configure the plugin either click HERE or go to Plugins -> Nop JCarousel -> Manage JCarousels</Value>
+              </LocaleResource>
+              <LocaleResource Name="WidgetZones">
+                <Value>Widget Zones</Value>
+                <Children>
+                  <LocaleResource Name="Carousel">
+                    <Value>JCarousel</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The JCarousel which will be added to this widget.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="WidgetZone">
+                    <Value>Widget Zone</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The widget zone to which the JCarousel will be added.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="DisplayOrder">
+                    <Value>Display Order</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The display order for the widget that will be created for the JCarousel.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Description">
+                    <Value>You can add the {0} JCarousel to as many widget zones as you would like. Just create a new widget by selecting the desired widget zone and click the 'Add new' button.</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AddJCarousel">
+                    <Value>Add the JCarousel to new widget zone</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="SaveBeforeEdit">
+                    <Value>You need to save the JCarousel before you can add it to a widget zone.</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ChooseJCarousel">
+                    <Value>Please choose which JCarousel you will want to be displayed in the widget:</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CreateNewJCarousel">
+                    <Value>If you like you can create new JCarousel, which you can add.</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

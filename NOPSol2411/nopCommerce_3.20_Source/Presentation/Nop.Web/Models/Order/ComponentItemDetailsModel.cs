@@ -1,0 +1,115 @@
+﻿using System;
+using System.Collections.Generic;
+using Nop.Web.Framework.Mvc;
+using Nop.Web.Models.Common;
+
+namespace Nop.Web.Models.Order
+{
+    public partial class ComponentItemDetailsModel : BaseNopEntityModel
+    {
+        public ComponentItemDetailsModel()
+        {
+            Items = new List<ComponentItemDetailsModel>();
+        }
+        public IList<ComponentItemDetailsModel> Items { get; set; }
+        /*
+        public ComponentItemDetailsModel()
+        {
+            TaxRates = new List<TaxRate>();
+            GiftCards = new List<GiftCard>();
+            Items = new List<OrderItemModel>();
+            OrderNotes = new List<OrderNote>();
+            Shipments = new List<ShipmentBriefModel>();
+
+            BillingAddress = new AddressModel();
+            ShippingAddress = new AddressModel();
+        }
+        public bool ShowExp { get; set; }
+        public bool PrintMode { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public string OrderStatus { get; set; }
+
+        public bool IsReOrderAllowed { get; set; }
+
+        public bool IsReturnRequestAllowed { get; set; }
+
+        public bool IsShippable { get; set; }
+        public string ShippingStatus { get; set; }
+        public AddressModel ShippingAddress { get; set; }
+        public string ShippingMethod { get; set; }
+        public IList<ShipmentBriefModel> Shipments { get; set; }
+
+        public AddressModel BillingAddress { get; set; }
+
+        public string VatNumber { get; set; }
+
+        public string PaymentMethod { get; set; }
+        public bool CanRePostProcessPayment { get; set; }
+        public bool DisplayPurchaseOrderNumber { get; set; }
+        public string PurchaseOrderNumber { get; set; }
+
+        public string OrderSubtotal { get; set; }
+        public string OrderSubTotalDiscount { get; set; }
+        public string OrderShipping { get; set; }
+        public string PaymentMethodAdditionalFee { get; set; }
+        public string CheckoutAttributeInfo { get; set; }
+        public string Tax { get; set; }
+        public IList<TaxRate> TaxRates { get; set; }
+        public bool DisplayTax { get; set; }
+        public bool DisplayTaxRates { get; set; }
+        public string OrderTotalDiscount { get; set; }
+        public int RedeemedRewardPoints { get; set; }
+        public string RedeemedRewardPointsAmount { get; set; }
+        public string OrderTotal { get; set; }
+        
+        public IList<GiftCard> GiftCards { get; set; }
+
+        public bool ShowSku { get; set; }
+        public IList<OrderItemModel> Items { get; set; }
+        
+        public IList<OrderNote> OrderNotes { get; set; }
+        
+		#region Nested Classes
+
+        public class ComponentItemDetailsModel : BaseNopEntityModel
+        {
+            public int ProductId { get; set; }
+            public int CustomerId { get; set; }
+            public int ProductSeName { get; set; }
+            public string UnitPrice { get; set; }
+            public string SubTotal { get; set; }
+            public int Quantity { get; set; }
+            public DateTime? ExpiryDate { get; set; }
+            public string AttributeInfo { get; set; }
+        }
+
+        public partial class TaxRate : BaseNopModel
+        {
+            public string Rate { get; set; }
+            public string Value { get; set; }
+        }
+
+        public partial class GiftCard : BaseNopModel
+        {
+            public string CouponCode { get; set; }
+            public string Amount { get; set; }
+        }
+
+        public partial class OrderNote : BaseNopModel
+        {
+            public string Note { get; set; }
+            public DateTime CreatedOn { get; set; }
+        }
+
+        public partial class ShipmentBriefModel : BaseNopEntityModel
+        {
+            public string TrackingNumber { get; set; }
+            public DateTime? ShippedDate { get; set; }
+            public DateTime? DeliveryDate { get; set; }
+        }
+		#endregion
+        */
+    }
+}

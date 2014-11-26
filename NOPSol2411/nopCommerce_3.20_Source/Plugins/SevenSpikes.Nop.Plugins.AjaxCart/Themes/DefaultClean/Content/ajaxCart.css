@@ -1,0 +1,229 @@
+﻿.productQuantityTextBox {
+    height: 17px;
+    font-size: 13px;
+    margin: 0 4px 0 0;
+    border-radius: 3px;
+}
+.nopAjaxCartProductListAddToCartButton {
+    float: left;
+    margin: 0;
+}
+.ajaxCart .qty-input,
+.miniProductDetailsView .add-info input[type="text"] {
+    margin: 0 5px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+}
+
+.ajaxCart {
+    border-radius: 5px;
+    text-align: left;
+}
+
+    .ajaxCart .k-window-titlebar.k-header .k-window-actions a {
+        border-radius: 9px;
+    }
+
+    .ajaxCart .product-details-page {
+        margin-top: 0;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+    .ajaxCart .overview {
+        margin: 0;
+        padding: 0;
+        width: inherit;
+        border: none;
+    }
+
+    .ajaxCart .product-collateral {
+        margin: 0;
+    }
+
+    .ajaxCart .product-details-page .product-variant-line {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+.productAddedToCartWindowDescription strong {
+    color: #cc0000;
+    font-family: arial, verdana, helvetica, sans-serif;
+}
+
+.ajaxCart .productAddedToCartWindowCheckout {
+    padding: 8px 32px;
+    border: 0 none;
+    border-color: #999;
+    background: #7DB72F;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7DB72F), to(#4E7D0E));
+    background: -moz-linear-gradient(top, #7DB72F, #4E7D0E);
+    color: #fff;
+    text-shadow: none;
+    font-weight: 700;
+    font-size: 1.3em;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7DB72F', endColorstr='#4E7D0E');
+    cursor: pointer;
+}
+
+    .ajaxCart .productAddedToCartWindowCheckout:hover {
+        background: #4E7D0E;
+        background: -webkit-gradient(linear, left top, left bottom, from(#4E7D0E), to(#7DB72F));
+        background: -moz-linear-gradient(top, #4E7D0E, #7DB72F);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4E7D0E', endColorstr='#7DB72F');
+    }
+
+.nopAjaxCartProductVariantAddToCartButton {
+    margin: 0;
+}
+
+.product-details-page .giftcard .message {
+    resize: none;
+}
+
+/* MINIPRODUCTDETAILS */
+
+.miniProductDetailsView .product-essential .gallery {
+    margin: 0 20px 0 0;
+}
+
+.miniProductDetailsView .product-details-page .add-to-cart {
+    padding: 0;
+}
+
+.miniProductDetailsView .overview .prices {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+    .miniProductDetailsView .overview .prices label {
+        display: none;
+    }
+
+    .miniProductDetailsView .overview .prices span {
+        display: block;
+        line-height: 30px;
+    }
+
+.miniProductDetailsView .overview .add-info {
+    float: right;
+    overflow: hidden;
+}
+
+.miniProductDetailsView .shortdescription {
+    margin-bottom: 10px;
+    max-width: 340px;
+}
+
+.miniProductDetailsView .product-overview-line {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+    .miniProductDetailsView .product-overview-line,
+    .miniProductDetailsView .product-overview-line .prices {
+        margin-bottom: 10px;
+    }
+
+.miniProductDetailsView .product-details-page .product-overview-line:last-child {
+    margin-bottom: 0;
+}
+
+.miniProductDetailsView .product-overview-line .prices span {
+    line-height: 23px;
+}
+
+.miniProductDetailsView .product-overview-line .add-to-cart {
+    clear: both;
+}
+
+/********* START ATTRIBUTES *********/
+
+.ajaxCart .attributes {
+    border-bottom: 1px dotted #ccc;
+    clear: both;
+}
+
+    .ajaxCart .attributes dl {
+        overflow: hidden;
+    }
+
+        .ajaxCart .attributes dl > * {
+            margin: 0 0 10px !important;
+            list-style: none;
+        }
+
+    .ajaxCart .attributes dt {
+        float: left;
+        clear: left;
+        width: 120px;
+    }
+
+        .ajaxCart .attributes dt label {
+            display: block;
+            float: left;
+            margin-right: 5px;
+        }
+
+    .ajaxCart .attributes dd {
+        float: left;
+    }
+
+        .ajaxCart .attributes dd select {
+            margin: 0;
+            max-width: 255px;
+        }
+
+    .ajaxCart .attributes .option-list li {
+        overflow: hidden;
+    }
+
+        .ajaxCart .attributes .option-list li > * {
+            display: block;
+            float: left;
+            line-height: 20px;
+        }
+
+    .ajaxCart .attributes .option-list.color-squares li > * {
+        line-height: inherit;
+    }
+
+    .ajaxCart .attributes .option-list li > *:first-child {
+        margin-right: 5px;
+    }
+
+    .ajaxCart .attributes textarea {
+        padding: 4px;
+        width: 280px;
+        height: 140px;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    .ajaxCart .attributes input[type=text] {
+        padding: 2px;
+        width: 140px;
+    }
+
+    .ajaxCart .attributes .qq-upload-button {
+        border-radius: 5px;
+    }
+
+    .ajaxCart .attributes .qq-upload-list {
+        margin: 0;
+    }
+
+    .ajaxCart .attributes .required {
+        color: red;
+    }
+
+/**** Added by Ivan ****/
+
+.ajax-cart-button-wrapper {
+    display: inline-block;
+}
+
+/********* END ATTRIBUTES *********/

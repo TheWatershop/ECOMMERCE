@@ -1,0 +1,17 @@
+.nop-jcarousel .jcarousel-next-horizontal {
+    left: -15px;
+    right: inherit !important;
+	background: url("images/prev-horizontal.png") no-repeat !important;
+}
+.nop-jcarousel .jcarousel-prev-horizontal {
+    right: -15px;
+    left: inherit !important;
+	background: url("images/next-horizontal.png") no-repeat !important;
+}
+.nop-jcarousel > h2,
+.nop-jcarousel .jcarousel-item-horizontal {
+    text-align: right;
+}
+.nop-jcarousel .jcarousel-item .prices > * {
+    float: right;
+}

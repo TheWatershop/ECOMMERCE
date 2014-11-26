@@ -1,0 +1,156 @@
+﻿@using Telerik.Web.Mvc.UI;
+@using Nop.Web.Framework.Web;
+@using Nop.Services.Security;
+@using Nop.Core.Domain.Security;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Framework.Plugin;
+@{
+    if (!Telerik.Web.Mvc.SiteMapManager.SiteMaps.ContainsKey("admin"))
+    {
+        Telerik.Web.Mvc.SiteMapManager.SiteMaps.Register<Telerik.Web.Mvc.XmlSiteMap>("admin", sitemap =>
+            sitemap.LoadFrom("~/Administration/sitemap.config"));
+    }
+
+    //menu plugin
+    var adminMenuPlugins = EngineContext.Current.Resolve<Nop.Core.Plugins.IPluginFinder>()
+        .GetPlugins<IAdminMenuPlugin>()
+        .Where(x => x.Authenticate())
+        .ToList();
+
+    var permissionService = EngineContext.Current.Resolve<IPermissionService>();
+
+    string url = Request.Url.ToString();
+
+    if (url.Contains("?"))
+    {
+        url = url.Split('?').FirstOrDefault();
+    }
+
+    var urlSplited = url.Split('/');
+
+    var lastUrlParameter = urlSplited[urlSplited.Length - 1];
+
+    int lastParameterInt;
+
+    var currentControllerName = string.Empty;
+
+    if (Int32.TryParse(lastUrlParameter, out lastParameterInt))
+    {
+        currentControllerName = urlSplited[urlSplited.Length - 3];
+    }
+    else
+    {
+        currentControllerName = urlSplited[urlSplited.Length - 2];
+    }
+    
+}
+
+<div id="current-plugin-menu">
+    <div class="section-header">
+        <div class="title"></div>
+    </div>
+    <ul class="t-widget t-reset t-header t-menu t-menu-vertical">
+    </ul>
+</div>
+
+@{
+    Html.Telerik().Menu().Name("Admin7Spikes")
+    .Items(x =>
+    {
+        if (adminMenuPlugins.Any())
+        {
+            foreach (var adminMenuPlugin in adminMenuPlugins)
+            {
+                BaseAdminPlugin7Spikes base7SpikesPlugin = adminMenuPlugin as BaseAdminPlugin7Spikes;
+
+                if (base7SpikesPlugin != null)
+                {
+                    adminMenuPlugin.BuildMenuItem(x.Add());
+
+                }
+            }
+        }
+    })
+    .OpenOnClick(false)
+    .Orientation(MenuOrientation.Vertical)
+    .Render();
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var menu = $("#Admin7Spikes");
+
+        if (!menu || menu.length <= 0) {
+            return;
+        }
+
+        var menuGroups = $(menu).find(".t-group");
+
+        if (!menuGroups || menuGroups.length <= 0) {
+            return;
+        }
+
+        var currentPluginMenu = $("#current-plugin-menu ul");
+
+        if (!currentPluginMenu || currentPluginMenu.length <= 0) {
+            return;
+        }
+
+        var hasItems = false;
+
+        var liElementsToBeAdded = [];
+
+        $.each(menuGroups, function (index, item) {
+
+            if (!hasItems) {
+
+                var linkItems = $(item).find("a");
+
+                $.each(linkItems, function (index1, item1) {
+                    if (!hasItems) {
+                        var itemHref = $(item1).attr("href");
+
+                        if (itemHref && itemHref.length > 0) {
+
+                            if (itemHref.toLowerCase().indexOf("@currentControllerName".toLowerCase()) !== -1) {
+                                hasItems = true;
+                                var liElements = $(item).find("li");
+
+                                if (liElements && liElements.length > 0 && liElementsToBeAdded.length == 0) {
+                                    liElementsToBeAdded = $(liElements).clone();
+                                }
+
+                                var linkElements = $(liElementsToBeAdded.find("a"));
+
+                                $.each(linkElements, function (lIndex, lItem) {
+                                    var href = $(lItem).attr("href").toLowerCase();
+                                    var url = '@url'.toLowerCase();
+
+                                    if (href == url) {
+                                        $(lItem).parent("li").addClass("spikes-menu-selected");
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+
+                if (hasItems) {
+                    $(currentPluginMenu).append(liElementsToBeAdded);
+
+                    var menuName = $(item).parent().find("span.t-link");
+
+                    if (menuName) {
+                        var title = $("#current-plugin-menu").find(".title");
+
+                        if (title) {
+                            $(title).text($(menuName).text());
+                        }
+                    }
+
+                    currentPluginMenu.parent().show();
+                }
+            }
+        });
+    });
+</script>

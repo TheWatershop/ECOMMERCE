@@ -1,0 +1,414 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nopAjaxFilters7Spikes a {
+    cursor: pointer;
+}
+.nopAjaxFilters7Spikes .block {
+    padding-bottom: 0;
+}
+.nopAjaxFilters7Spikes .block .title {
+    overflow: hidden;
+}
+.nopAjaxFilters7Spikes .block .filtersGroupPanel {
+    position: relative;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 10px 15px;
+}
+    .nopAjaxFilters7Spikes .block .filtersGroupPanel ul {
+        margin: 0;
+        padding: 0;
+    }
+    .nopAjaxFilters7Spikes .block .filtersGroupPanel li {
+        background: none;
+        padding: 0;
+    }
+.nopAjaxFilters7Spikes .filtersTitlePanel {
+	overflow: hidden;
+    color: #333;
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 0 0 10px 3px;
+    text-transform: uppercase;
+}
+.nopAjaxFilters7Spikes .filtersTitle {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.nopAjaxFilters7Spikes .clearFilterOptionsAll {
+    float: right;
+    color: #000;
+    text-transform: none;
+    cursor: pointer;
+}
+.nopAjaxFilters7Spikes .block .title a.toggleControl {
+    background: url("images/filterGroupToggle.png") no-repeat scroll -7px 5px transparent;
+    float: left;
+    color: #333;
+    display: block;
+    padding: 0 0 0 18px;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+    .nopAjaxFilters7Spikes .block .title a.toggleControl.closed {
+        background-position: 4px -7px;
+    }
+.nopAjaxFilters7Spikes .block .title a.clearFilterOptions {
+    float: right;
+    color: #000;
+    text-transform: lowercase;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: bold;
+}
+    .nopAjaxFilters7Spikes .block .title a.clearFilterOptions:hover {
+        text-decoration: underline;
+    }
+
+/* PRICE RANGE SLIDER */
+
+.priceRangeFilterPanel7Spikes .ui-slider {
+    background: #ccc;
+    height: 4px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.priceRangeFilterPanel7Spikes .ui-slider-range.ui-widget-header {
+    background: #333;
+}
+.priceRangeFilterPanel7Spikes .priceRangeMinMaxPanel {
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.priceRangeMinPanel,
+.priceRangeCurrentPricesPanel .currentMinPrice {
+    float: left;
+}
+.priceRangeMaxPanel,
+.priceRangeCurrentPricesPanel .currentMaxPrice {
+    float: right;
+}
+.nopAjaxFilters7Spikes .block .title a.clearPriceRangeFilter {
+    float: right;
+    color: #b80709;
+    text-transform: none;
+    cursor: pointer;
+}
+    .nopAjaxFilters7Spikes .block .title a.clearPriceRangeFilter:hover {
+        text-decoration: underline;
+    }
+.ui-widget-content {
+    border: 1px solid #888 !important;
+}
+.ui-slider-handle, .ui-slider-handle.ui-state-hover {
+    top: -5px !important;
+    width: 14px !important;
+    height: 14px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+}
+    .ui-slider-handle:focus {
+        outline: -webkit-focus-ring-color auto 0;
+    }
+.priceRangeFilterPanel7Spikes .ui-state-default, .priceRangeFilterPanel7Spikes .ui-widget-content .ui-state-default, .priceRangeFilterPanel7Spikes .ui-widget-header .ui-state-default {
+    background: url("images/scale_knob.png") top no-repeat !important;
+    border: none !important;
+}
+.ui-state-default:hover, .ui-widget-content .ui-state-default:hover, .ui-widget-header .ui-state-default:hover {
+    background-position: bottom !important;
+}
+.priceRangeFilterPanel7Spikes .priceRangeCurrentPricesPanel {
+    color: #b80709;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+/* CHECKBOX MODE */
+
+.nopAjaxFilters7Spikes .filtersGroupPanel a {
+    background: url("../../../images/checkbox.png") no-repeat scroll transparent;
+    color: #5C5B5B;
+    padding-left: 15px;
+}
+.nopAjaxFilters7Spikes .filtersGroupPanel .filtersDropDown a {
+    padding-left: 10px;
+}
+    .nopAjaxFilters7Spikes .filtersGroupPanel .filtersDropDown  a:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelected {
+        color: #b80709;
+        background-position: left -18px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemUnselected{
+        color: #333;
+        background-position: left 2px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled,
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+        color: #9D9D9D;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled {
+        background-position: left -35px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+        background-position: left -58px;
+    }
+        .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled:hover,
+        .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+
+/* COLOR SQUARE ATTRIBUTES */
+
+.colorOptions a {
+    padding-left: 0 !important;
+    background: none !important;
+}
+.colorOptions .color-container {
+    float: left;
+    margin: 5px 8px 0 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+}
+.colorOptions a.filterItemSelected .color-container {
+    box-shadow: 0 0 3px #000;
+}
+.colorOptions .color {
+    float: left;
+    width: 8px;
+    height: 8px;
+}
+.colorOptions a.filterItemSelected .color {
+    background: url('../../../images/selected.png') center no-repeat;
+}
+.colorOptions a.filterItemDisabled, .colorOptions a.filterItemSelectedDisabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.colorOptions .defaultColor {
+    background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #000000), color-stop(100%, #000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* IE10+ */
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* NO RESULTS POPUP */
+
+.ajaxFilters.k-window {
+    position: absolute;
+    z-index: 10001;
+    padding: 0 !important;
+    height: auto !important;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 0 1px #333;
+    border-radius: 9px;
+    text-align: left;
+}
+.ajaxFilters .k-window-titlebar {
+    margin: 0 !important;
+    padding: 8px;
+    background: #404040;
+    border-radius: 9px 9px 0 0;
+}
+    .ajaxFilters .k-window-titlebar span {
+        color: #fff;
+        text-shadow: #555 1px 1px 0px;
+        font-size: 16px;
+    }
+.ajaxFilters .k-window-actions {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+    .ajaxFilters .k-window-actions a {
+        display: block;
+    }
+    .ajaxFilters .k-window-actions .k-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        background: #fff url('../../../images/button-close.png') no-repeat center;
+        box-shadow: 0 0 1px #999 inset;
+        font-size: 0;
+        border-radius: 3px;
+    }
+        .ajaxFilters .k-window-actions .k-icon:hover {
+            background: #666 url('../../../images/button-close-hover.png') no-repeat center;
+        }
+.ajaxFilters .k-window-content {
+    padding: 15px;
+    min-width: inherit !important;
+    min-height: inherit !important;
+    background: url('../../../images/separator.png') top repeat-x;
+    color: #333;
+    line-height: 18px;
+    box-shadow: inset 0 1px #ccc;
+}
+    .ajaxFilters .k-window-content p {
+        margin: 0 0 10px;
+    }
+    .ajaxFilters .k-window-content:focus {
+        outline: -webkit-focus-ring-color auto 0;
+    }
+
+/* PRODUCT GRID SELECTORS */
+
+.product-selectors:after {
+    content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.product-viewmode,
+.product-sorting,
+.product-page-size {
+    float: left;
+    text-align: left;
+    margin-bottom: 0;
+}
+.product-sorting:after,
+.product-viewmode:after,
+.product-page-size:after{
+    content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.jDropDown ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 19px;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color: #fff;
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+}
+.jDropDown div {
+    width: 100%;
+}
+    .jDropDown div p {
+        white-space: nowrap;
+        padding: 2px 5px;
+        margin: 0;
+    }
+.jDropDown span,
+.jDropDown a{
+    cursor:pointer;
+}
+.jDropDown ul li {
+    width: 100%;
+}
+    .jDropDown ul li:hover, .jDropDown ul li.selected {
+        background-color: #ddd !important;
+        color: #000;
+    }
+    .jDropDown ul li span, .jDropDown ul li a {
+        display: block;
+        padding: 0 3px;
+        line-height: 20px;
+    }
+.product-sorting,
+.product-page-size {
+    margin-left: 108px;
+}
+.product-page-size {
+    width: 143px;
+}
+.jDropDown{
+    font-size: 11px;
+    position: relative;
+    float: left;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0px 0px;
+    background: url("images/arrowDown.gif") no-repeat;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.sortOptionsDropDown {
+    width: 110px;
+    background-position: 98px 6px;
+}
+.viewOptionsDropDown {
+    width: 90px;
+    background-position: 78px 6px;
+}
+.productsPageSizeDropDown {
+    width: 40px;
+    background-position: 28px 6px;
+}
+    .productsPageSizeDropDown div p {
+        width: 17px;
+    }
+.product-sorting > span,
+.product-viewmode > span,
+.product-page-size > span {
+    float: left;
+    line-height: 20px;
+    display: block;
+}
+
+/* DROPDOWN MODE */
+
+.filtersDropDownPanel {
+    overflow: visible !important;
+    height: 26px !important;
+}
+.filtersDropDown {
+    width: 158px;
+    font-size: 11px;
+    position: relative;
+    margin: 3px 0 0 0;
+    background-position: 146px 7px;
+}
+    .filtersDropDown div p {
+        padding: 0 5px;
+    }
+    .filtersDropDown ul li a {
+        background: none !important;
+        padding-left: 0;
+    }
+        .filtersDropDown ul li a:hover {
+            text-decoration: none !important;
+        }
+        .filtersDropDown ul li a.filterItemDisabled, .filtersDropDown ul li a.filterItemDisabledSelected {
+            display: none !important;
+        }
+
+/* AJAX LOADER */
+
+.productPanelAjaxBusy {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff url('../../../images/ajaxLoader.gif') no-repeat 50% 50%;
+    filter: Alpha(opacity = 70);
+    opacity: 0.7;
+    z-index: 2;
+}

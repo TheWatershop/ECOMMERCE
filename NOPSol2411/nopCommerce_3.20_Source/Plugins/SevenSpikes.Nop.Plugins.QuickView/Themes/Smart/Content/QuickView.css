@@ -1,0 +1,223 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.item-box .product-item {
+    position: absolute !important;
+}
+.buttonOverlay {
+    display: none !important;
+}
+
+/********* START BUTTON *********/
+
+
+.quick-view-button {
+	top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    z-index: 3;
+}
+.quick-view-button a {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+    text-align: center;
+	border: 2px solid #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    background: #5be url('images/button.png') center no-repeat;
+    border-radius: 30px;
+	padding: 0;
+	white-space: nowrap;
+	text-indent: 999px !important;
+	opacity: 0.9;
+}
+.quick-view-button a:hover {
+	opacity: 1;
+}
+@media screen and (min-width: 769px) {
+
+.product-list .quick-view-button {
+	left: 15%;
+}
+
+}
+
+/********** MAIN QUICKVIEW WINDOW **********/
+
+
+.quickView {
+    border-radius: 20px;
+}
+.quickView .k-window-titlebar.k-header .k-window-actions a {
+	width: 20px;
+	height: 20px;
+	border-radius: 2px;
+}
+.quickView .gallery .picture:before {
+	display: none;
+}
+
+/********** GALLERY & OVERVIEW *********/
+
+
+.quickViewWindow .product-name {
+	color: #5be;
+	text-shadow: 1px 1px 0 #f9f9f9;
+}
+.quickViewWindow .gallery .picture {
+	height: 250px;
+}
+.quickViewWindow .gallery .thumbnails a {
+	margin: 0 5px 8px;
+}
+.quickViewWindow .links-panel a {
+	background: url('images/arrow.png') left center no-repeat;
+	padding-left: 20px;
+}
+.quickViewWindow .overview {
+    margin: 0 !important;
+}
+.quickViewWindow .overview #accordion {
+	width: auto;
+}
+.quickViewWindow #accordion .ui-accordion-content {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;     
+}
+.quickViewWindow #accordion .ui-icon-circle-arrow-s {
+    background: url('images/minus.png') center no-repeat;
+}
+.quickViewWindow #accordion .ui-icon-circle-arrow-e {
+    background: url('images/plus.png') center no-repeat;
+}
+.quickViewWindow .overview .left {
+	max-width: 230px;
+}
+.quickViewWindow .overview .short-description, 
+.quickViewWindow .overview .stock, 
+.quickViewWindow .overview .manufacturers, 
+.quickViewWindow .overview .product-reviews-overview {
+    clear: both;
+}
+.quickViewWindow .overview .buttons,
+.quickViewWindow .overview .prices {
+	float: none;
+}
+.quickViewWindow .free-shipping {
+	margin: 10px 0 !important;
+}
+.quickViewWindow .overview .add-to-cart,
+.quickViewWindow .overview .prices {
+	width: auto;
+    text-align: center !important;
+}
+.quickViewWindow .overview .add-to-cart-panel {
+	margin-left: 0;
+}
+.quickViewWindow .back-in-stock-subscription {
+	clear: left;
+}
+.quickViewWindow .product-variant {
+	margin-left: 2px;
+}
+.quickViewWindow .product-variant:nth-child(3n+1) {
+	margin-left: 0;
+}
+.quickViewWindow .variant-info .product-price {
+	color: #fff;
+}
+
+/********** RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+
+.quickViewWindow .product-grid {
+	padding: 0 5px;
+    width: auto;
+}
+.quickViewWindow .product-grid .title {
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+	font-size: 18px;
+    line-height: normal;
+}
+.quickViewWindow .product-grid .item-box {
+    width: 106px;
+    margin: 10px !important;
+	border-bottom: none !important;
+}
+.quickViewWindow .item-grid {
+    padding: 0 5px;
+}
+.quickViewWindow .item-box:before {
+    padding-top: 120%;
+}
+.quickViewWindow .item-box .product-item {
+    top: 0;
+    bottom: 0;
+}
+.quickViewWindow .product-grid .item-box .product-title {
+    height: auto !important;
+}
+.quickViewWindow .product-grid .item-box .product-title a {
+    display: block;
+    line-height: 1.2;
+    height: 28px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.quickViewWindow .product-grid .item-box .picture {
+	background: none;
+}
+.quickViewWindow .item-box .details {
+    height: 0;
+}
+
+/********* GIFTCARD *********/
+
+
+.quickViewWindow .giftcard {
+	margin-left: 0;
+	padding-top: 10px;
+}
+.quickViewWindow .giftcard div {
+	float: none;
+	width: auto;
+	font-size: 0;
+}
+.quickViewWindow .giftcard div > * {
+	display: inline-block;
+	float: none;
+}
+.quickViewWindow .giftcard label {
+	width: 90px;
+	min-width: 0;
+	margin: 0 10px 0 0;
+	text-align: right;
+	font-size: 13px;
+}
+.quickViewWindow .giftcard input[type="text"],
+.quickViewWindow .giftcard textarea {
+	min-width: 0;
+	width: 275px;
+}
+
+/********* ATTRIBUTES *********/
+
+
+.quickViewWindow .attributes dl > * {
+	width: auto !important;
+}
+.quickViewWindow .color-container {
+	display: block;
+	border: none;
+}
+.quickViewWindow .color-container .color {
+	width: 24px;
+	height: 24px;
+}
+.quickViewWindow .color-squares input {
+	position: relative;
+}

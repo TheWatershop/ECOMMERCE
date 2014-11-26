@@ -1,0 +1,150 @@
+﻿/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media screen and (min-width: 769px) {
+
+    .page-title h1,
+    .header-links-wrapper,
+    .header-links,
+    .gallery,
+    .variant-picture,
+    .variant-overview .add-to-wishlist-button,
+    .cart-collaterals,
+    .order-review-data ul,
+    .order-details-area td,
+    .blog-page .tags > *,
+    .blogpost-page .tags > *,
+    .comment-info {
+	    float: right;
+    }
+    .link-rss,
+    .header-selectors-wrapper,
+    .shopping-cart-page .totals,
+    .order-details-page .page-title a,
+    .order-details-page .cart-total {
+	    float: left;
+    }
+
+    .page,
+    .block,
+    .breadcrumb,
+    .overview .buttons {
+	    text-align: right;
+    }
+    .block .view-all,
+    .poll .buttons,
+    .poll-total-votes,
+    .order-details-page .actions {
+	    text-align: left;
+    }
+    .cart-wrapper{
+	    margin: 0 20px 0 0;
+	    float: right;
+    }
+    .footer-disclaimer{
+	    right: 15px;
+	    left: auto;
+    }
+    .footer-powered-by{
+	    left: 15px;
+	    right: auto;
+    }
+    .block .listbox{
+	    padding: 0 10px 40px 5px;
+	    text-align: right;
+    }
+    .block .sublist{
+	    margin: -5px 20px 20px 0;
+    }
+    .block-popular-tags .listbox,
+    .block-poll .listbox{
+	    padding-right: 5px !important;
+	    padding-left: 0 !important;
+    }
+    .breadcrumb li:first-child *{
+	    margin-right: 0;
+    }
+	
+	.product-list .item-box {
+		text-align: right;
+	}
+	.product-list .item-box .picture {
+		right: 0;
+		left: auto;
+	}
+	.product-list .item-box .product-title,
+	.product-list .item-box .details {
+		right: 30%;
+		padding: 0 15px 0 0;
+	}
+	.product-list .item-box .buttons {
+		text-align: right;
+	}
+	
+    .overview{
+	    margin-right: 340px !important;
+	    margin-left: 0 !important;
+    }
+    .overview .buttons div{
+	    margin: 0 0 10px 10px;
+    }
+    .overview .add-to-cart-panel,
+    .variant-overview .add-to-cart-panel{
+	    margin-right: 30px;
+	    margin-left: 0;
+    }
+    .variant-picture + .variant-overview{
+	    margin: 0 235px 0 0;
+    }
+    .attributes dt{
+	    float: right;
+	    clear: right;
+	    margin-left: 10px;
+	    margin-right: 0;
+    }
+    .attributes dd{
+	    float: right;
+	    margin-left: 10px;
+	    margin-right: 0;
+    }
+    .color-squares label{
+	    margin: 0 0 0 10px;
+    }
+
+    /* GIFT CARD */
+
+        .giftcard label{
+	        margin: 0 0 0 10px;
+        }
+        .wishlist-content .button-2{
+	        margin: 0 0 0 10px;
+        }
+        .compare-products-page .clear-list{
+	        left: 0;
+	        right: auto;
+        }
+        .address-list .buttons,
+        .order-list .buttons{
+	        left: 55px;
+	        right: auto;
+        }
+        .checkout-page .address-item{
+	        float: right;
+	        margin: 5px 0 5px 20px;
+        }
+        .payment-info .info{
+	        margin-right: auto;
+	        margin-left: auto;
+        }
+        .blog-page .tags label,
+        .blogpost-page .tags label{
+	        margin: 0 0 0 10px;
+        }
+        .comment-info + .comment-content{
+	        margin: 0 135px 0 0;
+        }
+
+}

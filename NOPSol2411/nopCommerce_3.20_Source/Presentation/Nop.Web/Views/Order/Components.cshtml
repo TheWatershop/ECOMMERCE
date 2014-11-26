@@ -1,0 +1,29 @@
+﻿@model ComponentItemDetailsModel
+@using Nop.Web.Models.Order;
+@{
+    if (!Model.PrintMode)
+    {
+        Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Print.cshtml";
+    }
+    //title
+    Html.AddTitleParts(T"Archived Components");
+}
+@if (Model.PrintMode)
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.print();
+        });
+    </script>
+}
+<div class="page order-details-page">
+
+    <div class="page-body">
+        @Html.Widget("orderdetails_page_top")
+        @Html.Widget("orderdetails_page_bottom")
+    </div>
+</div>

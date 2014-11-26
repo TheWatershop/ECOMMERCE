@@ -1,0 +1,67 @@
+﻿.productQuantityTextBox {
+    font-size: 13px;
+    width: 14px;
+    margin: 0 4px 0 0;
+    height: 14px;
+    padding: 1px;
+}
+.ajaxCart {
+    text-align: left;
+    border-radius: 5px;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions a {
+    border-radius: 9px;
+}
+.ajaxCart .product-details-page {
+    border: none;
+    margin-top: 0;
+    padding: 0;
+}
+.ajaxCart .product-details-page .overview {
+    border: none;
+}
+.ajaxCart .product-collateral {
+    margin: 0;
+}
+.ajaxCart .product-details-page .product-variant-line {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.miniProductDetailsView h1 {
+    margin-bottom: 0;
+}
+.productAddedToCartWindowDescription strong {
+    color: green;
+    font-family: arial, verdana, helvetica, sans-serif;
+}
+.ajaxCart .productAddedToCartWindowCheckout {
+    background: #ffc685;
+    background: -moz-linear-gradient(top, #ffc685 0%, #f98400 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc685), color-stop(100%,#f98400));
+    background: -webkit-linear-gradient(top, #ffc685 0%,#f98400 100%);
+    background: -o-linear-gradient(top, #ffc685 0%,#f98400 100%);
+    background: -ms-linear-gradient(top, #ffc685 0%,#f98400 100%);
+    background: linear-gradient(to bottom, #ffc685 0%,#f98400 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc685', endColorstr='#f98400',GradientType=0 );
+    text-shadow: 1px 1px 0 #000;
+    padding: 0 32px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 34px;
+}
+    .ajaxCart .productAddedToCartWindowCheckout:hover {
+        background: #f98400;
+        background: -moz-linear-gradient(top, #f98400 0%, #ffc685 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f98400), color-stop(100%,#ffc685));
+        background: -webkit-linear-gradient(top, #f98400 0%,#ffc685 100%);
+        background: -o-linear-gradient(top, #f98400 0%,#ffc685 100%);
+        background: -ms-linear-gradient(top, #f98400 0%,#ffc685 100%);
+        background: linear-gradient(to bottom, #f98400 0%,#ffc685 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f98400', endColorstr='#ffc685',GradientType=0 );
+    }
+
+    /**** Added by Ivan ****/
+
+.ajax-cart-button-wrapper {
+    display: inline-block;
+}

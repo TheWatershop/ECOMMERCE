@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Value>SevenSpikes</Value>
+    <Children>
+      <LocaleResource Name="QuickViewMenu">
+        <Value>Nop Quick View</Value>
+      </LocaleResource>
+      <LocaleResource Name="QuickView">
+        <Value>Nop Quick View</Value>
+        <Children>
+          <LocaleResource Name="Admin">
+            <Value>Admin</Value>
+            <Children>
+              <LocaleResource Name="Submenus">
+                <Value>Submenu names</Value>
+                <Children>
+                  <LocaleResource Name="Settings">
+                    <Value>Settings</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Settings">
+                <Value>Settings</Value>
+                <Children>
+                  <LocaleResource Name="Common">
+                    <Value>Nop Quick View Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Enabled">
+                    <Value>Enable the Quick View plugin</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If you check this opton you will enable the Nop Quick View plugin.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnabledAsWidget">
+                    <Value>Enable the Quick View plugin as widget</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If you check this opton you will enable the widget of the Nop Quick View plugin.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductItemSelector">
+                    <Value>Product item selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Set the selector of the product item element. The quick view button will be shown when hover over this item. NOTE: the selector should contain attribute "data-productid" with the ID of the product.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductItemSelectorChild">
+                    <Value>Quick View button parent</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Set the element where the button will be placed. If left empty or the same value as the "Product item selector" is entered, the button will be placed in the "Product item selector". If entered a different value, the button will be placed in it. </Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="QuickViewButtonText">
+                    <Value>Quick View</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="MakeQuickViewPopupDraggable">
+                    <Value>Make the Quick View popup draggable</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked the Quick View Popup will be draggable.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableQuickViewPopupOverlay">
+                    <Value>Enable Overlay</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked an overlay effect will be applyed to your website, so that only the Quick View Popup will be clickable.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowShortProductDescription">
+                    <Value>Show short product description</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked the short product description will be shown in the Quick View.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowFullProductDescription">
+                    <Value>Show full product description</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked the full product description will be shown in the Quick View.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowProductSpecification">
+                    <Value>Show product specification</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked the product specification will be shown in the Quick View.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowProductsAlsoPurchased">
+                    <Value>Show products also purchased</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked products also purchased will be shown in the Quick View.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowRelatedProducts">
+                    <Value>Show related products</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked related products will be shown in the Quick View.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowCompareProductsButton">
+                    <Value>Show compare products button</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked the compare products button will be shown in the Quick View.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="AccordionPanelsHeightStyle">
+                    <Value>Accordion panels height style</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>
+                          "auto" - All panels will be set to the height of the tallest panel.&lt;br/&gt;
+                          "fill" - Expand to the available height based on the accordion's parent height.&lt;br/&gt;
+                          "content" - Each panel will be only as tall as its content.
+                        </Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShowAddToWishlistButton">
+                    <Value>Show add to wishlist button when single product variant.</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If clicked the add to wishlist button will be shown in the Quick View for single product variants</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableCloudZoom">
+                    <Value>Enable the cloud zoom on the main product image.</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If enabled the cloud zoom will be activated on the main product picture</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="GeneralSettings">
+                    <Value>General Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="QuickViewPopupBehaviorSettings">
+                    <Value>Quick View Popup Behavior Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="QuickViewPopupAppearanceSettings">
+                    <Value>Quick View Popup Appearance Settings</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ClickToConfigure">
+                <Value>To configure the plugin either click HERE or go to Plugins -> Nop Quick View -> Settings</Value>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+          <LocaleResource Name="Public">
+            <Value>Public</Value>
+            <Children>
+              <LocaleResource Name="ProductDetails">
+                <Value>Details</Value>
+              </LocaleResource>
+              <LocaleResource Name="ProductVariants">
+                <Value>Variants</Value>
+              </LocaleResource>
+              <LocaleResource Name="MoreInfoHover">
+                <Value>Hover for more info</Value>
+              </LocaleResource>
+              <LocaleResource Name="ProductDescription">
+                <Value>Description</Value>
+              </LocaleResource>
+              <LocaleResource Name="ProductSpecifications">
+                <Value>Specifications</Value>
+              </LocaleResource>
+              <LocaleResource Name="OtherProducts">
+                <Value>Other Products</Value>
+              </LocaleResource>
+             <LocaleResource Name="GoToProductPageLink">
+                <Value>Go to product's page</Value>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

@@ -1,0 +1,52 @@
+﻿.productQuantityTextBox {
+    font-size: 13px;
+    margin-right: 5px;
+    line-height: 18px;
+}
+.ajaxCart {
+    text-align: left;
+}
+.productAddedToCartWindowCheckout {
+    height: 36px;
+    font-size: 16px;
+    padding: 0 32px;
+}
+.productAddedToCartWindowDescription strong {
+    color: green;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+.ajaxCart .product-details-page form {
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+.ajaxCart .product-essential .picture {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.ajaxCart .product-essential .overview {
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+}
+.ajaxCart .product-collateral {
+    margin-bottom: 0;
+}
+.ajaxCart .product-variant-line {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.ajaxCart .product-variant-line .attributes dl {
+    padding: 0;
+}
+.miniProductDetailsView .add-info label {
+    line-height: 20px;
+}
+
+
+/**** Added by Ivan ****/
+
+.ajax-cart-button-wrapper {
+    display: inline-block;
+}

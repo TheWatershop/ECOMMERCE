@@ -1,0 +1,382 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nopAjaxFilters7Spikes .block .filtersGroupPanel {
+    position: relative;
+    background: url("images/bg_sidebar_block.gif") no-repeat scroll left bottom #404040;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 10px 15px;
+}
+    .nopAjaxFilters7Spikes .block .filtersGroupPanel ul {
+        margin: 0;
+        padding: 0;
+    }
+.nopAjaxFilters7Spikes .filtersTitlePanel {
+    color: #FF9933;
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 0 0 10px 3px;
+    text-transform: uppercase;
+    display: none;
+}
+.nopAjaxFilters7Spikes .filtersTitle {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.nopAjaxFilters7Spikes .clearFilterOptionsAll {
+    float: right;
+    color: #FF9933;
+    text-transform: none;
+    cursor: pointer;
+}
+.nopAjaxFilters7Spikes .block .title a.toggleControl {
+    background: url("images/filterGroupToggle.gif") no-repeat scroll -7px 7px transparent;
+    float: left;
+    color: #FF9933;
+    display: block;
+    padding: 0 0 0 1.5em;
+    cursor: pointer;
+}
+    .nopAjaxFilters7Spikes .block .title a.toggleControl.closed {
+        background-position: 4px -5px;
+    }
+.nopAjaxFilters7Spikes .block .title a.clearFilterOptions {
+    float: right;
+    color: #FF9933;
+    text-transform: none;
+    cursor: pointer;
+}
+    .nopAjaxFilters7Spikes .block .title a.clearFilterOptions:hover {
+        text-decoration: underline;
+    }
+
+/* PRICE RANGE SLIDER */
+
+.priceRangeFilterPanel7Spikes .ui-slider {
+    background: #555555;
+    height: 4px;
+    position: relative;
+    width: 150px;
+    margin-bottom: 10px;
+}
+.priceRangeFilterPanel7Spikes .priceRangeMinMaxPanel {
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.priceRangeMinPanel,
+.priceRangeCurrentPricesPanel .currentMinPrice {
+    float: left;
+}
+.priceRangeMaxPanel,
+.priceRangeCurrentPricesPanel .currentMaxPrice {
+    float: right;
+}
+.nopAjaxFilters7Spikes .block .title a.clearPriceRangeFilter {
+    float: right;
+    color: #FF9933;
+    text-transform: none;
+    cursor: pointer;
+}
+    .nopAjaxFilters7Spikes .block .title a.clearPriceRangeFilter:hover {
+        text-decoration: underline;
+    }
+.ui-widget-content {
+    border: 1px solid #888 !important;
+}
+.ui-slider-handle, .ui-slider-handle.ui-state-hover {
+    top: -5px !important;
+    width: 14px !important;
+    height: 14px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+}
+    .ui-slider-handle:focus {
+        outline: -webkit-focus-ring-color auto 0;
+    }
+.priceRangeFilterPanel7Spikes .ui-state-default, .priceRangeFilterPanel7Spikes .ui-widget-content .ui-state-default, .priceRangeFilterPanel7Spikes .ui-widget-header .ui-state-default {
+    background: url("images/scale_knob.png") top no-repeat !important;
+    border: none !important;
+}
+.ui-state-default:hover, .ui-widget-content .ui-state-default:hover, .ui-widget-header .ui-state-default:hover {
+    background-position: bottom !important;
+}
+.priceRangeFilterPanel7Spikes .priceRangeCurrentPricesPanel {
+    color: #f93;
+    overflow: hidden;
+}
+
+/* CHECKBOX MODE */
+
+.nopAjaxFilters7Spikes .filtersGroupPanel a {
+    background: url("../../../images/checkbox.png") no-repeat scroll transparent;
+}
+    .nopAjaxFilters7Spikes .filtersGroupPanel a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemUnselected,
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelected {
+        color: #fff;
+        padding-left: 15px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled,
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+        color: #9D9D9D;
+        padding-left: 15px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemUnselected {
+        background-position: left -58px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelected {
+        background-position: left -38px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled {
+        background-position: left -18px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+        background-position: left 2px;
+    }
+        .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled:hover,
+        .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+
+/* COLOR SQUARE ATTRIBUTES */
+
+.colorOptions a {
+    padding-left: 0 !important;
+    background: none !important;
+}
+.colorOptions .color-container {
+    float: left;
+    margin: 5px 8px 0 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+}
+.colorOptions a.filterItemSelected .color-container {
+    box-shadow: 0 0 3px #000;
+}
+.colorOptions .color {
+    float: left;
+    width: 8px;
+    height: 8px;
+}
+.colorOptions a.filterItemSelected .color {
+    background: url('../../../images/selected.png') center no-repeat;
+}
+.colorOptions a.filterItemDisabled, .colorOptions a.filterItemSelectedDisabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.colorOptions .defaultColor {
+    background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #000000), color-stop(100%, #000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* IE10+ */
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* NO RESULTS POPUP */
+
+.ajaxFilters.k-window {
+    position: absolute;
+    z-index: 10001;
+    padding: 0 !important;
+    height: auto !important;
+    border: 1px solid #666;
+    background: #fff;
+    box-shadow: 0 0 1px #333;
+    border-radius: 9px;
+    text-align: left;
+}
+.ajaxFilters .k-window-titlebar {
+    margin: 0 !important;
+    padding: 8px;
+    border-bottom: 1px solid #666;
+    background: #333;
+    border-radius: 5px 5px 0 0;
+}
+    .ajaxFilters .k-window-titlebar span {
+        color: #fff;
+        text-shadow: 1px 1px 0 #666;
+        font-size: 16px;
+    }
+.ajaxFilters .k-window-actions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+    .ajaxFilters .k-window-actions a {
+        display: block;
+    }
+    .ajaxFilters .k-window-actions .k-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        background: #666 url('../../../images/button-close-hover.png') no-repeat center;
+        box-shadow: 0 0 1px #999 inset;
+        font-size: 0;
+        border-radius: 3px;
+    }
+        .ajaxFilters .k-window-actions .k-icon:hover {
+            background: #fff url('../../../images/button-close.png') no-repeat center;
+        }
+.ajaxFilters .k-window-content {
+    padding: 15px;
+    min-width: inherit !important;
+    min-height: inherit !important;
+    background: url('../../../images/separator.png') top repeat-x;
+    color: #333;
+    line-height: 18px;
+    box-shadow: inset 0 1px #ccc;
+}
+    .ajaxFilters .k-window-content p {
+        margin: 0 0 10px;
+    }
+    .ajaxFilters .k-window-content:focus {
+        outline: -webkit-focus-ring-color auto 0;
+    }
+
+/* PRODUCT GRID SELECTORS */
+
+.jDropDown ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 19px;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color: #fff;
+    border-radius: 0px 0px 5px 5px;
+}
+.jDropDown div {
+    width: 100%;
+}
+    .jDropDown div p {
+        white-space: nowrap;
+        padding: 2px 5px;
+        margin: 0;
+    }
+.jDropDown ul li {
+    width: 100%;
+    text-align: left;
+}
+    .jDropDown ul li:hover, .jDropDown ul li.selected {
+        background-color: #999;
+        color: #fff;
+    }
+    .jDropDown ul li span, .jDropDown ul li a {
+        display: block;
+        padding: 2px 0px 0px 3px;
+    }
+.product-page-size {
+    width: 143px;
+}
+    .product-page-size:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;        
+    }
+.sortOptionsDropDown,
+.viewOptionsDropDown,
+.productsPageSizeDropDown {
+    font-size: 11px;
+    position: relative;
+    float: left;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0px 0px;
+    background: url("images/arrowDown.gif") no-repeat;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.sortOptionsDropDown {
+    width: 110px;
+    background-position: 98px 6px;
+}
+.viewOptionsDropDown {
+    width: 90px;
+    background-position: 78px 6px;
+}
+.productsPageSizeDropDown {
+    width: 40px;
+    background-position: 28px 6px;
+}
+    .productsPageSizeDropDown div p {
+        width: 17px;
+    }
+.product-sorting > span,
+.product-viewmode > span,
+.product-page-size > span {
+    float: left;
+    line-height: 20px;
+    display: block;
+}
+
+/* DROPDOWN MODE */
+
+.filtersDropDownPanel {
+    overflow: visible !important;
+    height: 26px !important;
+}
+.filtersDropDown {
+    width: 138px;
+    font-size: 11px;
+    position: relative;
+    margin: 3px 0 0 0;
+    font-size: 11px;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0px 0px;
+    background: #fff url("images/arrowDown.gif") no-repeat 122px 7px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+}
+    .filtersDropDown div p {
+        padding: 1px 0px 0px 10px;
+        width: 125px;
+    }
+    .filtersDropDown ul {
+        background-color: #fff;
+    }
+        .filtersDropDown ul li a {
+            background: none !important;
+            padding-left: 10px !important;
+            color: #333 !important;
+        }
+            .filtersDropDown ul li a:hover {
+                text-decoration: none !important;
+            }
+            .filtersDropDown ul li a.filterItemDisabled, .filtersDropDown ul li a.filterItemDisabledSelected {
+                display: none !important;
+            }
+
+/* AJAX LOADER */
+
+.productPanelAjaxBusy {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff url('../../../images/ajaxLoader.gif') no-repeat 50% 50%;
+    filter: Alpha(opacity = 70);
+    opacity: 0.7;
+    z-index: 2;
+}

@@ -1,0 +1,76 @@
+﻿.nopAjaxFilters7Spikes .block .title a.toggleControl {
+    background: url("images/rtl-filterGroupToggle.gif") no-repeat right 8px;
+    float: right;
+    padding: 0 1.5em 0 0;
+}
+.nopAjaxFilters7Spikes .block .title a.toggleControl.closed {
+    background-position: right -9px;
+}
+.nopAjaxFilters7Spikes .block .title a.clearFilterOptions,
+.nopAjaxFilters7Spikes .block .title a.clearPriceRangeFilter {
+    float: left;
+}
+
+/* PRODUCT GRID SELECTORS */
+
+.product-selectors > div > div {
+    background-position: 5px 6px;
+}
+.jDropDown div p,
+.jDropDown ul li {
+    text-align: right;
+}
+.jDropDown ul li span, .jDropDown ul li a {
+    padding: 2px 3px 0 0;
+}
+
+/* CHECKBOX MODE */
+
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemUnselected,
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelected,
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled,
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+    padding: 0 15px 0 0;
+}
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemUnselected {
+        background-position: right -58px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelected {
+        background-position: right -38px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled {
+        background-position: right -18px;
+    }
+    .nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+        background-position: right 2px;
+    }
+
+/* NO RESULTS POPUP */
+
+.ajaxFilters .k-window-titlebar,
+.ajaxFilters .k-window-content p {
+    text-align: right;
+}
+.ajaxFilters .k-window-actions {
+    right: inherit;
+    left: 10px;    
+}
+
+/* DROPDOWN MODE */
+
+.filtersDropDown {
+    background: #fff url("images/arrowDown.gif") no-repeat 5px 7px;
+}
+    .filtersDropDown div p {
+        padding: 1px 10px 0 0;
+    }
+.filtersDropDown ul li a {
+    padding: 2px 10px 2px 0 !important;
+}
+
+/* COLOR OPTIONS */
+
+.colorOptions .color-container {
+    float: right;
+    margin: 5px 0px 0 0;
+}

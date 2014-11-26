@@ -1,0 +1,236 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+    margin: 10px 0;
+}
+
+.nop-jcarousel > h2 {
+    position: relative;
+	z-index: 5;
+	height: 35px;
+	background: #333;
+	margin-bottom: -5px;
+	padding: 0 10px;
+	font: normal bold 15px/35px Arial, Helvetica, sans-serif;
+	color: #f93;
+	border-radius: #fff;
+	border-radius: 5px 5px 0 0;
+}
+
+.nop-jcarousel .jcarousel-container {
+    background: #eee;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.nop-jcarousel .jcarousel-container-horizontal {
+    padding: 20px 30px 15px;
+}
+
+.nop-jcarousel .jcarousel-clip {
+    overflow: hidden;
+}
+.jcarousel-list-horizontal {
+    padding: 10px 0 !important;
+}
+.nop-jcarousel .item-holder
+{
+    position: relative;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.nop-jcarousel .item-holder .ribbon-wrapper {
+	position: static;
+}
+
+.nop-jcarousel .jcarousel-item-horizontal {
+    margin: 0 8px;
+}
+
+.nop-jcarousel .jcarousel-item .thumb-img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+	text-align: center;
+}
+
+.nop-jcarousel .jcarousel-item .thumb-img:hover img {
+    opacity: 0.9;
+}
+
+.nop-jcarousel .jcarousel-product-name {
+    display: block;
+	height: 30px;
+	overflow: hidden;
+    color: #333;
+    font-size: 12px;
+	font-weight: bold;
+    margin: 3px 0;
+    line-height: 14px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nop-jcarousel .jcarousel-item .short-description {
+    height: 27px;
+	overflow: hidden;
+	margin: 0 0 5px;
+	font: normal normal 11px Arial, Helvetica, sans-serif;
+	color: #666;
+}
+
+.nop-jcarousel .jcarousel-item .prices {
+    margin-bottom: 5px;
+    overflow: hidden;
+    height: 18px;
+}
+
+.nop-jcarousel .jcarousel-item .actual-price {
+    color: #f70;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nop-jcarousel .jcarousel-item .old-price {
+    font-size: 12px;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.nop-jcarousel .jcarousel-item .button {
+	display: inline-block;
+	text-align: center;
+	font: normal normal 12px Tahoma, Geneva, sans-serif;
+	color: #3664A5;
+	border-radius: 2px;
+}
+
+.nop-jcarousel .jcarousel-item .button:hover {
+    background-position: bottom;
+    text-decoration: none;
+}
+
+.nop-jcarousel .jcarousel-next-horizontal,
+.nop-jcarousel .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 22px;
+	margin: -11px 0 0;
+    cursor: pointer;
+}
+
+.nop-jcarousel .jcarousel-next-horizontal {
+    right: 6px;
+    background: url("images/next-horizontal.png") no-repeat center top;
+}
+
+.nop-jcarousel .jcarousel-prev-horizontal {
+    left: 6px;
+    background: url("images/prev-horizontal.png") no-repeat center top;
+}
+
+.nop-jcarousel .jcarousel-next-horizontal:hover,
+.nop-jcarousel .jcarousel-next-horizontal:focus {
+    background-position: center bottom;
+}
+
+.nop-jcarousel .jcarousel-next-disabled:hover {
+    background-position: center top;
+}
+
+.nop-jcarousel .jcarousel-prev-horizontal:hover,
+.nop-jcarousel .jcarousel-prev-horizontal:focus {
+    background-position: center bottom;
+}
+
+.nop-jcarousel .jcarousel-prev-disabled:hover {
+    background-position: center top;
+}
+
+/* VERTICAL */
+
+.nop-jcarousel.vertical-holder {
+    margin: 0 0 15px;
+}
+
+.nop-jcarousel .jcarousel-container-vertical {
+    padding: 35px 13px 30px;
+}
+
+.nop-jcarousel .jcarousel-clip-vertical {
+    height: 212px;
+}
+
+.nop-jcarousel .jcarousel-item-vertical {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.nop-jcarousel .jcarousel-next-vertical,
+.nop-jcarousel .jcarousel-prev-vertical {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -11px;
+    width: 22px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.nop-jcarousel .jcarousel-next-vertical {
+    bottom: 5px;
+    background: url("images/next-vertical.png") no-repeat 0 0;
+}
+
+.nop-jcarousel .jcarousel-next-vertical:hover,
+.nop-jcarousel .jcarousel-next-vertical:focus {
+    background-position: center bottom;
+}
+
+.nop-jcarousel .jcarousel-prev-vertical {
+    top: 10px;
+    background: url("images/prev-vertical.png") no-repeat 0 0;
+}
+
+.nop-jcarousel .jcarousel-prev-vertical:hover,
+.nop-jcarousel .jcarousel-prev-vertical:focus {
+    background-position: center bottom;
+}
+
+.nop-jcarousel .jcarousel-next-disabled-horizontal,
+.nop-jcarousel .jcarousel-next-disabled-horizontal:hover,
+.nop-jcarousel .jcarousel-next-disabled-horizontal:focus,
+.nop-jcarousel .jcarousel-next-disabled-horizontal:active,
+.nop-jcarousel .jcarousel-prev-disabled-horizontal,
+.nop-jcarousel .jcarousel-prev-disabled-horizontal:hover,
+.nop-jcarousel .jcarousel-prev-disabled-horizontal:focus,
+.nop-jcarousel .jcarousel-prev-disabled-horizontal:active,
+.nop-jcarousel .jcarousel-prev-disabled-vertical,
+.nop-jcarousel .jcarousel-prev-disabled-vertical:hover,
+.nop-jcarousel .jcarousel-prev-disabled-vertical:focus,
+.nop-jcarousel .jcarousel-prev-disabled-vertical:active,
+.nop-jcarousel .jcarousel-next-disabled-vertical,
+.nop-jcarousel .jcarousel-next-disabled-vertical:hover,
+.nop-jcarousel .jcarousel-next-disabled-vertical:focus,
+.nop-jcarousel .jcarousel-next-disabled-vertical:active {
+    opacity: 0.5;
+    cursor: default;
+}
+
+/* If the wrap is set to circular and the carousel skin can display more items than there are, the carousel adds additional <li> elements to fill the
+empty spaces. This class is added only for those empty elements. They should not be visible. */
+
+.nop-jcarousel .jcarousel-item-placeholder-horizontal {
+    visibility: hidden;
+}
+
+.nop-jcarousel .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}

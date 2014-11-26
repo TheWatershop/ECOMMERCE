@@ -1,0 +1,20 @@
+﻿.instant-search-busy {
+    background: #fff url('../../../images/ajax-loader-small.gif') no-repeat 3px !important;
+}
+
+input.search-box-text {
+    padding: 1px 5px 0 0;
+}
+#instant-search-categories {
+    margin: 0 0 0 5px;
+}
+.instant-search-item .img-block {
+    float: right;
+}
+.instant-search-item .detail {
+    float: left;
+}
+.instant-search-item .detail .title,
+.instant-search-item .detail .price {
+    text-align: right;
+}

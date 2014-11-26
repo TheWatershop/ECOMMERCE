@@ -1,0 +1,143 @@
+﻿@using SevenSpikes.Nop.Plugins.QuickView.Models;
+@using Nop.Core.Domain.Orders;
+@model QuickViewProductPageModel
+@{
+    var productDetails = Model.ProductDetails;
+}
+
+<div class="product-essential">
+    @using (Html.BeginRouteForm("Product", new { SeName = Model.ProductDetails.SeName }, FormMethod.Post, new { id = "product-details-form" }))
+    {
+        <div class="popup-header">
+            <h1 class="product-name">
+                @Model.ProductDetails.Name
+            </h1>
+        </div>
+        <div class="gallery">
+            <!--product pictures-->
+            @Html.Action("ShowCloudZoomPictures", "QuickViewCatalog", new { model = Model })
+
+            <div class="links-panel">
+                <a href="@Url.RouteUrl("Product", new { SeName = Model.ProductDetails.SeName })" class="link-to-product-page">@T("SevenSpikes.QuickView.Public.GoToProductPageLink")</a>
+            </div>
+        </div>
+        <div class="overview">
+
+            <div id="accordion">
+                <h3>@T("SevenSpikes.QuickView.Public.ProductDetails")</h3>
+                <div class="product-details">
+                    <div class="left">
+                        <!--product SKU, manufacturer part number, stock info-->
+                        @Html.Partial("_SKU_Man_Stock", productDetails)
+
+                        <!--Back in stock subscription-->
+                        @Html.Partial("_BackInStockSubscription", productDetails)
+
+                        <!--product manufacturers-->
+                        @Html.Action("ProductManufacturers", "Catalog", new { productId = Model.ProductDetails.Id })
+
+                        <!--sample download-->
+                        @Html.Partial("_DownloadSample", productDetails)
+                    </div>
+                    <div class="right">
+                        @if (!productDetails.AddToCart.DisableWishlistButton && Model.QuickViewSettings.ShowAddToWishlistButton)
+                        {
+                            <div class="add-to-wishlist">
+                                <input type="button" class="button-2 add-to-wishlist-button" value="@T("ShoppingCart.AddToWishlist")" data-productid="@productDetails.AddToCart.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = productDetails.AddToCart.ProductId, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                            </div>
+                        }
+                        @if (Model.QuickViewSettings.ShowCompareProductsButton)
+                        {
+                            @Html.Action("CompareProductsButton", "Catalog", new { productId = Model.ProductDetails.Id })
+                        }
+                    </div>
+                        @* This code is taken from the _ProductVariantPrice.cshtml view. This variable is defined there and on document.ready it is used in a function defined in the _ProductAttributes.cshtml view.
+                        In the case of NopAjaxCart document.ready does not work, so redefine the variable here, before it is used in the _ProductAttributes.cshmlt view. It is used when
+                        price dynamic update is enabled *@
+                        @if (productDetails.ProductPrice.DynamicPriceUpdate)
+                        {
+                            <script type="text/javascript">
+                                var priceValForDynUpd_@(productDetails.Id) = @(((float)(productDetails.ProductPrice.PriceValue != productDetails.ProductPrice.PriceWithDiscountValue ? productDetails.ProductPrice.PriceWithDiscountValue : productDetails.ProductPrice.PriceValue)).ToString(new System.Globalization.CultureInfo("en-US")));
+                            </script>
+                        }
+
+                        @{
+                        var dataDictAttributes = new ViewDataDictionary();
+                        dataDictAttributes.TemplateInfo.HtmlFieldPrefix = string.Format("attributes_{0}", productDetails.Id);
+                            @Html.Partial("_ProductAttributes", productDetails.ProductVariantAttributes, dataDictAttributes)                  
+                        }
+
+                        @{
+                        var dataDictGiftCard = new ViewDataDictionary();
+                        dataDictGiftCard.TemplateInfo.HtmlFieldPrefix = string.Format("giftcard_{0}", productDetails.Id);
+                            @Html.Partial("_GiftCardInfo", productDetails.GiftCard, dataDictGiftCard)
+                        }
+
+                        <!--product tier prices-->
+                        @Html.Action("ProductTierPrices", "Catalog", new { productId = productDetails.Id })
+                    <div class="purchase-area">
+                        @{
+                        var dataDictPrice = new ViewDataDictionary();
+                        dataDictPrice.TemplateInfo.HtmlFieldPrefix = string.Format("price_{0}", productDetails.Id);
+                            @Html.Partial("_ProductPrice", productDetails.ProductPrice, dataDictPrice)
+                        }
+
+                        @{
+                        var dataDictAddToCart = new ViewDataDictionary();
+                        dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", productDetails.Id);
+                            @Html.Partial("_AddToCart", productDetails.AddToCart, dataDictAddToCart)                    
+                        }
+                    </div>
+                </div>
+
+                @if (Model.QuickViewSettings.ShowShortProductDescription || Model.QuickViewSettings.ShowFullProductDescription)
+                {
+                    if (!String.IsNullOrEmpty(Model.ProductDetails.ShortDescription) || !String.IsNullOrEmpty(Model.ProductDetails.FullDescription))
+                    {
+                    <h3>@T("SevenSpikes.QuickView.Public.ProductDescription")</h3>
+                    <div class="product-details">
+                        @if (Model.QuickViewSettings.ShowShortProductDescription)
+                        {
+                            <div class="short-description">
+                                @Html.Raw(productDetails.ShortDescription)
+                            </div>
+                        }
+
+                        @if (Model.QuickViewSettings.ShowFullProductDescription)
+                        {
+                            <div class="full-description">
+                                @Html.Raw(productDetails.FullDescription)
+                            </div>
+                        }
+                    </div>
+                    }
+                }
+
+                @{
+                MvcHtmlString productSpecificationsContent = MvcHtmlString.Empty;
+                if (Model.QuickViewSettings.ShowProductSpecification)
+                {
+                    productSpecificationsContent = Html.Action("ProductSpecifications", "Catalog", new { productId = Model.ProductDetails.Id });
+                }
+                }
+
+                @if (!MvcHtmlString.IsNullOrEmpty(productSpecificationsContent))
+                {
+                    <h3>@T("SevenSpikes.QuickView.Public.ProductSpecifications")</h3>
+                    <div class="product-details">
+                        @productSpecificationsContent
+                    </div>
+                }
+            </div>
+            @if (Model.QuickViewSettings.ShowRelatedProducts)
+            {
+                @Html.Action("RelatedProducts", "Catalog", new { productId = Model.ProductDetails.Id, productThumbPictureSize = 85 })
+            }
+            @if (Model.QuickViewSettings.ShowProductsAlsoPurchased)
+            {
+                @Html.Action("ProductsAlsoPurchased", "Catalog", new { productId = Model.ProductDetails.Id, productThumbPictureSize = 85 })
+            }
+        </div>       
+    }
+</div>
+

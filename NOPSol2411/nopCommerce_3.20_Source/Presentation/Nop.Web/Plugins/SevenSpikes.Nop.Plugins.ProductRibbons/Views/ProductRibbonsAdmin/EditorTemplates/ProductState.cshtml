@@ -1,0 +1,16 @@
+﻿@using System.Collections
+@using SevenSpikes.Nop.Plugins.ProductRibbons.Domain;
+@using Nop.Core.Infrastructure;
+@using Telerik.Web.Mvc.UI;
+@using Nop.Core.Domain.Catalog;
+@using Nop.Services.Catalog;
+
+@{
+    var productStates = (IEnumerable)(from ProductState productState in Enum.GetValues(typeof (ProductState)) select productState.ToString());
+    
+}
+
+@(Html.Telerik().DropDownList()
+        .Name("ProductState")
+        .BindTo(new SelectList(productStates))
+)

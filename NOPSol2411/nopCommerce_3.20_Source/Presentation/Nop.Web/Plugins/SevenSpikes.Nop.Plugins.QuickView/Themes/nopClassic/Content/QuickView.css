@@ -1,0 +1,252 @@
+﻿/*
+* Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+
+/********************************* NOP CLASSIC *******************************/
+
+
+
+
+/********** START BUTTON *********/
+
+.quick-view-button {
+    border: 1px solid #999;
+    border-radius: 2px;
+    background: #96abc9; 
+    background: -moz-linear-gradient(top, #96abc9 0%, #657d9e 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#96abc9), color-stop(100%,#657d9e)); 
+    background: -webkit-linear-gradient(top, #96abc9 0%,#657d9e 100%); 
+    background: -o-linear-gradient(top, #96abc9 0%,#657d9e 100%); 
+    background: -ms-linear-gradient(top, #96abc9 0%,#657d9e 100%); 
+    background: linear-gradient(to bottom, #96abc9 0%,#657d9e 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96abc9', endColorstr='#657d9e',GradientType=0 );
+	color: #fff;
+}
+.quick-view-button:hover {
+    background: #657d9e; 
+    background: -moz-linear-gradient(top, #657d9e 0%, #96abc9 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#657d9e), color-stop(100%,#96abc9)); 
+    background: -webkit-linear-gradient(top, #657d9e 0%,#96abc9 100%); 
+    background: -o-linear-gradient(top, #657d9e 0%,#96abc9 100%); 
+    background: -ms-linear-gradient(top, #657d9e 0%,#96abc9 100%); 
+    background: linear-gradient(to bottom, #657d9e 0%,#96abc9 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#657d9e', endColorstr='#96abc9',GradientType=0 );
+}
+.product-grid .quick-view-button {
+    top: 120px;
+    left: 77px;
+}
+.product-list .quick-view-button {
+    top: 140px;
+    left: 31px;
+}
+    .quick-view-button a {
+        text-shadow: -1px -1px 0 #666;
+    }
+
+/********** END BUTTON *********/
+
+/********** START GALLERY *********/
+
+.quickViewWindow .gallery .picture {
+    overflow: hidden;
+    margin: 0;
+    width: 250px;
+    float: none;
+}
+.quickViewWindow .gallery .links-panel a {
+    color: #13386d;
+}
+
+/********** END GALLERY *********/
+
+/********** START PRODUCT ESSENTIAL *********/
+
+.quickViewWindow .overview {
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+}
+.quickViewWindow #accordion > h3 span.ui-icon-circle-arrow-s {
+    background: url(images/minus.png) no-repeat center;
+}
+.quickViewWindow #accordion > h3 span.ui-icon-circle-arrow-e {
+    background: url(images/plus.png) no-repeat center;
+}
+.quickViewWindow .overview .left > *,
+.quickViewWindow .overview .right > * {
+    line-height: 20px;
+}
+.quickViewWindow .left .back-in-stock-subscription {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 11px;
+}
+    .quickViewWindow .left .back-in-stock-subscription .subscribe-button {
+        margin: 0;
+        padding: 3px 6px;
+    }
+    .quickViewWindow .left .back-in-stock-subscription .subscribe-button:hover {
+        text-decoration: none;
+    }
+    .quickViewWindow .overview .email-a-friend input,
+    .quickViewWindow .overview .compare-products input {
+        margin: 0;
+    }
+.quickViewWindow .overview .add-to-wishlist-button{
+    margin-top: 0;
+}
+.quickViewWindow .overview .download-sample-button {
+    min-width: 50px;
+    height: 20px;
+    background: rgb(173,214,255); 
+    background: -moz-linear-gradient(top, rgba(173,214,255,1) 0%, rgba(124,165,205,1) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(173,214,255,1)), color-stop(100%,rgba(124,165,205,1))); 
+    background: -webkit-linear-gradient(top, rgba(173,214,255,1) 0%,rgba(124,165,205,1) 100%); 
+    background: -o-linear-gradient(top, rgba(173,214,255,1) 0%,rgba(124,165,205,1) 100%); 
+    background: -ms-linear-gradient(top, rgba(173,214,255,1) 0%,rgba(124,165,205,1) 100%); 
+    background: linear-gradient(to bottom, rgba(173,214,255,1) 0%,rgba(124,165,205,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add6ff', endColorstr='#7ca5cd',GradientType=0 );
+    padding: 2px 6px;
+    border: 1px solid #777;
+    border-radius: 2px;
+    color: #036;
+    font: normal 11px Tahoma, Geneva, sans-serif;
+    line-height: 0;
+    text-shadow: 1px 1px 0 #ccc;
+    cursor: pointer;
+}
+    .quickViewWindow .overview .download-sample-button:hover {
+        background: rgb(124,165,205);
+        background: -moz-linear-gradient(top, rgba(124,165,205,1) 0%, rgba(173,214,255,1) 100%); 
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,165,205,1)), color-stop(100%,rgba(173,214,255,1))); 
+        background: -webkit-linear-gradient(top, rgba(124,165,205,1) 0%,rgba(173,214,255,1) 100%); 
+        background: -o-linear-gradient(top, rgba(124,165,205,1) 0%,rgba(173,214,255,1) 100%); 
+        background: -ms-linear-gradient(top, rgba(124,165,205,1) 0%,rgba(173,214,255,1) 100%); 
+        background: linear-gradient(to bottom, rgba(124,165,205,1) 0%,rgba(173,214,255,1) 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ca5cd', endColorstr='#add6ff',GradientType=0 );
+        text-decoration: none;
+    }
+        .quickViewWindow .overview .download-sample-button:hover a {
+            text-decoration: none;
+        }
+.quickViewWindow .overview .purchase-area {
+    border-top: 1px dashed #999;
+    overflow:hidden;
+    padding: 10px 0 0;
+    margin-top: 10px;
+}
+    .quickViewWindow .overview .purchase-area .prices{
+        line-height: 34px;
+        float: left;
+        margin: 0;
+        text-align: left;
+    }
+    .quickViewWindow .overview .purchase-area .add-to-cart {
+        float: right;
+    }
+.quickViewWindow .overview .purchase-area .add-to-cart .qty-input {
+    height: 24px;
+    line-height: 24px;
+}
+.quickViewWindow .overview .purchase-area .add-to-cart .add-to-wishlist-button,
+.quickViewWindow .overview .product-specs-box .title {
+    display: none;
+}
+.quickViewWindow .product-essential .full-description
+{
+    border-top: none;
+}
+
+/********** END PRODUCT ESSENTIAL *********/    
+
+/********** START RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+.quickViewWindow .product-grid {
+    overflow: hidden;
+    float: right;
+    background: #f6f6f4;
+    box-shadow: 0 2px 2px 0 #ccc;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 198px;
+    max-height: 198px;
+}
+    .quickViewWindow .product-grid .item-row {
+        margin-top: 0;
+        padding: 0 5px;
+    }
+.quickViewWindow .product-grid .item-box .picture {
+    width: 113px;
+}
+    .quickViewWindow .product-grid .item-box .picture a {
+        overflow: hidden;
+        display: block;
+        width: 85px;
+        height: 85px;
+        margin: 0 auto;
+    }
+.quickViewWindow .product-grid .product-item {
+    border: none;
+}
+    .quickViewWindow .product-grid .product-item .description {
+        display: none;
+    }
+    .quickViewWindow .product-grid .product-item .picture {
+        box-shadow: none;
+        height: 85px;
+        float: none;
+        overflow: hidden;
+    }
+.quickViewWindow .product-grid .item-box,
+.quickViewWindow .also-purchased-products-grid .item-box {
+    width: 109px;
+    padding: 0;
+    margin-left: 25px;
+}
+    .quickViewWindow .product-grid .item-row .item-box:first-child,
+    .quickViewWindow .also-purchased-products-grid .item-row .item-box:first-child {
+        margin-left: 0;
+    }
+    .quickViewWindow .product-grid .item-box .product-title {
+        padding: 0;
+        font-size: 10px;
+    }
+        .quickViewWindow .product-grid .item-box .product-title a {
+            display: inline;
+            line-height: inherit;
+        }
+.quickViewWindow .product-grid .product-item .add-info {
+    display: none;
+}
+
+/********** END RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+/********** START BOTTOM PANEL *********/
+
+.quickViewWindow .purchase-area {
+    clear: right;
+}
+
+/********** END BOTTOM PANEL *********/
+
+/********* START VARIANTS IN GRID ********/
+
+.quickViewWindow .overview .variants-in-grid .product-variant-list .product-variant .prices .product-price {
+    color: #0f0;
+    font-weight: bold;
+}
+
+/********* END VARIANTS IN GRID ********/
+
+/********* START GIFTCARD ********/
+
+.quickViewWindow .giftcard dl dd .message {
+    width: 250px;
+}
+
+/********* END GIFTCARD ********/

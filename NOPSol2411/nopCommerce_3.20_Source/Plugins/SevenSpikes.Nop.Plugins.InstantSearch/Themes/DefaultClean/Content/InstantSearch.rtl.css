@@ -1,0 +1,20 @@
+﻿.search-box form > * {
+    float: right !important;
+}
+span.search-box-text,
+#instant-search-categories {
+    margin: 0 !important;
+}
+.instant-search-busy {
+    background-position: left center !important;
+}
+
+/* AUTOCOMPLETE */
+
+.instant-search-item .img-block {
+    float: right !important;
+}
+.instant-search-item .detail {
+    float: left !important;
+    text-align: right !important;
+}

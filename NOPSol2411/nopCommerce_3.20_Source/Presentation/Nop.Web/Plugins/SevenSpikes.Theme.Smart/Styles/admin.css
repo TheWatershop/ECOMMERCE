@@ -1,0 +1,55 @@
+﻿.theme-color .adminData div {
+    float: left;
+    margin: 0 5px;
+    font-size: 0;
+    position: relative;
+    cursor: pointer;
+}
+.theme-color .adminData div:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.theme-color .adminData div.active:before,
+.theme-color .adminData div:hover:before {
+    width: 29px;
+    height: 29px;
+    top: 5px;
+    left: 5px;
+    border: 3px solid rgba(0,0,0,0.4);
+}
+
+.theme-color input {
+    display: none;
+}
+
+.theme-color .adminData label {
+    display: block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0;
+}
+.theme-color .adminData label[for=_Preset_Violet] {
+    background-color: #8999cc;
+}
+.theme-color .adminData label[for=_Preset_Blueberry] {
+    background-color: #843a4b;
+}
+.theme-color .adminData label[for=_Preset_Fresh] {
+    background-color: #74b841;
+}
+.theme-color .adminData label[for=_Preset_Sand] {
+    background-color: #b6a287;
+}
+.theme-color .adminData label[for=_Preset_Ocean] {
+    background-color: #5be;
+}

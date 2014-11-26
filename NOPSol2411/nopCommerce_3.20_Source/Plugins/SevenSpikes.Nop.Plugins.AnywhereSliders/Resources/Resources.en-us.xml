@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Value>Admin</Value>
+    <Children>
+      <LocaleResource Name="NopAnywhereSliders">
+        <Value>Nop Anywhere Sliders</Value>
+      </LocaleResource>
+      <LocaleResource Name="Plugins">
+        <Children>
+          <LocaleResource Name="AnywhereSliders">
+            <Value>Sliders</Value>
+            <Children>
+              <LocaleResource Name="Admin">
+                <Children>
+                  <LocaleResource Name="Submenus">
+                    <Value>Submenu names</Value>
+                    <Children>
+                      <LocaleResource Name="ManageSliders">
+                        <Value>Manage Sliders</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="GeneralSettings">
+                    <Value>General Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="NivoSettings">
+                    <Children>
+                      <LocaleResource Name="NivoSliderGeneralSettings">
+                        <Value>Nivo Slider General Settings</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="NivoSliderAdvancedSettings">
+                        <Value>Nivo Slider Advanced Settings</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="AnimationSpeed">
+                        <Value>Animation Speed (milliseconds)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Slide transition speed</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="KeyboardNavigation">
+                        <Value>Enable keyboard navigation</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Enable keyboard navigation using left and right arrows</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="EnableDirectionNavigation">
+                        <Value>Enable direction navigation</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Enable Next and Prev navigation</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="PrevText">
+                        <Value>Previous Text</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Shows the previous text.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="NextText">
+                        <Value>Next Text</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Shows the next text.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="RandomStart">
+                        <Value>Random start</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>If checked the slider will start sliding from a random picture.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="DirectionNavigationShowOnHoverOnly">
+                        <Value>Show direction navigation only on hover</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Show direction navigation(Next and Prev) only on hover</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="EnableControlNavigation">
+                        <Value>Enable control navigation</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>1,2,3... navigation</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="EnableControlNavigationThumbs">
+                        <Value>Enable using thumbnails for control navigation</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Enable using thumbnails for control navigation.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ThumbsBiggerSize">
+                        <Value>The bigger size of the thumbnail pictures</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The bigger size in pixels of the thumbnail pictures</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ThemeClassName">
+                        <Value>Theme class name</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The name of the theme class that is added to the slider. For example if you set it to light then an additional class named theme-light will be added to the slider.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Slices">
+                        <Value>Slices (for slice animations)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>For slice animations</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="BoxCols">
+                        <Value>BoxCols (for box animations)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>BoxCols (for box animations)</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="BoxRows">
+                        <Value>BoxRows (for box animations)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>BoxRows (for box animations)</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="CaptionOpacity">
+                        <Value>Caption opacity</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Caption opacity</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Effect">
+                        <Value>Effect</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The effect can be any of the followings: sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft, fold, fade, random, slideInRight, slideInLeft, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="AutoSlideInterval">
+                        <Value>Auto slide interval (milliseconds)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The interval in milliseconds before an image is changed with another</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Links">
+                        <Value>Use Pictures as Links</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Use the slider pictures as links that will redirect the customer to a chosen url.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Height">
+                        <Value>Slider Height</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The height of the slider panel. Note: use images with the same height.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Width">
+                        <Value>Slider Width</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The width of the slider panel. Note: use images with the same width.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="AdvancedSettings">
+                        <Value>Advanced Settings</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="PauseOnHover">
+                        <Value>Pause on hover</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Whether to pause sliding on mouse hover</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ShowCaption">
+                        <Value>Show Caption</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Whether to show the caption text for each image</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="CarouselSettings">
+                    <Value>Carousel 2D Settings</Value>
+                    <Children>
+                      <LocaleResource Name="AutoSlideInterval">
+                        <Value>Auto slide interval (milliseconds)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The interval in milliseconds before an image is changed with another</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Navigation">
+                        <Value>Enable Navigation</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Whether to show prev and next buttons</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Links">
+                        <Value>Use Images as Links</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Use images as links that will redirect the customer to a chosen url.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Height">
+                        <Value>Slider Height</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The height of the slider panel. Note: use images with the same height.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Width">
+                        <Value>Slider Width</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The width of the slider panel. Note: use images with the same width.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="HoverPause">
+                        <Value>Hover pause</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Whether to pause on mouse hover</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ShowTitle">
+                        <Value>Display text</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Whether to show the display text for each image</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Carousel3DSettings">
+                    <Value>Carousel 3D Settings</Value>
+                    <Children>
+                      <LocaleResource Name="Width">
+                        <Value>Slider Panel Width</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Width of the area of the slider</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Height">
+                        <Value>Slider Panel Height</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Height of the area of the slider</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="PictureWidth">
+                        <Value>Picture Width</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Width of the picture to which the image will be auto resized</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="PictureHeight">
+                        <Value>Picture Height</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Height of the picture to which the image will be auto resized</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="YRaduis">
+                        <Value>Y raduis</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The Y radius that controls on what angle the 3d slider will be visible</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="XPosition">
+                        <Value>X position</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The X position of the center of the 3d slider</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="YPosition">
+                        <Value>Y position</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The Y position of the center of the 3d slider</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Speed">
+                        <Value>Speed</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The speed with which the images will be rotated. Values vary around 0.05.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="MouseWheel">
+                        <Value>Mouse wheel</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The speed with which the images will be rotated when the mouse wheel is used</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="AutoRotateDelay">
+                        <Value>Auto rotate delay (milliseconds)</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The delay in milliseconds before the next image is rotated.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="AutoRotate">
+                        <Value>Auto rotate</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Determines whether the images will auto rotate</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="SliderImage">
+                    <Children>
+                      <LocaleResource Name="DisplayText">
+                        <Value>Title</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The title of the image that can be visible in some of the sliders.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Url">
+                        <Value>Url</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The url of the image when is clicked.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Alt">
+                        <Value>Alt</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The value of the "alt" attribute of the image. In short it is a description of the image.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Visible">
+                        <Value>Visible</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Whether the image is visible and is included in the slider.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="DisplayOrder">
+                        <Value>Display Order</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The order in which the images will be displayed.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Picture">
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Choose the picture you want to include in the slider.</Value>
+                          </LocaleResource>
+                        </Children>
+                        <Value>Picture</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="AddNew">
+                        <Value>Add a new slider image</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="QuickAddNew">
+                        <Value>Quick add a new slider image</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="QuickAddNewButton">
+                        <Value>Quick add</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="SaveBeforeEdit">
+                        <Value>You need to save the slider before you can upload pictures for this slider.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="BackToSliderImages">
+                        <Value>Back to the pictures of the slider</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="Edited">
+                        <Value>Slider image successfully edited.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="Created">
+                        <Value>Slider image successfully created.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="PictureHeight">
+                        <Value>Picture Height</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="PictureWidth">
+                        <Value>Picture Width</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="EditSliderImageDetails">
+                        <Value>Edit Picture Details</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Slider">
+                    <Children>
+                      <LocaleResource Name="SystemName">
+                        <Value>System Name</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The system name of the slider. It is not visible in the public area. It is used when calling a slider in manual integration. The value of the 'systemName' argument.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="SliderType">
+                        <Value>Slider Type</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The type of the slider. This determines how the images will be changing.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="FromDate">
+                        <Value>From Date</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Set the date from which the Anywhere Slider will be displayed.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ToDate">
+                        <Value>To Date</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Set the date to which the Anywhere Slider will be displayed.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Language">
+                        <Value>Language</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>Set language for which the Slider will be displayed.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="CategoriesNames">
+                        <Value>Categories</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The categories to which the sliders is mapped.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ManufacturerNames">
+                        <Value>Manufacturers</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The manufacturers to which the sliders is mapped.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="WidgetZonesNames">
+                        <Value>Widget Zones Names</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The names of the widget zone in which the slider is added.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="BackToList">
+                        <Value>Back to sliders list</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="TabTitle">
+                        <Children>
+                          <LocaleResource Name="Settings">
+                            <Value>Settings</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="Pictures">
+                            <Value>Pictures</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="Widgets">
+                            <Value>Widgets</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="Categories">
+                            <Value>Categories</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="Manufacturers">
+                            <Value>Manufacturers</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="Stores">
+                            <Value>Stores</Value>
+                            <Children>
+                              <LocaleResource Name="SaveBeforeEdit">
+                                <Value>You need to save the Anywhere Slider, before you can limit it to stores.</Value>
+                              </LocaleResource>
+                            </Children>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Settings">
+                        <Children>
+                          <LocaleResource Name="Title">
+                            <Value>Slider Settings</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="AddNew">
+                        <Value>Add new slider</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="Created">
+                        <Value>Slider successfully created.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="Edited">
+                        <Value>Slider successfully edited.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="Deleted">
+                        <Value>Slider successfully deleted.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="EditSliderDetails">
+                        <Value>Edit Slider Details</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="CategoriesTab">
+                        <Value></Value>
+                        <Children>
+                          <LocaleResource Name="HowMappingWorks">
+                            <Value>You can map this slider to several categories. Note: When a slider is mapped to a category then it will be shown only on the page for the category.</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="SaveBeforeEdit">
+                            <Value>You need to save the slider before you can add category mappings.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="ManufacturersTab">
+                        <Value></Value>
+                        <Children>
+                          <LocaleResource Name="HowMappingWorks">
+                            <Value>You can map this slider to several manufacturers. Note: When a slider is mapped to a manufacturer then it will be shown only on the page for the manufacturer.</Value>
+                          </LocaleResource>
+                          <LocaleResource Name="SaveBeforeEdit">
+                            <Value>You need to save the slider before you can add manufacturer mappings.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Widget">
+                    <Children>
+                      <LocaleResource Name="Description">
+                        <Value>You can add the {0} slider to as many widget zones as you would like. Just create a new widget by selecting the desired widget zone and click the 'Add new' button.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="WidgetZone">
+                        <Value>Widget Zone</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The widget zone to which the slider will be added.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="DisplayOrder">
+                        <Value>Display Order</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The display order for the widget that will be created for the slider.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="Slider">
+                        <Value>Slider</Value>
+                        <Children>
+                          <LocaleResource Name="Hint">
+                            <Value>The slider which will be added to this widget.</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                      <LocaleResource Name="AddSlider">
+                        <Value>Add the slider to new widget zone</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="SaveBeforeEdit">
+                        <Value>You need to save the slider before you can add it to a widget zone.</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="ChooseSlider">
+                        <Value>Please choose which slider you will want to be displayed in the widget:</Value>
+                      </LocaleResource>
+                      <LocaleResource Name="CreateNewSlider">
+                        <Value>If you like you can create new slider, which you can add.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Category">
+                    <Value>Category</Value>
+                    <Children>
+                      <LocaleResource Name="DisplayText">
+                        <Value>Category</Value>
+                        <Children>
+                          <LocaleResource Name="Category">
+                            <Value>Category</Value>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ClickToConfigure">
+                    <Value>To configure the plugin either click HERE or go to Plugins -> Nop Anywhere Sliders -> Manage Sliders</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Fields">
+                <Children>
+                  <LocaleResource Name="IsRequired">
+                    <Value>Field is required</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

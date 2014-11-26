@@ -1,0 +1,7 @@
+﻿.productTabs-header ul li{
+    float: right !important;
+    margin: 1px 0 0 .2em !important;
+}
+.productTabs-body p {
+    text-align: right !important;
+}

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Value>SevenSpikes</Value>
+    <Children>
+      <LocaleResource Name="Conditions">
+        <Value>Nop Conditions</Value>
+        <Children>
+          <LocaleResource Name="Admin">
+            <Value>Admin</Value>
+            <Children>
+              <LocaleResource Name="Condition">
+                <Value>Condition</Value>
+                <Children>
+                  <LocaleResource Name="Description">
+                    <Value>
+                      With conditions you can filter the products for which this attachment will be shown.&lt;br/&gt;
+                      The conditions consist of &lt;strong&gt;Condition Groups&lt;/strong&gt;. &lt;br/&gt;
+                      The &lt;strong&gt;Default State&lt;/strong&gt; is also considered as a condition group. &lt;br/&gt;
+                      A Condition Group consists of one or many &lt;strong&gt;Condition Statements&lt;/strong&gt; (rules).&lt;br/&gt;
+                      The dependancy between the Condition Groups is &lt;strong&gt;OR&lt;/strong&gt; and between the Condition Statements is &lt;strong&gt;AND&lt;/strong&gt;. This means that if all of the Condition Statements in one Condition Group are true for a product, the attachment will be displayed over that product.&lt;br/&gt;
+                      To add a Condition Group you need to click on the &lt;strong&gt;Add Condition Group&lt;/strong&gt; button.
+                      To delete a Condition Group you need to click on the &lt;strong&gt;Delete&lt;/strong&gt; button.
+                      To add a Condition Statement to the Condition Group, you need to click on the &lt;strong&gt;Add new record&lt;/strong&gt; button.
+                    </Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ConditionName">
+                    <Value>Condition Name</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The name of the condition.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Active">
+                    <Value>Active</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies whether the condition is active.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="AddConditionGroup">
+                    <Value>Add Condition Group</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="DefaultConditionValue">
+                    <Value>Default State</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If the product does not match any condition groups, then this determines whether the attachment will be shown on the product. Almost always select "Fail" unless you want to show on every product.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="TabTitle">
+                    <Value>Conditions</Value>
+                    <Children>
+                      <LocaleResource Name="SaveBeforeEdit">
+                        <Value>You need to Save before you can add conditions.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                </Children>
+                <LocaleResource Name="AddNew">
+                  <Value>Add Condition</Value>
+                </LocaleResource>
+                <LocaleResource Name="Created">
+                  <Value>The Condition have been created successfully.</Value>
+                </LocaleResource>
+                <LocaleResource Name="Edited">
+                  <Value>Condition successfully edited.</Value>
+                </LocaleResource>
+                <LocaleResource Name="Deleted">
+                  <Value>The Condition was deletes successfully</Value>
+                </LocaleResource>
+              </LocaleResource>
+              <LocaleResource Name="ProductOverrides">
+                <Children>
+                  <LocaleResource Name="TabTitle">
+                    <Value>Override Product Conditions</Value>
+                    <Children>
+                      <LocaleResource Name="SaveBeforeEdit">
+                        <Value>You need to Save before you can add product overrides.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductName">
+                    <Value>Product</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductState">
+                    <Value>State</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductOverrides">
+                    <Value>Products</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AddNew">
+                    <Value>Add a new product</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="CustomerOverrides">
+                <Children>
+                  <LocaleResource Name="TabTitle">
+                    <Value>Override Customer Conditions</Value>
+                    <Children>
+                      <LocaleResource Name="SaveBeforeEdit">
+                        <Value>You need to Save before you can add customer overrides.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="CustomerName">
+                    <Value>Customer</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CustomerEmail">
+                    <Value>Email</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="OverrideState">
+                    <Value>State</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CustomerOverrides">
+                    <Value>Customers</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AddNew">
+                    <Value>Add a new customer</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  <LocaleResource Name="Enums">
+    <Children>
+      <LocaleResource Name="SevenSpikes.Nop.Conditions.Domain.ProductConditionProperty">
+        <Children>
+          <LocaleResource Name="Default">
+            <Value>Default</Value>
+          </LocaleResource>
+          <LocaleResource Name="Category">
+            <Value>Category</Value>
+          </LocaleResource>
+          <LocaleResource Name="Manufacturer">
+            <Value>Manufacturer</Value>
+          </LocaleResource>
+          <LocaleResource Name="ProductAgeHours">
+            <Value>Product Age Hours</Value>
+          </LocaleResource>
+          <LocaleResource Name="DiscountAmmount">
+            <Value>Discount Ammount</Value>
+          </LocaleResource>
+          <LocaleResource Name="DiscountPercentage">
+            <Value>Discount Percentage</Value>
+          </LocaleResource>
+          <LocaleResource Name="PriceDifferenceAmmount">
+            <Value>Price Difference Ammount</Value>
+          </LocaleResource>
+          <LocaleResource Name="PriceDifferencePercentage">
+            <Value>Price Difference Percentage</Value>
+          </LocaleResource>
+          <LocaleResource Name="MinPrice">
+            <Value>Min Price</Value>
+          </LocaleResource>
+          <LocaleResource Name="Quantity">
+            <Value>Quantity</Value>
+          </LocaleResource>
+          <LocaleResource Name="PreOrder">
+            <Value>Pre Order</Value>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+      <LocaleResource Name="SevenSpikes.Nop.Conditions.Domain.CustomerConditionProperty">
+        <Children>
+          <LocaleResource Name="Default">
+            <Value>Default</Value>
+          </LocaleResource>
+          <LocaleResource Name="UserName">
+            <Value>User Name</Value>
+          </LocaleResource>
+          <LocaleResource Name="Email">
+            <Value>Email</Value>
+          </LocaleResource>
+          <LocaleResource Name="IsLoggedIn">
+            <Value>Is Logged In</Value>
+          </LocaleResource>
+          <LocaleResource Name="IsInRole">
+            <Value>Is In Role</Value>
+          </LocaleResource>
+          <LocaleResource Name="IsNotInRole">
+            <Value>Is Not In Role</Value>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+      <LocaleResource Name="SevenSpikes.Nop.Conditions.Domain.OperatorType">
+        <Children>
+          <LocaleResource Name="EqualTo">
+            <Value>Equal To</Value>
+          </LocaleResource>
+          <LocaleResource Name="NotEqualTo">
+            <Value>Not Equal To</Value>
+          </LocaleResource>
+          <LocaleResource Name="Contains">
+            <Value>Contains</Value>
+          </LocaleResource>
+          <LocaleResource Name="DoesNotContain">
+            <Value>Does Not Contain</Value>
+          </LocaleResource>
+          <LocaleResource Name="LessThan">
+            <Value>Less Than</Value>
+          </LocaleResource>
+          <LocaleResource Name="GreaterThan">
+            <Value>Greater Than</Value>
+          </LocaleResource>
+          <LocaleResource Name="LessThanOrEqualTo">
+            <Value>Less Than Or Equal To</Value>
+          </LocaleResource>
+          <LocaleResource Name="GreaterThanOrEqualTo">
+            <Value>Greater Than Or Equal To</Value>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

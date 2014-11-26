@@ -1,0 +1,14 @@
+.nop-jcarousel .jcarousel-next-horizontal {
+    left: 6px;
+    right: inherit;
+    background: url("images/prev-horizontal.png") no-repeat center top;
+}
+.nop-jcarousel .jcarousel-prev-horizontal {
+    right: 6px;
+    left: inherit;
+    background: url("images/next-horizontal.png") no-repeat center top;
+}
+
+.item-info {
+    text-align: right;
+}

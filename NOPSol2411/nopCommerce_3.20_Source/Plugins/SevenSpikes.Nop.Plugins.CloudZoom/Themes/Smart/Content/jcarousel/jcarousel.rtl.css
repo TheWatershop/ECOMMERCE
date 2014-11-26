@@ -1,0 +1,17 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*** NAVIGATION ***/
+
+.jcarousel-skin-thumbs .jcarousel-prev-horizontal {
+    left: auto;
+    right: 0;
+    background: #5be url('images/next-horizontal.png') center no-repeat;
+}
+.jcarousel-skin-thumbs .jcarousel-next-horizontal {
+    right: auto;
+    left: 0;
+    background: #5be url('images/prev-horizontal.png') center no-repeat;
+}

@@ -1,0 +1,96 @@
+﻿@** Copyright 2013 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+
+@using Nop.Core.Infrastructure
+@using SevenSpikes.Nop.Framework.MVCExtensions;
+@model SevenSpikes.Nop.Plugins.MegaMenu.Models.MegaMenuCategoriesModels
+@if (Model.CategoriesModels.Count > 0)
+{
+    var megaMenuSettings = EngineContext.Current.Resolve<SevenSpikes.Nop.Plugins.MegaMenu.Domain.MegaMenuSettings>();
+    if (megaMenuSettings.ShowCategoriesInASingleMenuItem)
+    {
+    <li><a href="#">@T("SevenSpikes.MegaMenu.Admin.Settings.MenuItemNameValue")</a>
+        <div class="dropdown categories fullWidth">
+            <div class="row-wrapper">
+                @(Html.DataTable<SevenSpikes.Nop.Plugins.MegaMenu.Models.MegaMenuCategoryModel>(Model.CategoriesModels, 4, "row", "box",
+                    @<text>
+                <div class="title">
+                    <strong>
+                        <a href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })" title="@item.CategoryModel.PictureModel.Title">
+                            @item.CategoryModel.Name</a>
+                    </strong>
+                </div>
+                <!--title-->
+                <div class="picture">
+                    <a href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })" title="@item.CategoryModel.PictureModel.Title">
+                        <img class="lazy" alt="@item.CategoryModel.PictureModel.AlternateText" src="#"
+                                    title="@item.CategoryModel.PictureModel.Title" data-original="@item.CategoryModel.PictureModel.ImageUrl"/></a>
+                </div>
+                <!--picture-->
+                <ul class="subcategories">
+                    @foreach (var subCategory in item.SubCategories.Take(megaMenuSettings.NumberOfCategories))
+                    {
+                        <li>
+                            <a href="@Url.RouteUrl("Category", new { SeName = subCategory.CategoryModel.SeName })" title="@subCategory.CategoryModel.Name">
+                            @subCategory.CategoryModel.Name</a>
+                        </li>
+                    }
+
+                    @if (item.SubCategories.Count == megaMenuSettings.NumberOfCategories)
+                    {
+                        <li>
+                            <a class="view-all" href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })">@T("SevenSpikes.MegaMenu.ViewAllCategories")</a> 
+                        </li>
+                    }
+                </ul>
+                </text>
+                ))
+            </div>
+        </div>
+        <!--dropdown-->
+    </li>
+    }
+    else
+    {
+        foreach (var category in Model.CategoriesModels)
+        {
+            <li><a href="@Url.RouteUrl("Category", new { SeName = category.CategoryModel.SeName })">@category.CategoryModel.Name</a>
+                @if (category.SubCategories.Count > 0)
+                {
+                    <div class="dropdown categories fullWidth">
+                        @(Html.DataTable<SevenSpikes.Nop.Plugins.MegaMenu.Models.MegaMenuCategoryModel>(category.SubCategories, 4, "row", "box",
+                                    @<text>
+                        <div class="title">
+                            <strong>
+                                <a href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })" title="@item.CategoryModel.PictureModel.Title">@item.CategoryModel.Name</a>
+                            </strong>
+                        </div>
+                        <div class="picture">
+                            <a href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })" title="@item.CategoryModel.PictureModel.Title">
+                                <img class="lazy" alt="@item.CategoryModel.PictureModel.AlternateText" src="#" data-original="@item.CategoryModel.PictureModel.ImageUrl"
+                                                        title="@item.CategoryModel.PictureModel.Title" /></a>
+                        </div>
+                        <ul class="subcategories">
+                            @foreach (var subCategory1 in item.SubCategories.Take(megaMenuSettings.NumberOfCategories))
+                            {
+                                <li><a href="@Url.RouteUrl("Category", new { SeName = subCategory1.CategoryModel.SeName })" title="@subCategory1.CategoryModel.Name">
+                                    @subCategory1.CategoryModel.Name</a>
+                                </li>
+                            }
+                            @if (item.SubCategories.Count == megaMenuSettings.NumberOfCategories)
+                            {
+                                <li>
+                                    <a class="view-all" href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })">@T("SevenSpikes.MegaMenu.ViewAllCategories")</a> 
+                                </li>
+                            }
+                        </ul>
+                        </text>
+                                 ))
+                    </div>
+                    <!--dropdown-->
+                }
+            </li>
+        }
+    }
+}

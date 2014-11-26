@@ -1,0 +1,62 @@
+﻿.filtersTitlePanel p {
+    float: right !important;
+    margin: 0 0 0 5px !important;
+}
+.filtersGroupPanel a {
+    text-align: right !important;
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+}
+    .filtersGroupPanel a.ui-slider-handle {
+        padding: 0 !important;
+    }
+    .filtersDropDown ul a {
+        padding: 0 3px !important;
+    }
+.nopAjaxFilters7Spikes .block .title a.toggleControl {
+    background: url("images/rtl-filterGroupToggle.png") no-repeat right 5px !important;
+    padding: 0 15px 0 0 !important;
+    float: right !important;
+}
+    .nopAjaxFilters7Spikes .block .title a.toggleControl.closed {
+        background-position: right -8px !important;
+    }
+.nopAjaxFilters7Spikes .block .title a.clearFilterOptions,
+.nopAjaxFilters7Spikes .clearFilterOptionsAll {
+    float: left !important;
+}
+
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemUnselected {
+    background-position: right 3px !important;
+}
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelected {
+    background-position: right -17px !important;
+}
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemSelectedDisabled {
+    background-position: right -37px !important;
+}
+.nopAjaxFilters7Spikes .filtersGroupPanel a.filterItemDisabled {
+    background-position: right -57px !important;
+}
+
+.sortOptionsDropDown,
+.viewOptionsDropDown,
+.productsPageSizeDropDown {
+    background-position: 6px 6px !important;
+}
+.sortOptionsDropDown .toplevel p,
+.productsPageSizeDropDown .toplevel p,
+.jDropDown .toplevel p,
+.jDropDown ul li span, 
+.jDropDown ul li a {
+    text-align: right !important;
+}
+.product-sorting > *,
+.product-page-size > *,
+.product-viewmode > * {
+    float: right !important;
+}
+
+.filtersDropDown {
+    background-position: 7px 6px !important;
+}

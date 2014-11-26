@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Value>SevenSpikes</Value>
+    <Children>
+      <LocaleResource Name="Mappings">
+        <Value>Nop Mappings</Value>
+        <Children>
+          <LocaleResource Name="WidgetZones">
+            <Value>Widget Zones</Value>
+            <Children>
+              <LocaleResource Name="Name">
+                <Value>Widget Zone</Value>
+              </LocaleResource>
+              <LocaleResource Name="DisplayOrder">
+                <Value>Display Order</Value>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

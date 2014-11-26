@@ -1,0 +1,64 @@
+.product-details-page .full-description,
+.product-details-page .product-specs-box, 
+.ui-tabs .product-specs-box .title {
+    display: none;
+}
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+
+.productTabs {
+	margin-top: 20px !important;
+	padding: 0 !important;
+	border: none !important;
+    background: none;
+}
+.productTabs .ui-tabs-nav {
+	overflow:hidden; background:#657d9e url('images/boxhead1.png') repeat-x; padding:0; border:1px solid #999; border-bottom:1px solid #888; border-radius:2px;
+	box-shadow:0 0 3px #fff inset; font:bold 13px/38px Arial,Helvetica,sans-serif; color:#fff; text-shadow: -1px -1px 0 #666;
+}
+.productTabs-header li {
+	height: 38px !important;
+	background: none !important;
+	margin: 0 1px 0 0 !important;
+	padding: 0 !important;
+	border: none !important;
+}
+.productTabs-header li a {
+	display: block;
+	padding: 0 15px !important;
+	font :bold 13px/38px Arial,Helvetica,sans-serif !important;
+	color: #fff !important;
+	text-shadow: -1px -1px 0 #666 !important;
+}
+.productTabs-header li:hover {
+	background:url('images/tab.png') center repeat-x !important;
+}
+.productTabs .ui-tabs-selected {
+	background:url('images/tab.png') center repeat-x !important;
+	cursor: default !important;
+}
+.productTabs-body {
+	background: #eef;
+	border: 1px solid #ccc;
+    border-radius: 0 0 2px 2px;
+}
+.productTabs-body p {
+    margin: 8px 0;
+}
+.productTabs-body ul {
+	margin: 12px 0;
+	padding-left: 36px;
+	list-style: disc;
+}
+.productTabs-body ol {
+	margin: 12px 0;
+	padding-left: 36px;
+	list-style: decimal;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+    cursor: default;
+}

@@ -1,0 +1,48 @@
+﻿@** Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*@
+
+@{
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/PriceRangeFilterSlider.min.js");
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.AjaxFilters/Scripts/jquery.ui.touch-punch.min.js");
+}
+
+@model SevenSpikes.Nop.Plugins.AjaxFilters.Models.PriceRangeFilterSlider.PriceRangeFilterModel7Spikes
+
+@{
+    string toggleStateClass = "toggleControl";
+    string toggleStateStyles = "";
+    if (Model.NopAjaxFiltersSettings.ClosePriceRangeFilterBox == true)
+    {
+        toggleStateClass = "toggleControl closed";
+        toggleStateStyles = "display: none;";
+    }
+}
+
+<div class="block filter-block priceRangeFilterPanel7Spikes" data-currentCurrencySymbol="@Model.CurrencySymbol">
+    <div class="title">
+        <a class="@toggleStateClass">@T("SevenSpikes.NopAjaxFilters.Client.PriceRangeFilter.Title")</a>
+        <a class="clearPriceRangeFilter">@T("SevenSpikes.NopAjaxFilters.Client.Common.Clear")</a>
+    </div>
+    <div class="filtersGroupPanel" style="@toggleStateStyles">
+        <div class="priceRangeMinMaxPanel">
+            <span class="priceRangeMinPanel">
+                <span>@T("SevenSpikes.NopAjaxFilters.Client.PriceRangeFilter.Min"):</span>
+                <span class="priceRangeMinPrice">@Model.MinPriceFormatted</span>
+            </span>
+            <span class="priceRangeMaxPanel">
+                <span>@T("SevenSpikes.NopAjaxFilters.Client.PriceRangeFilter.Max"):</span>
+                <span class="priceRangeMaxPrice">@Model.MaxPriceFormatted</span>
+            </span>
+        </div>
+        <div id="slider" data-sliderMinValue="@Model.MinPrice" data-sliderMaxValue="@Model.MaxPrice"
+                data-selectedFromValue="@Model.SelectedPriceRange.From" data-selectedToValue="@Model.SelectedPriceRange.To"
+                data-customFormatting="@Model.Formatting" >
+        </div>
+        <div class="priceRangeCurrentPricesPanel">
+            <span class="currentMinPrice">@String.Concat(Model.CurrencySymbol, Model.SelectedPriceRange.From)</span>
+            <span class="currentMaxPrice">@String.Concat(Model.CurrencySymbol, Model.SelectedPriceRange.To)</span>
+        </div>
+    </div>
+</div>
+

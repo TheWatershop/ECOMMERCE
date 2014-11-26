@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=ECOMMERCE;Initial Catalog=NOP;Integrated Security=True;Persist Security Info=False;MultipleActiveResultSets=True

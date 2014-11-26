@@ -1,0 +1,260 @@
+﻿/*=====================================================
+    
+    MAIN CSS / SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media screen and (min-width: 240px) {
+
+*{
+	direction: rtl;
+}
+
+    .ui-dialog-titlebar span,
+    .search-box input.search-box-text,
+    .search-box .search-box-button,
+    .newsletter-email input[type="text"],
+    .newsletter-email input[type="button"],
+    .block .tags li a,
+    .product-tags-all-page li a,
+    .overview .add-to-cart-panel > *,
+    .variant-overview .add-to-cart-panel > *,
+    .product-review-item .review-title,
+    .cart-collaterals .coupon-code input[type="text"],
+    .cart-collaterals .coupon-code input[type="submit"],
+    .order-details-area td {
+	    float: right;
+    }
+    #lbCloseLink,
+    .product-review-item .product-review-box {
+	    float: left;
+    }
+    .new_select,
+    .contacts,
+    #lbBottom,
+    .opc .step-title {
+	    text-align: right;
+    }
+    .ui-dialog-buttonset {
+	    text-align: left;
+    }
+
+    .category-description ul,
+    .manufacturer-description ul,
+    .full-description ul,
+    .topic-html-content ul,
+    .topic-page ul,
+    .post-body ul{
+	    padding: 0 36px 0 0;
+    }
+    .category-description ol,
+    .manufacturer-description ol,
+    .full-description ol,
+    .topic-html-content ol,
+    .topic-page ol,
+    .post-body ol{
+	    padding: 0 36px 0 0;
+    }
+    #goToTop{
+	    left: 20px;
+	    right: auto;
+    }
+    .required{
+	    margin: 0 0 0 -6px;
+    }
+
+
+
+    /*********** BAR NOTIFICATION & JQUERY POPUPS  ***********/
+
+        .bar-notification{
+	        right: 0;
+	        left: auto;
+	        padding: 10px 10px 10px 25px;
+        }
+        .bar-notification .content{
+	        float: right;
+	        margin: 0 0 0 10px;
+        }
+        .bar-notification .close{
+	        left: 0;
+	        right: auto;
+        }
+        .ui-dialog-titlebar button{
+	        left: 0;
+	        right: auto;
+        }
+        .ui-dialog-buttonset button{
+	        margin-right: 5px;
+	        margin-left: 0;
+        }
+
+
+
+    /*********** HEADER & NAVIGATION ***********/
+
+        .admin-header-links{
+	        right: 0;
+	        left: auto;
+        }
+        .new_select > span{
+	        padding: 0 8px 0 32px;
+        }
+        .new_select > span:after{
+	        left: 4px;
+	        right: auto;
+        }
+        .language-list img{
+	        left: 0;
+	        right: 0;
+        }
+        .cart-wrapper > div{
+	        padding: 8px 8px 8px 36px;
+        }
+        .cart-wrapper .cart-qty{
+	        left: 4px;
+	        right: auto;
+        }
+        .ui-autocomplete.ui-menu.ui-widget.ui-widget-content img{
+	        margin-left: 5px;
+	        margin-right: 0;
+        }
+        .contacts li span:before{
+	        margin: 0 0 0 10px;
+        }
+        .contacts li.phone span:before{
+	        background-position: right 0;
+        }
+        .contacts li.mobile span:before{
+	        background-position: right -32px;
+        }
+        .contacts li.email span:before{
+	        background-position: right -64px;
+        }
+        .contacts li.skype span:before{
+	        background-position: right -96px;
+        }
+        .footlist a:before{
+	        margin: 0 0 0 10px;
+            background: url('../img/rtl-arrow2.png') center no-repeat;
+        }
+        .footer-store-theme:after{
+	        left: 4px;
+	        right: auto;
+        }
+        .footer-store-theme select{
+	        left: 0;
+	        right: 0;
+        }
+        .block .list a,
+        .block .year strong{
+	        padding: 10px 20px 10px 0;
+        }
+        .block .list a:before,
+        .block .year strong:before{
+	        right: 0;
+	        left: auto;
+        }
+        .block .list a:before {
+            background-image: url('../img/rtl-arrow3.png');
+        }
+        .block .sublist a:before {
+            background-image: url('../img/rtl-arrow3-black.png');
+        }
+        .todays-poll-box{
+	        margin-left: auto;
+	        margin-right: auto;
+        }
+        .item-box .details{
+	        right: 0;
+	        left: auto;
+        }
+        .item-box .old-price{
+	        margin: 0 0 0 5px;
+        }
+        .gallery .picture img,
+        .gallery .picture-thumbs img,
+        .variant-picture img{
+	        left: 0;
+	        right: 0;
+        }
+        /*Default Zoom start*/
+        #lbOverlay{
+	        right: 0;
+	        left: auto;
+        }
+        #lbImage{
+	        right: 0;
+	        left: auto;
+        }
+        #lbPrevLink{
+	        right: 0;
+	        left: auto;
+        }
+        #lbNextLink{
+	        left: 0;
+	        right: auto;
+        }
+        #lbCaption,
+        #lbNumber{
+	        margin: 0 0 0 70px;
+        }
+        .overview .qty-label,
+        .variant-overview .qty-label{
+	        right: -35px;
+	        left: auto;
+        }
+        .overview .qty-input, .variant-overview .qty-input {
+            margin: 0 0 0 -10px;
+        }
+        .product-tags-list li.separator{
+	        margin: 0 3px 0 5px;
+        }
+        .product-review-helpfulness .question{
+	        margin: 0 0 0 5px;
+        }
+        .product-review-helpfulness .result{
+	        margin: 0 10px 0 0;
+        }
+        .enter-password-form input[type="password"]{
+	        float: right !important;
+        }
+        .enter-password-form input[type="submit"]{
+	        float: right !important;
+	        padding: 0 15px 0 20px !important;
+        }
+        .registration-page select + select,
+        .account-page select + select{
+	        margin: 0 10px 0 0;
+        }
+        .opc .step-title span{
+	        margin: 0 0 0 5px;
+        }
+
+
+
+    /*********** SEARCH & SITEMAP ***********/
+
+        .search-input input + label{
+	        margin: 0 2px 0 0;
+        }
+        .advanced-search .price-range{
+	        margin: 0 -30px 0 0;
+        }
+        .sitemap-page li{
+	        margin: 0 0 0 20px;
+        }
+        .sitemap-page li:after{
+	        left: -15px;
+	        right: auto;
+        }
+        .blog-page .tags li.separator,
+        .blogpost-page .tags li.separator{
+	        margin: 0 3px 0 5px;
+        }
+        .comment-info .avatar img{
+	        left: 0;
+	        right: 0;
+        }
+
+}

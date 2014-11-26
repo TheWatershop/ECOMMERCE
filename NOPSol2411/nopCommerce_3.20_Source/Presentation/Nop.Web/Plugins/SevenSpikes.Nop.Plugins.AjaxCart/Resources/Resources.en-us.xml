@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Value></Value>
+    <Children>
+      <LocaleResource Name="NopAjaxCart">
+        <Value>Nop Ajax Cart</Value>
+        <Children>
+          <LocaleResource Name="Admin">
+            <Value>Nop Ajax Cart</Value>
+            <Children>
+              <LocaleResource Name="Submenus">
+                <Value>Submenu names</Value>
+                <Children>
+                  <LocaleResource Name="Settings">
+                    <Value>Settings</Value>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Settings">
+                <Value>Nop Ajax Cart Settings</Value>
+                <Children>
+                  <LocaleResource Name="GeneralSettingsTitle">
+                    <Value>General Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AjaxCartAvailabilitySettings">
+                    <Value>Ajax Cart Availability Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AjaxCartSelectorsSettings">
+                    <Value>Ajax Cart Selectors Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductAddedToCartPopupSettings">
+                    <Value>Product Added To Cart Popup Settings</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableNopAjaxCart">
+                    <Value>Enable Nop Ajax Cart</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the Nop Ajax Cart plugin will be enabled.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableNopAjaxCartAsWidget">
+                    <Value>Enable Nop Ajax Cart As Widget</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>If checked the Nop Ajax Cart plugin will be enabled as a widget.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableOnProductPage">
+                    <Value>Enable Nop Ajax Cart on Product Page</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies whether the Nop Ajax Cart functionality is enabled on product page.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableOnCatalogPages">
+                    <Value>Enable Nop Ajax Cart On Pages With Product Boxes</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies whether the Nop Ajax Cart functionality is enabled on pages such as category, manufacturer, recently viewed, recently added, etc. pages.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableProductQuantityTextBox">
+                    <Value>Enable Product Quantity Text Box On Pages With Product Boxes</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies whether the product quantity text box is enabled for products in product boxes.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableOnMultiProductVariants">
+                    <Value>Enable Ajax Cart On Grouped Product On Pages With Product Boxes</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specifies whether the Ajax Cart should be used for grouped products on pages with product boxes.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="PageElementSelector">
+                    <Value>Page Element Selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The selector for the html element of the page. This selector should be available on all pages. The Nop Ajax Cart plugin uses this element to add dynamic content to it, like modal dialogs and ajax busy animation.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ShoppingCartMenuLinkSelector">
+                    <Value>Shopping Cart Menu Link Selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The selector for the html element in the header link, which contains information about the number of items in the shopping cart.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="FlyoutCartPanelSelector">
+                    <Value>Flyout Shopping Cart Element Selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The selector for the flyout shopping cart element. It is used by the Nop Ajax Cart plugin to update the flyout shopping cart after a product has been added to the shopping cart.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductPageAddToCartButtonSelector">
+                    <Value>Product Page "Add To Cart" Button Selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The selector for the product page "Add to cart" button on the product details page. It is used by the integration of the Nop Ajax Cart plugin.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductBoxAddToCartButtonSelector">
+                    <Value>Product Box "Add To Cart" Button Selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The selector for the product box "Add to cart" button. The product box is used for listing products on pages like category page, manufacturer page, home page, etc. It is used by the integration of the Nop Ajax Cart plugin.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductBoxProductItemElementSelector">
+                    <Value>Product Box Product Item Element Selector</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>The product item element within the product box holds the ID of the product. The Ajax Cart need this ID in order to work."</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="ProductAddedToCartImageSize">
+                    <Value>Product Added To Cart Image Size (pixels)</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specify the image size of the image displayed on the product added to cart window (in pixels).</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="MiniProductDetailsViewImageSize">
+                    <Value>Mini Product Details View Image Size (pixels)</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Specify the image size of the images displayed on the mini product details window (show for multi product variants) (in pixels).</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="Theme">
+                    <Value>Theme</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Select the theme for the Ajax Cart</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableRelatedProductsInPopup">
+                    <Value>Show Related Products In Popup</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Show related products in the popup after adding product to the cart.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="NumberOfRelatedProductsInPopup">
+                    <Value>Number Of Related Products In Popup</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Set the number of Related Products in the popup.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="EnableCrossSellProductsInPopup">
+                    <Value>Show Cross Sell Products In Popup</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Show cross sell products in the popup after adding product to the cart.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                  <LocaleResource Name="NumberOfCrossSellProductsInPopup">
+                    <Value>Number Of Cross Sell Products In Popup</Value>
+                    <Children>
+                      <LocaleResource Name="Hint">
+                        <Value>Set the number of Cross Sell Products in the popup.</Value>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="ClickToConfigure">
+                <Value>To configure the plugin either click HERE or go to Plugins -> Nop Ajax Cart -> Settings</Value>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+          <LocaleResource Name="ShoppingCartNotificationBoxQuantity">
+            <Value>Quantity</Value>
+          </LocaleResource>
+          <LocaleResource Name="ShoppingCartNotificationBoxContinueShopping">
+            <Value>Continue Shopping</Value>
+          </LocaleResource>
+          <LocaleResource Name="ShoppingCartNotificationBoxViewYourBasket">
+            <Value>View Your Basket</Value>
+          </LocaleResource>
+          <LocaleResource Name="ShoppingCartNotificationBoxTitle">
+            <Value>Just Added To Your Basket</Value>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes">
+    <Children>
+      <LocaleResource Name="SmartTheme">
+        <Value>Nop Smart Theme</Value>
+      </LocaleResource>
+      <LocaleResource Name="Themes">
+        <Children>
+          <LocaleResource Name="ProductCompareName">
+            <Value>Name</Value>
+          </LocaleResource>
+          <LocaleResource Name="Smart">
+            <Children>
+              <LocaleResource Name="Admin">
+                <Children>
+                  <LocaleResource Name="Settings">
+                    <Value>Settings</Value>
+                    <Children>
+                      <LocaleResource Name="ThemeSettings">
+                        <Value>Smart Theme Settings</Value>
+                        <Children>
+                          <LocaleResource Name="Preset">
+                            <Value>Preset</Value>
+                            <Children>
+                              <LocaleResource Name="Hint">
+                                <Value>Choose your color preset of the theme.</Value>
+                              </LocaleResource>
+                            </Children>
+                          </LocaleResource>
+                        </Children>
+                      </LocaleResource>
+                    </Children>
+                  </LocaleResource>
+                </Children>
+              </LocaleResource>
+              <LocaleResource Name="Common">
+                <Children>
+                  <LocaleResource Name="Phone">
+                    <Value>+222 (Phone) 987654</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Mobile">
+                    <Value>+111 (Mobile) 012345</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Email">
+                    <Value>support [at] smartstore.com</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Skype">
+                    <Value>skype_smart</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="LegalInformation">
+                    <Value>Legal Information</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="SecurePayment">
+                    <Value>Secure Payment</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="LicenseAgreement">
+                    <Value>License Agreement</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ShippingReturns">
+                    <Value>Shipping and Returns</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="InternationalShipping">
+                    <Value>International Shipping</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="DeliveryInformation">
+                    <Value>Delivery Information</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="AffiliateExtras">
+                    <Value>Affiliate and Extras</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="Brands">
+                    <Value>Brands</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="GiftVouchers">
+                    <Value>Gift Vouchers</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="BecomeAffiliate">
+                    <Value>Become Affiliate</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="ServiceSupport">
+                    <Value>Service and Support</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CustomerAssistance">
+                    <Value>Customer Assistance</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="FAQ">
+                    <Value>Frequently Asked Questions</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="GoToPage">
+                    <Value>Product's page</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="GoTo">
+                    <Value>Go to...</Value>
+                  </LocaleResource>
+
+                  
+
+
+                  <LocaleResource Name="Help">
+                    <Value>Help</Value>
+                  </LocaleResource>
+                
+                  <LocaleResource Name="CustomerServices">
+                    <Value>Customer services</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="CompanyInfo">
+                    <Value>Company info</Value>
+                  </LocaleResource>
+
+                  <LocaleResource Name="Search">
+                    <Value>Search</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="OurOffers">
+                    <Value>Our Offers</Value>
+                  </LocaleResource>
+                 
+                  <LocaleResource Name="EmailName">
+                    <Value>sales</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="EmailDomain">
+                    <Value>store.com</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="FollowUs">
+                    <Value>Follow us</Value>
+                  </LocaleResource>
+                  <LocaleResource Name="PaymentOptions">
+                    <Value>Payment options</Value>
+                  </LocaleResource>
+                 
+                </Children>
+              </LocaleResource>
+            </Children>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  <LocaleResource Name="Order">
+    <Children>
+      <LocaleResource Name="Shipments">
+        <Children>
+          <LocaleResource Name="ID">
+            <Value>Shipments ID</Value>
+          </LocaleResource>
+        </Children>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  <LocaleResource Name="shoppingcart">
+    <Value>Shopping Cart</Value>
+    <Children>
+      <LocaleResource Name="headerquantity">
+        <Value>{0}</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  <LocaleResource Name="wishlist">
+    <Value>Wishlist</Value>
+    <Children>
+      <LocaleResource Name="headerquantity">
+        <Value>{0}</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>
