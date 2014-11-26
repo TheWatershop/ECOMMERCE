@@ -1,0 +1,1592 @@
+OBJECT Table 50000 Integration Table
+{
+  OBJECT-PROPERTIES
+  {
+    Date=01/04/14;
+    Time=[ 12:00:00 AM];
+    Modified = Yes;
+    Version List=CEINT1.00;
+  }
+  PROPERTIES
+  {
+  }
+  FIELDS
+  {
+    { 1   ;   ;Index                  ;Integer        ;AutoIncrement=Yes }
+    { 2   ;   ;RecType                  ;Code10        ;Description=CEINT1.00 }
+    { 3   ;   ;Status                  ;Integer        ;Description=CEINT1.00 }
+    { 4   ;   ;NCNo                  ;Integer        ;Description=CEINT1.00 }
+    { 5   ;   ;NCDoc                  ;Integer        ;Description=CEINT1.00 }
+    { 6   ;   ;ErrorText                  ;Text250        ;Description=CEINT1.00 }
+    { 7   ;   ;f1                  ;Text80        ;Description=CEINT1.00 Doc Type }
+    { 8   ;   ;f2                  ;Integer        ;Description=CEINT1.00 Spec ID }
+    { 9   ;   ;f3                  ;Text80        ;Description=CEINT1.00 Desciption }
+    { 10   ;   ;f4                  ;Decimal        ;Description=CEINT1.00 Amount wo tax }
+    { 11   ;   ;f5                  ;Decimal        ;Description=CEINT1.00 Amount/Price }
+    { 12   ;   ;f6                  ;Decimal        ;Description=CEINT1.00 Cost }
+    { 13   ;   ;f7                  ;Decimal        ;Description=CEINT1.00 Invt }
+    { 14   ;   ;f8                  ;Boolean        ;Description=CEINT1.00 include vat }
+    { 15   ;   ;f9                  ;Text30        ;Description=CEINT1.00 currency code }
+    { 16   ;   ;f10                  ;Decimal        ;Description=CEINT1.00 currency rate }
+    { 17   ;   ;f11                  ;Text80        ;Description=CEINT1.00 fname }
+    { 18   ;   ;f12                  ;Text80        ;Description=CEINT1.00 lname }
+    { 19   ;   ;f13                  ;Text80        ;Description=CEINT1.00 address }
+    { 20   ;   ;f14                  ;Text80        ;Description=CEINT1.00 city }
+    { 21   ;   ;f15                  ;Integer        ;Description=CEINT1.00 Spec ID2 }
+    { 22   ;   ;f16                  ;Text250        ;Description=CEINT1.00 desc2 }
+    { 23   ;   ;f17                  ;Code20        ;Description=CEINT1.00 Postcode }
+    { 24   ;   ;f18                  ;Text80        ;Description=CEINT1.00 name }
+    { 25   ;   ;f19                  ;Boolean        ;Description=CEINT1.00 enabled }
+    { 26   ;   ;f20                  ;DateTime        ;Description=CEINT1.00 DT }
+  }
+  KEYS
+  {
+    {    ;Index                                      ;Clustered=Yes }
+    {    ;RecType,NCNo,NCDoc                      }
+  }
+  FIELDGROUPS
+  {
+  }
+  CODE
+  {
+
+    BEGIN
+    {
+      DWG - Cyber Eagle Mgt
+      ----
+      01/04/14  CEINT1.00
+      Core table for integration engine-Loading Table
+      Generated with Integration Engine V1.0.5204.39139
+    }
+    END.
+  }
+}
+
+OBJECT Table 50001 Integration Mapping Table
+{
+  OBJECT-PROPERTIES
+  {
+    Date=01/04/14;
+    Time=[ 12:00:00 AM];
+    Modified = Yes;
+    Version List=CEINT1.00;
+  }
+  PROPERTIES
+  {
+  }
+  FIELDS
+  {
+    { 1   ;   ;Type                  ;Code10        ;Description=CEINT1.00 }
+    { 2   ;   ;NCID                  ;Integer        ;Description=CEINT1.00 }
+    { 3   ;   ;NAVID                  ;Code20        ;Description=CEINT1.00 }
+    { 4   ;   ;NAVLineNo                  ;Integer        ;Description=CEINT1.00 }
+    { 5   ;   ;LoadingIndex                  ;Integer        ;Description=CEINT1.00 }
+  }
+  KEYS
+  {
+    {    ;LoadingIndex                                      ;Clustered=Yes }
+    {    ;Type,NCID,NAVID,NAVLineNo                                      ;}
+  }
+  FIELDGROUPS
+  {
+  }
+  CODE
+  {
+
+    BEGIN
+    {
+      DWG - Cyber Eagle Mgt
+      ----
+      01/04/14  CEINT1.00
+      Core table for integration engine-Loading Table
+      Generated with Integration Engine V1.0.5204.39139
+    }
+    END.
+  }
+}
+
+OBJECT Table 50019 Integration Setup Table
+{
+  OBJECT-PROPERTIES
+  {
+    Date=01/04/14;
+    Time=[ 12:00:00 AM];
+    Modified = Yes;
+    Version List=CEINT1.00;
+  }
+  PROPERTIES
+  {
+  }
+  FIELDS
+  {
+    { 1   ;   ;Primary Key                  ;Code10        ;Description=CEINT1.00 }
+    { 2   ;   ;Company Name                  ;Text50        ;Description=CEINT1.00 }
+    { 3   ;   ;Import Batch Interval                  ;Duration        ;Description=CEINT1.00 }
+    { 4   ;   ;Last Import DateTime                  ;DateTime        ;Description=CEINT1.00 }
+    { 5   ;   ;CELibrary Directory                  ;Text250        ;Description=CEINT1.00 }
+  }
+  KEYS
+  {
+    {    ;Primary Key                                      ;Clustered=Yes }
+  }
+  FIELDGROUPS
+  {
+  }
+  CODE
+  {
+
+    BEGIN
+    {
+      DWG - Cyber Eagle Mgt
+      ----
+      01/04/14  CEINT1.00
+      Core table for integration engine-Loading Table
+      Generated with Integration Engine V1.0.5204.39139
+    }
+    END.
+  }
+}
+
+OBJECT Codeunit 50001 Integration Codeunit
+{
+  OBJECT-PROPERTIES
+  {
+    Date=01/04/14;
+    Time=[ 12:00:00 AM];
+    Modified = Yes;
+    Version List=CEINT1.00;
+  }
+  PROPERTIES
+  {
+    TableNo=50000;
+    OnRun=BEGIN
+          case Rec.RecType OF
+           'CAT' : ProcessCAT(Rec);
+           'ROLE' : ProcessROLE(Rec);
+           'CUST' : ProcessCUST(Rec);
+           'ITEM' : ProcessITEM(Rec);
+           'PRICE' : ProcessPRICE(Rec);
+           'SADDR' : ProcessSADDR(Rec);
+           'SH' : ProcessSH(Rec);
+           'SHL' : ProcessSHL(Rec);
+          END;
+          END;
+
+  }
+  CODE
+  {
+    VAR
+      Records@1000000 : Record 50000;
+      Records2@1000001 : Record 50000;
+      cucore@1000002 : Codeunit 50001;
+      IsProcess@1000003 : Boolean;
+      RetStr@1000004 : Text[250];
+      RetInt@1000005 : Integer;
+      Setup@1000006 : Record 50019;
+      BT@1000007 : Text[1024];
+      BT2@1000008 : BigText;
+      newDT@1000009 : DateTime;
+      EvalInteger@1000010 : Integer;
+      EvalDecimal@1000011 : Decimal;
+      WshShell@1101235001 : Automation "{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B} 1.0:{72C24DD5-D70A-438B-8A42-98424B88AFB8}:'Windows Script Host Object Model'.WshShell";
+      CmdStr@1000012 : Text[1024];
+      wshMode@1000013 : Integer;
+      wshWait@1000014 : Boolean;
+      OFile@1000015 : File;
+      OStream@1000016 : OutStream;
+      SERV2@1000017 : Record 5941;
+      SERV3@1000018 : Record 5940;
+    PROCEDURE ExportCAT@1000058(CAT@1000059 : Record 5722;);
+    VAR
+          Rc@1000060 : Record 50000;
+          rmap@1000061 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'CAT');
+             rmap.SETRANGE(NAVID,CAT."Code");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'CAT';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'CAT';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := CAT."Code";
+             rmap.INSERT;
+          END;
+         Rc."f3" := CAT."Description";
+         Rc."f8" := CAT."Show On Home Page";
+         Rc."f16" := CAT."NCDescription";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportROLE@1000062(ROLE@1000063 : Record 6;);
+    VAR
+          Rc@1000064 : Record 50000;
+          rmap@1000065 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'ROLE');
+             rmap.SETRANGE(NAVID,ROLE."Code");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'ROLE';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'ROLE';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := ROLE."Code";
+             rmap.INSERT;
+          END;
+         Rc."f3" := ROLE."Description";
+         Rc."f8" := NOT ROLE."Price Includes VAT";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportCUST@1000066(CUST@1000067 : Record 18;);
+    VAR
+          Rc@1000068 : Record 50000;
+          rmap@1000069 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'CUST');
+             rmap.SETRANGE(NAVID,CUST."No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'CUST';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'CUST';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := CUST."No.";
+             rmap.INSERT;
+          END;
+         Rc."f1" := CUST."Password Salt";
+      IF CUST."County" <> '' THEN
+      rc.f2 := GETNCID('STATE',CUST."County");
+         Rc."f3" := CUST."E-Mail";
+         Rc."f8" := CUST."NCDeleted";
+         Rc."f11" := CUST."First Name";
+         Rc."f12" := CUST."Surname";
+         Rc."f13" := CUST."Address";
+         Rc."f14" := CUST."City";
+      IF CUST."Customer Price Group" <> '' THEN
+      rc.f15 := GETNCID('ROLE',CUST."Customer Price Group");
+         Rc."f16" := CUST."Password";
+         Rc."f18" := CUST."Name";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportITEM@1000070(ITEM@1000071 : Record 27;);
+    VAR
+          Rc@1000072 : Record 50000;
+          rmap@1000073 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'ITEM');
+             rmap.SETRANGE(NAVID,ITEM."No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'ITEM';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'ITEM';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := ITEM."No.";
+             rmap.INSERT;
+          END;
+      IF ITEM."Item Category Code" <> '' THEN
+      rc.f2 := GETNCID('CAT',ITEM."Item Category Code");
+         Rc."f3" := ITEM."Description";
+         Rc."f5" := ITEM."Unit Price";
+         Rc."f6" := ITEM."Unit Cost";
+         Rc."f7" := ITEM."Inventory";
+         Rc."f8" := ITEM."IsFeaturedProduct";
+         Rc."f16" := ITEM."NCDescription";
+         Rc."f19" := ITEM."NCDeleted";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportPRICE@1000074(PRICE@1000075 : Record 7002;);
+    VAR
+          Rc@1000076 : Record 50000;
+          rmap@1000077 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'PRICE');
+             rmap.SETRANGE(NAVID,PRICE."Item No."+','+PRICE."Sales Code");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'PRICE';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'PRICE';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := PRICE."Item No."+','+PRICE."Sales Code";
+             rmap.INSERT;
+          END;
+      IF PRICE."Item No." <> '' THEN
+      rc.f2 := GETNCID('ITEM',PRICE."Item No.");
+         Rc."f5" := PRICE."Unit Price";
+         Rc."f7" := PRICE."Minimum Quantity";
+      IF PRICE."Sales Code" <> '' THEN
+      rc.f15 := GETNCID('ROLE',PRICE."Sales Code");
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportSADDR@1000078(SADDR@1000079 : Record 222;);
+    VAR
+          Rc@1000080 : Record 50000;
+          rmap@1000081 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'SADDR');
+             rmap.SETRANGE(NAVID,SADDR."Code"+','+SADDR."Customer No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'SADDR';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'SADDR';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SADDR."Code"+','+SADDR."Customer No.";
+             rmap.INSERT;
+          END;
+      IF SADDR."Customer No." <> '' THEN
+      rc.f2 := GETNCID('CUST',SADDR."Customer No.");
+         Rc."f11" := SADDR."First Name";
+         Rc."f12" := SADDR."Surname";
+         Rc."f13" := SADDR."Address";
+         Rc."f14" := SADDR."City";
+      IF SADDR."County" <> '' THEN
+      rc.f15 := GETNCID('STATE',SADDR."County");
+         Rc."f18" := SADDR."Name";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportSH@1000082(SH@1000083 : Record 36;);
+    VAR
+          Rc@1000084 : Record 50000;
+          rmap@1000085 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'SH');
+             rmap.SETRANGE(NAVID,SH."No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'SH';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'SH';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SH."No.";
+             rmap.INSERT;
+          END;
+      IF SH."Sell-to Customer No." <> '' THEN
+      rc.f2 := GETNCID('CUST',SH."Sell-to Customer No.");
+         Rc."f4" := SH."Amount";
+         Rc."f9" := SH."Currency Code";
+         Rc."f10" := SH."Currency Factor";
+         Rc."f11" := SH."Bill-to Name";
+         Rc."f12" := SH."Bill-to Name 2";
+         Rc."f13" := SH."Bill-to Address";
+         Rc."f14" := SH."Bill-to City";
+      IF SH."Ship-to Code" <> '' THEN
+      rc.f15 := GETNCID('SADDR',SH."Ship-to Code"+','+SH."Sell-to Customer No.");
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+             SERV3.SETFILTER("Description 2",'*' + SH."No.");
+             IF SERV3.FINDSET THEN REPEAT
+                 SERV2.SETRANGE("Parent Service Item No.",SERV3."No.");
+                 IF SERV2.FINDSET THEN REPEAT
+                     EXPORTSERV(SERV2,SH."No.");
+                 UNTIL SERV2.NEXT = 0;
+             UNTIL SERV3.NEXT = 0;
+    END;
+    PROCEDURE ExportSHL@1000086(SHL@1000087 : Record 37;);
+    VAR
+          Rc@1000088 : Record 50000;
+          rmap@1000089 : Record 50001;
+          ITEM@1000090 : Record 27;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'SHL');
+             rmap.SETRANGE(NAVID,SHL."Document No.");
+             rmap.SETRANGE(NAVLineNo,SHL."Line No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'SHL';
+             Rc.NCDoc := GETNCID('SH',SHL."Document No.");
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'SHL';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SHL."Document No.";
+             rmap.NAVLineNo := SHL."Line No.";
+             rmap.INSERT;
+          END;
+          IF SHL."Unit Price incl GST" = 0 THEN
+             SHL."Unit Price incl GST" := SHL."Unit Price" +SHL."Unit Price" * SHL."VAT %";
+      IF SHL."No." <> '' THEN
+      rc.f2 := GETNCID('ITEM',SHL."No.");
+         Rc."f3" := SHL."Description";
+         Rc."f4" := SHL."Amount";
+         Rc."f5" := SHL."Amount Including VAT";
+         Rc."f6" := SHL."Unit Price";
+         Rc."f7" := SHL."Quantity";
+         Rc."f10" := SHL."Unit Price incl GST";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportSERV@1000091(SHL@1000092 : Record 5941;DocNo@1000093 : Code[20]);
+    VAR
+          Rc@1000094 : Record 50000;
+          rmap@1000095 : Record 50001;
+          ITEM@1000096 : Record 27;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'SHL');
+             rmap.SETRANGE(NAVID,DocNo);
+             rmap.SETRANGE(NAVLineNo,SHL."Line No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'SHL';
+             Rc.NCDoc := GETNCID('SHL',DocNo);
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'SHL';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := DocNo;
+             rmap.NAVLineNo := SHL."Line No.";
+             rmap.INSERT;
+          END;
+          ITEM.GET(SHL."No.");
+      IF SHL."No." <> '' THEN
+      rc.f2 := GETNCID('ITEM',SHL."No.");
+          Rc."f3" := '';
+          Rc."f4" := 0;
+          Rc."f5" := 0;
+          Rc."f6" := ITEM."Unit Price Excl. Gst";
+          Rc."f7" := 1;
+          Rc."f10" := ITEM."Unit Price";
+          Rc.f20 := CREATEDATETIME(SHL."Next Replacement Date",TIME);
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE ExportSINV@1000097(SH@1000098 : Record 112;);
+    VAR
+          Rc@1000099 : Record 50000;
+          rmap@1000100 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'SH');
+             rmap.SETRANGE(NAVID,SH."No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'SH';
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'SH';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SH."No.";
+             rmap.INSERT;
+          END;
+      IF SH."Sell-to Customer No." <> '' THEN
+      rc.f2 := GETNCID('CUST',SH."Sell-to Customer No.");
+         Rc."f4" := SH."Amount";
+         Rc."f9" := SH."Currency Code";
+         Rc."f10" := SH."Currency Factor";
+      IF SH."Ship-to Code" <> '' THEN
+      rc.f15 := GETNCID('SADDR',SH."Ship-to Code"+','+SH."Sell-to Customer No.");
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+             SERV3.SETRANGE("Description 2",SH."Posting Description");
+             IF SERV3.FINDSET THEN REPEAT
+                 SERV2.SETRANGE("Parent Service Item No.",SERV3."No.");
+                 IF SERV2.FINDSET THEN REPEAT
+                     EXPORTSERV(SERV2,SH."No.");
+                 UNTIL SERV2.NEXT = 0;
+             UNTIL SERV3.NEXT = 0;
+    END;
+    PROCEDURE ExportSINVL@1000101(SHL@1000102 : Record 113;);
+    VAR
+          Rc@1000103 : Record 50000;
+          rmap@1000104 : Record 50001;
+          ITEM@1000105 : Record 27;
+
+    BEGIN
+          Setup.GET;
+          rmap.SETRANGE(Type,'SHL');
+             rmap.SETRANGE(NAVID,SHL."Document No.");
+             rmap.SETRANGE(NAVLineNo,SHL."Line No.");
+          IF rmap.FINDFIRST THEN BEGIN
+             rc.GET(rmap.LoadingIndex);
+          END ELSE BEGIN
+             Rc.INIT;
+             Rc.RecType	:= 'SHL';
+             Rc.NCDoc := GETNCID('SH',SHL."Document No.");
+             Rc.INSERT;
+             rmap.INIT;
+             rmap.Type := 'SHL';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SHL."Document No.";
+             rmap.NAVLineNo := SHL."Line No.";
+             rmap.INSERT;
+          END;
+          IF SHL."Unit Price incl GST" = 0 THEN
+             SHL."Unit Price incl GST" := SHL."Unit Price" +SHL."Unit Price" * SHL."VAT %";
+      IF SHL."No." <> '' THEN
+      rc.f2 := GETNCID('ITEM',SHL."No.");
+         Rc."f3" := SHL."Description";
+         Rc."f4" := SHL."Amount";
+         Rc."f5" := SHL."Amount Including VAT";
+         Rc."f6" := SHL."Unit Price";
+         Rc."f7" := SHL."Quantity";
+          Rc.Status := 3;
+          Rc.MODIFY;
+          LoadingtoNC(Rc);
+    END;
+    PROCEDURE LoadingtoNC@1000106(Rc@1000107 : Record 50000;);
+    VAR
+          LogFile@1000108 : File;
+          LogStream@1000109 : InStream;
+          rmap@1000110 : Record 50001;
+
+    BEGIN
+          Setup.GET;
+          CLEAR(BT);
+          CASE Rc.RecType OF
+          'CAT' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f3 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f3"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(Rc."f8"),'=',',');
+          BT+=',';
+          IF Rc.f16 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f16"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          END;
+          'ROLE' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f3 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f3"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(Rc."f8"),'=',',');
+          END;
+          'CUST' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f1 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f1"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f2 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f2"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f3 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f3"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(Rc."f8"),'=',',');
+          BT+=',';
+          IF Rc.f11 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f11"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f12 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f12"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f13 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f13"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f14 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f14"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f15 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f15"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f16 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f16"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f17 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f17"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f18 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f18"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          END;
+          'ITEM' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f2 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f2"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f3 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f3"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f5 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f5"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f6 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f6"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f7 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f7"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(Rc."f8"),'=',',');
+          BT+=',';
+          IF Rc.f16 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f16"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(Rc."f19"),'=',',');
+          END;
+          'PRICE' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f2 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f2"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f5 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f5"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f7 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f7"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f15 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f15"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          END;
+          'SADDR' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f2 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f2"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f11 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f11"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f12 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f12"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f13 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f13"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f14 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f14"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f15 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f15"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f17 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f17"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f18 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f18"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          END;
+          'SH' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          IF Rc.f2 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f2"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f4 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f4"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f9 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f9"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f10 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f10"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f11 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f11"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f12 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f12"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f13 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f13"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f14 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f14"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f15 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f15"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          END;
+          'SHL' : BEGIN
+          BT+=FORMAT(Rc."NCNo");
+          BT+=',';
+          BT+=FORMAT(Rc."NCDoc");
+          BT+=',';
+          IF Rc.f2 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f2"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f3 <> '' THEN
+             BT+= DELCHR(FORMAT(Rc."f3"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(''),'=',',');
+          BT+=',';
+          IF Rc.f4 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f4"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f5 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f5"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f6 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f6"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f7 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f7"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF Rc.f10 <> 0 THEN
+             BT+= DELCHR(FORMAT(Rc."f10"),'=',',')
+          ELSE
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+          IF NOT (Rc.f20 = 0DT) THEN
+             BT+= FORMAT(Rc.f20);
+          END;
+          END;
+          IF ISCLEAR(WshShell) THEN
+              CREATE(WshShell);
+              CmdStr := ' PROC '+Rc.RecType+' "'+ FORMAT(Setup."Last Import DateTime") +'" '+'"'+ COMPANYNAME +'" "'+ DELCHR(BT,'=','"')+'"';
+              wshMode := 0;
+              wshWait := true;
+          RetInt := WshShell.Run(Setup."CELibrary Directory"+'\CELib.exe'+CmdStr,wshMode,wshWait);
+          IF RetInt <> 0 THEN BEGIN
+             IF Rc.NCNo <> RetInt THEN BEGIN
+                 rmap.SETRANGE(LoadingIndex, rc.Index);
+                 rmap.FINDFIRST;
+                 rmap.NCID := RetInt;
+                 rmap.MODIFY;
+                 Rc.NCNo := RetInt;
+             END;
+             Rc.Status := 1;
+             Rc.MODIFY;
+          END ELSE BEGIN
+          LogFile.OPEN(Setup."CELibrary Directory"+'\NCLOG.txt');
+          LogFile.CREATEINSTREAM(LogStream);
+          WHILE NOT LogStream.EOS DO BEGIN
+             LogStream.READTEXT(Rc.ErrorText);
+          END;
+          LogFile.CLOSE;
+             Rc.Status := 3;
+             Rc.MODIFY;
+          END;
+          COMMIT;
+    END;
+    PROCEDURE ProcessCAT@1000111(VAR Rc@1000112 : Record 50000;);
+    VAR
+          CAT@1000113 : Record 5722;
+          rmap@1000114 : Record 50001;
+          bInsert@1000115 : Boolean;
+    BEGIN
+    Setup.GET;
+          CAT.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'CAT');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF CAT.GET(rmap.NAVID) THEN
+             bInsert := false;
+          END;
+          IF bInsert THEN BEGIN;
+          CAT.INIT;
+          CAT."Code" := ' ';
+          CAT.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'CAT';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := CAT."Code";
+             rmap.INSERT;
+          END;
+         CAT."Description" := Rc."f3";
+         CAT."Show On Home Page" := Rc."f8";
+         CAT."NCDescription" := Rc."f16";
+          CAT.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessROLE@1000116(VAR Rc@1000117 : Record 50000;);
+    VAR
+          ROLE@1000118 : Record 6;
+          rmap@1000119 : Record 50001;
+          bInsert@1000120 : Boolean;
+    BEGIN
+    Setup.GET;
+          ROLE.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'ROLE');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF ROLE.GET(rmap.NAVID) THEN
+             bInsert := false;
+          END;
+          IF bInsert THEN BEGIN;
+          ROLE.INIT;
+          ROLE."Code" := ' ';
+          ROLE.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'ROLE';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := ROLE."Code";
+             rmap.INSERT;
+          END;
+         ROLE."Description" := Rc."f3";
+         ROLE."Price Includes VAT" := NOT Rc."f8";
+          ROLE.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessCUST@1000121(VAR Rc@1000122 : Record 50000;);
+    VAR
+          CUST@1000123 : Record 18;
+          rmap@1000124 : Record 50001;
+          bInsert@1000125 : Boolean;
+    BEGIN
+    Setup.GET;
+          CUST.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'CUST');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF CUST.GET(rmap.NAVID) THEN
+             bInsert := false;
+          END;
+          IF bInsert THEN BEGIN;
+          CUST.INIT;
+          CUST."No." := ' ';
+          CUST.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'CUST';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := CUST."No.";
+             rmap.INSERT;
+          END;
+         CUST."Password Salt" := Rc."f1";
+      IF rc.f2<> 0 THEN
+      CUST.VALIDATE("County",GETNAVID('STATE',rc.f2));
+         CUST."E-Mail" := Rc."f3";
+         CUST."NCDeleted" := Rc."f8";
+         CUST."First Name" := Rc."f11";
+         CUST."Surname" := Rc."f12";
+         CUST."Address" := Rc."f13";
+         CUST."City" := Rc."f14";
+      IF rc.f15<> 0 THEN
+      CUST.VALIDATE("Customer Price Group",GETNAVID('ROLE',rc.f15));
+         CUST."Password" := Rc."f16";
+         CUST."Name" := Rc."f18";
+          CUST."Customer Posting Group" := 'RESIDENT';
+          CUST."Customer Price Group" := 'RESIDENT';
+          CUST."Gen. Bus. Posting Group" := 'LOCAL';
+          IF CUST."Name" = '' THEN
+          CUST."Name" := CUST."First Name" +' '+CUST."Surname";
+          CUST.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessITEM@1000126(VAR Rc@1000127 : Record 50000;);
+    VAR
+          ITEM@1000128 : Record 27;
+          rmap@1000129 : Record 50001;
+          bInsert@1000130 : Boolean;
+    BEGIN
+    Setup.GET;
+          ITEM.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'ITEM');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF ITEM.GET(rmap.NAVID) THEN
+             bInsert := false;
+          END;
+          IF bInsert THEN BEGIN;
+          ITEM.INIT;
+          ITEM."No." := ' ';
+          ITEM.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'ITEM';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := ITEM."No.";
+             rmap.INSERT;
+          END;
+      IF rc.f2<> 0 THEN
+      ITEM.VALIDATE("Item Category Code",GETNAVID('CAT',rc.f2));
+         ITEM."Description" := Rc."f3";
+         ITEM."Unit Price" := Rc."f5";
+         ITEM."Unit Cost" := Rc."f6";
+         ITEM."Inventory" := Rc."f7";
+         ITEM."IsFeaturedProduct" := Rc."f8";
+         ITEM."NCDescription" := Rc."f16";
+         ITEM."NCDeleted" := Rc."f19";
+          ITEM.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessPRICE@1000131(VAR Rc@1000132 : Record 50000;);
+    VAR
+          PRICE@1000133 : Record 7002;
+          rmap@1000134 : Record 50001;
+          bInsert@1000135 : Boolean;
+    BEGIN
+    Setup.GET;
+          PRICE.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'PRICE');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF PRICE.GET(SELECTSTR(1,rmap.NAVID),SELECTSTR(2,rmap.NAVID)) THEN
+             bInsert := false;
+          END;
+          IF bInsert THEN BEGIN;
+          PRICE.INIT;
+          PRICE.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'PRICE';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := PRICE."Item No."+','+PRICE."Sales Code";
+             rmap.INSERT;
+          END;
+      IF rc.f2<> 0 THEN
+      PRICE.VALIDATE("Item No.",GETNAVID('ITEM',rc.f2));
+         PRICE."Unit Price" := Rc."f5";
+         PRICE."Minimum Quantity" := Rc."f7";
+      IF rc.f15<> 0 THEN
+      PRICE.VALIDATE("Sales Code",GETNAVID('ROLE',rc.f15));
+          PRICE.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessSADDR@1000136(VAR Rc@1000137 : Record 50000;);
+    VAR
+          SADDR@1000138 : Record 222;
+          SADDR2@1000139 : Record 222;
+          rmap@1000140 : Record 50001;
+          bInsert@1000141 : Boolean;
+    BEGIN
+    Setup.GET;
+          SADDR.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'SADDR');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF SADDR.GET(rmap.NAVID) THEN
+             bInsert := false;
+          END;
+          IF bInsert THEN BEGIN;
+          SADDR.INIT;
+      IF rc.f2<> 0 THEN
+      SADDR.VALIDATE("Customer No.",GETNAVID('CUST',rc.f2));
+      IF rc.f15<> 0 THEN
+      SADDR.VALIDATE("County",GETNAVID('STATE',rc.f15));
+          SADDR2.SETRANGE("Customer No.",GETNAVID('CUST',rc.f2));
+          SADDR."Code" := '0' + FORMAT(SADDR2.COUNT + 1);
+          SADDR.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'SADDR';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SADDR."Code"+','+SADDR."Customer No.";
+             rmap.INSERT;
+          END;
+      IF rc.f2<> 0 THEN
+      SADDR.VALIDATE("Customer No.",GETNAVID('CUST',rc.f2));
+         SADDR."First Name" := Rc."f11";
+         SADDR."Surname" := Rc."f12";
+         SADDR."Address" := Rc."f13";
+         SADDR."City" := Rc."f14";
+      IF rc.f15<> 0 THEN
+      SADDR.VALIDATE("County",GETNAVID('STATE',rc.f15));
+         SADDR."Name" := Rc."f18";
+          SADDR.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessSH@1000142(VAR Rc@1000143 : Record 50000;);
+    VAR
+          SH@1000144 : Record 36;
+          rmap@1000145 : Record 50001;
+          bInsert@1000146 : Boolean;
+    BEGIN
+    Setup.GET;
+          SH.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'SH');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF SH.GET(SH."Document Type"::Order, rmap.NAVID) THEN
+             ERROR('Record exists in NAV already and cannot be modified')
+          END;
+          IF bInsert THEN BEGIN;
+          SH.INIT;
+          SH."Document Type" := SH."Document Type"::Order;
+          SH."No." := ' ';
+          SH.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'SH';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SH."No.";
+             rmap.INSERT;
+          END;
+      IF rc.f2<> 0 THEN
+      SH.VALIDATE("Sell-to Customer No.",GETNAVID('CUST',rc.f2));
+         SH."Amount" := Rc."f4";
+         SH."Currency Code" := Rc."f9";
+         SH."Currency Factor" := Rc."f10";
+         SH."Bill-to Name" := Rc."f11";
+         SH."Bill-to Name 2" := Rc."f12";
+         SH."Bill-to Address" := Rc."f13";
+         SH."Bill-to City" := Rc."f14";
+      IF rc.f15<> 0 THEN
+      SH.VALIDATE("Ship-to Code",DELSTR(GETNAVID('SADDR',rc.f15),STRPOS(GETNAVID('SADDR',rc.f15),',')));
+          SH.MODIFY(true);
+
+    END;
+    PROCEDURE ProcessSHL@1000147(VAR Rc@1000148 : Record 50000;);
+    VAR
+          SHL@1000149 : Record 37;
+          rmap@1000150 : Record 50001;
+          bInsert@1000151 : Boolean;
+          Lines@1000152 : Record 37;
+          Header@1000153 : Record 36;
+          ITEM@1000154 : Record 27;
+    BEGIN
+    Setup.GET;
+          SHL.RESET;
+          bInsert := true;
+          rmap.SETRANGE(Type,'SHL');
+             rmap.SETRANGE(NCID,rc.NCNo);
+          IF rmap.FINDFIRST THEN BEGIN
+          IF SHL.GET(SHL."Document Type"::Order,rmap.NAVID, rmap.NAVLineNo) THEN
+             ERROR('Line exists in NAV already and type cannot be modified')
+          END;
+          IF bInsert THEN BEGIN;
+          SHL.INIT;
+          SHL."Document Type" := SHL."Document Type"::Order;
+          IF NOT Header.GET(Header."Document Type"::Order,GETNAVID('SH',rc.NCDoc)) THEN
+          ERROR('No Header no. can be found for this line');
+          Lines.SETRANGE("Document No.",Header."No.");
+          Lines.SETRANGE("Document Type",Header."Document Type");
+          IF Lines.FINDLAST THEN
+          SHL."Line No." := Lines."Line No." + 10000
+          ELSE
+          SHL."Line No." := 10000;
+          SHL."Document No." := Header."No.";
+          SHL.INSERT(true);
+             rmap.INIT;
+             rmap.Type := 'SHL';
+             rmap.LoadingIndex := rc.Index;
+             rmap.NCID := rc.NCNo;
+             rmap.NAVID := SHL."Document No.";
+             rmap.NAVLineNo := SHL."Line No.";
+             rmap.INSERT;
+          END;
+          SHL."Type" := SHL."Type"::ITEM;
+      IF rc.f2<> 0 THEN
+      SHL.VALIDATE("No.",GETNAVID('ITEM',rc.f2));
+         SHL."Description" := Rc."f3";
+         SHL."Amount" := Rc."f4";
+         SHL."Amount Including VAT" := Rc."f5";
+         SHL."Unit Price" := Rc."f6";
+         SHL."Quantity" := Rc."f7";
+         SHL."Unit Price incl GST" := Rc."f10";
+          SHL."Gen. Bus. Posting Group" := 'LOCAL';
+          IF ITEM.GET(SHL."No.") THEN
+             IF ITEM."Service Item Group" = 'SYSTEMS' THEN BEGIN
+             ITEM.SETRANGE("Service Item Group",'COMPONENTS');
+                 IF ITEM.FINDSET THEN REPEAT
+          BT+=FORMAT(0);
+          BT+=',';
+          BT+=FORMAT(Rc."NCDoc");
+          BT+=',';
+             BT+= DELCHR(FORMAT(GETNCID('ITEM',ITEM."No.")),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(ITEM."Description"),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(0),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(ITEM."Unit Price Excl. Gst"),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(1),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(ITEM."Unit Price Excl. Gst" + ITEM."Unit Price" * SHL."VAT %"),'=',',');
+          BT+=',';
+             BT+= DELCHR(FORMAT(CREATEDATETIME(CALCDATE('+1Y',WORKDATE),TIME)),'=',',');
+          IF ISCLEAR(WshShell) THEN
+              CREATE(WshShell);
+              CmdStr := ' PROC '+Rc.RecType+' "'+ FORMAT(Setup."Last Import DateTime") +'" '+'"'+ COMPANYNAME +'" "'+ DELCHR(BT,'=','"')+'"';
+              wshMode := 0;
+              wshWait := true;
+          RetInt := WshShell.Run(Setup."CELibrary Directory"+'\CELib.exe'+CmdStr,wshMode,wshWait);
+                 UNTIL ITEM.NEXT = 0
+                 END;
+          SHL.MODIFY(true);
+
+    END;
+    PROCEDURE GETNCID@1000155(Type@1000156 : Code[10];Id@1000157 : Code[20]) : Integer;
+    VAR
+       rMap@1000158 : Record 50001;
+    BEGIN
+          rMap.SETRANGE(Type,Type);
+          rMap.SETRANGE(NAVID,Id);
+          IF rMap.FINDFIRST THEN
+             EXIT(rMap.NCID)
+          ELSE
+             EXIT(0);
+    END;
+    PROCEDURE GETNCLINEID@1000159(Type@1000160 : Code[10];Id@1000161 : Code[20];LineId@1000162 : Integer) : Integer;
+    VAR
+       rMap@1000163 : Record 50001;
+    BEGIN
+          rMap.SETRANGE(Type,Type);
+          rMap.SETRANGE(NAVLineNo,LineId);
+          rMap.SETRANGE(NAVID,Id);
+          IF rMap.FINDFIRST THEN
+             EXIT(rMap.NCID)
+          ELSE
+             EXIT(0);
+    END;
+    PROCEDURE GETNAVID@1000164(Type@1000165 : Code[10];Id@1000166 : Integer) : Code[20];
+    VAR
+       rMap@1000167 : Record 50001;
+    BEGIN
+          rMap.SETRANGE(Type,Type);
+          rMap.SETRANGE(NCID,Id);
+          rMap.FINDFIRST;
+          EXIT(rMap.NAVID);
+    END;
+
+    BEGIN
+    {
+      DWG - Cyber Eagle Mgt
+      ----
+      01/04/14  CEINT1.00
+      Core Codeunit for integration engine-Processes/inserts from 50000 Integration Table
+      Generated with Integration Engine V1.0.5204.39139
+    }
+    END.
+  }
+}
+
+OBJECT Codeunit 50000 Integration Driver Codeunit
+{
+  OBJECT-PROPERTIES
+  {
+    Date=01/04/14;
+    Time=[ 12:00:00 AM];
+    Modified = Yes;
+    Version List=CEINT1.00;
+  }
+  PROPERTIES
+  {
+    OnRun=BEGIN
+          newDT := CURRENTDATETIME;
+          IF NOT Setup.GET THEN BEGIN
+          DeleteAll;
+          Setup.INIT;
+          Setup."Company Name" := COMPANYNAME;
+          Setup."Import Batch Interval" := 0200T - 0100T;
+          Setup."Last Import DateTime" := CREATEDATETIME(CALCDATE('-100Y',WORKDATE),TIME);
+          Setup."CELibrary Directory" := 'C:\Install\NCObjs';
+          Setup.INSERT;
+          Setup.GET;
+          ITEM.RESET;
+          IF ITEM.FINDFIRST THEN REPEAT
+             ITEM.NCDeleted := FALSE;
+             IF ITEM."UNIT PRICE" = 0 THEN
+               ITEM.NCDeleted := TRUE;
+             IF ITEM.NCDescription = '' THEN
+               ITEM.NCDescription := ITEM.Description;
+             ITEM.MODIFY;
+          UNTIL ITEM.next = 0;
+          STATE.RESET;
+          STATE.SETFILTER(NCNo,'<>0');
+          IF STATE.FINDFIRST THEN REPEAT
+            RMap.INIT;
+            RMap.Type := 'STATE';
+            RMap.NCID := STATE.NCNo;
+            RMap.NAVID := STATE.Name;
+            RMap.LoadingIndex := STATE.NCNo;
+            RMap.INSERT;
+          UNTIL STATE.next = 0;
+          ExportAll;
+          END ELSE BEGIN
+          Records.SETRANGE(Status,3);
+          IF Records.FINDFIRST THEN REPEAT
+               CLEARLASTERROR;
+               cucore.LoadingtoNC(Records)
+          UNTIL Records.NEXT = 0;
+          END;
+          COMMIT;
+          Records.SETRANGE(Status,4);
+          IF Records.FINDFIRST THEN REPEAT
+           CLEARLASTERROR;
+           //cucore.run(Records);
+           IF cucore.run(Records) THEN BEGIN
+               Records.Status := 1;
+               Records.MODIFY;
+           END ELSE BEGIN
+               Records.Status := 4;
+               Records.ErrorText := COPYSTR(GETLASTERRORTEXT,1,250);
+               Records.MODIFY;
+           END;
+           COMMIT;
+          UNTIL Records.next = 0;
+          IF ISCLEAR(WshShell) THEN
+              CREATE(WshShell);
+              CmdStr := ' SEL "" "'+ FORMAT(Setup."Last Import DateTime") +'" '+'"'+ COMPANYNAME +'" "'+ DELCHR(BT,'=','"')+'"';
+              wshMode := 0;
+              wshWait := true;
+          RetInt := WshShell.Run(Setup."CELibrary Directory"+'\CELib.exe'+CmdStr,wshMode,wshWait);
+          COMMIT;
+          IF RetInt <> 0 THEN BEGIN
+          Records.SETRANGE(Status,2);
+          IF Records.FINDFIRST THEN REPEAT
+           CLEARLASTERROR;
+           //cucore.run(Records);
+           IF cucore.run(Records) THEN BEGIN
+               Records.Status := 1;
+               Records.MODIFY;
+           END ELSE BEGIN
+               Records.Status := 4;
+               Records.ErrorText := COPYSTR(GETLASTERRORTEXT,1,250);
+               Records.MODIFY;
+           END;
+           COMMIT;
+          UNTIL Records.next = 0;
+          ITEM.RESET;
+          ITEM.SETRANGE(NCDeleted,FALSE);
+          CLEAR(BT2);
+          IF ITEM.FINDFIRST THEN REPEAT
+          ITEM.CALCFIELDS(Inventory);
+          NCID := cucore.GETNCID(FORMAT('ITEM'),ITEM."No.");
+          IF NCID <> 0 THEN BEGIN
+          BT2.ADDTEXT(FORMAT(NCID));
+          BT2.ADDTEXT(',');
+          BT2.ADDTEXT(DELCHR(FORMAT(ROUND(ITEM.Inventory, 1, '<')), '=', ','));
+          BT2.ADDTEXT(',');
+          END;
+          UNTIL ITEM.next = 0;
+          IF ISCLEAR(WshShell) THEN
+              CREATE(WshShell);
+              CmdStr := ' QTY "" "'+ FORMAT(Setup."Last Import DateTime") +'" '+'"'+ COMPANYNAME +'" "'+Setup."CELibrary Directory"+'\QTY.txt'+'"';
+          OFile.CREATE(Setup."CELibrary Directory"+'\QTY.txt');
+          OFile.CREATEOUTSTREAM(OStream);
+          BT2.WRITE(OStream);
+          OFile.CLOSE;
+              wshMode := 0;
+              wshWait := true;
+          RetInt := WshShell.Run(Setup."CELibrary Directory"+'\CELib.exe'+CmdStr,wshMode,wshWait);
+          Setup."Last Import DateTime" := NewDT;
+          Setup.MODIFY;
+          MESSAGE('Processing Done');
+          END;
+          END;
+
+  }
+  CODE
+  {
+    VAR
+      Records@1000019 : Record 50000;
+      Records2@1000020 : Record 50000;
+      ITEM@1000021 : Record 27;
+      NCID@1000022 : Integer;
+      STATE@1000023 : Record 28004;
+      RMap@1000024 : Record 50001;
+      cucore@1000025 : Codeunit 50001;
+      IsProcess@1000026 : Boolean;
+      RetStr@1000027 : Text[250];
+      RetInt@1000028 : Integer;
+      Setup@1000029 : Record 50019;
+      BT@1000030 : Text[1024];
+      BT2@1000031 : BigText;
+      newDT@1000032 : DateTime;
+      EvalInteger@1000033 : Integer;
+      EvalDecimal@1000034 : Decimal;
+      WshShell@1101235001 : Automation "{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B} 1.0:{72C24DD5-D70A-438B-8A42-98424B88AFB8}:'Windows Script Host Object Model'.WshShell";
+      CmdStr@1000035 : Text[1024];
+      wshMode@1000036 : Integer;
+      wshWait@1000037 : Boolean;
+      OFile@1000038 : File;
+      OStream@1000039 : OutStream;
+      SERV2@1000040 : Record 5941;
+      SERV3@1000041 : Record 5940;
+    PROCEDURE ExportAll@1000042();
+    VAR
+          CurrentRecordNo@1000043 : Integer;
+          Window@1000044 : Dialog;
+          CAT@1000045 : Record 5722;
+          ROLE@1000046 : Record 6;
+          CUST@1000047 : Record 18;
+          ITEM@1000048 : Record 27;
+          PRICE@1000049 : Record 7002;
+          SADDR@1000050 : Record 222;
+          SH@1000051 : Record 36;
+          SHL@1000052 : Record 37;
+          SINV@1000053 : Record 112;
+          SINVL@1000054 : Record 113;
+
+    BEGIN
+          Window.OPEN('CAT processed: @1@@@@@@@@@\'
+          +'ROLE processed: @2@@@@@@@@@\'
+          +'CUST processed: @3@@@@@@@@@\'
+          +'ITEM processed: @4@@@@@@@@@\'
+          +'PRICE processed: @5@@@@@@@@@\'
+          +'SADDR processed: @6@@@@@@@@@\'
+          +'SH processed: @7@@@@@@@@@\'
+          +'SHL processed: @8@@@@@@@@@\'
+          +'SINV processed: @9@@@@@@@@@\'
+          +'SINVL processed: @10@@@@@@@@@\'
+          +'Press Esc to abort');
+               CurrentRecordNo := 1;
+           IF CAT.FINDSET THEN REPEAT
+               cucore.EXPORTCAT(CAT);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(1,ROUND(CurrentRecordNo / CAT.COUNTAPPROX * 10000,1));
+           UNTIL CAT.NEXT = 0;
+               Window.UPDATE(1,ROUND(CAT.COUNTAPPROX * 10000,1));
+               CurrentRecordNo := 1;
+           IF ROLE.FINDSET THEN REPEAT
+               cucore.EXPORTROLE(ROLE);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(2,ROUND(CurrentRecordNo / ROLE.COUNTAPPROX * 10000,1));
+           UNTIL ROLE.NEXT = 0;
+               Window.UPDATE(2,ROUND(ROLE.COUNTAPPROX * 10000,1));
+          CUST.SETRANGE(NCEnabled,TRUE);
+               CurrentRecordNo := 1;
+           IF CUST.FINDSET THEN REPEAT
+               cucore.EXPORTCUST(CUST);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(3,ROUND(CurrentRecordNo / CUST.COUNTAPPROX * 10000,1));
+           UNTIL CUST.NEXT = 0;
+               Window.UPDATE(3,ROUND(CUST.COUNTAPPROX * 10000,1));
+               CurrentRecordNo := 1;
+           IF ITEM.FINDSET THEN REPEAT
+               cucore.EXPORTITEM(ITEM);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(4,ROUND(CurrentRecordNo / ITEM.COUNTAPPROX * 10000,1));
+           UNTIL ITEM.NEXT = 0;
+               Window.UPDATE(4,ROUND(ITEM.COUNTAPPROX * 10000,1));
+          PRICE.SETRANGE("Sales Type",PRICE."Sales Type"::"Customer Price Group");
+               CurrentRecordNo := 1;
+           IF PRICE.FINDSET THEN REPEAT
+               cucore.EXPORTPRICE(PRICE);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(5,ROUND(CurrentRecordNo / PRICE.COUNTAPPROX * 10000,1));
+           UNTIL PRICE.NEXT = 0;
+               Window.UPDATE(5,ROUND(PRICE.COUNTAPPROX * 10000,1));
+          SADDR.SETRANGE(NCEnabled,TRUE);
+               CurrentRecordNo := 1;
+           IF SADDR.FINDSET THEN REPEAT
+               cucore.EXPORTSADDR(SADDR);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(6,ROUND(CurrentRecordNo / SADDR.COUNTAPPROX * 10000,1));
+           UNTIL SADDR.NEXT = 0;
+               Window.UPDATE(6,ROUND(SADDR.COUNTAPPROX * 10000,1));
+          SH.SETRANGE(NCEnabled,TRUE);
+               CurrentRecordNo := 1;
+           IF SH.FINDSET THEN REPEAT
+               cucore.EXPORTSH(SH);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(7,ROUND(CurrentRecordNo / SH.COUNTAPPROX * 10000,1));
+           UNTIL SH.NEXT = 0;
+               Window.UPDATE(7,ROUND(SH.COUNTAPPROX * 10000,1));
+          SHL.SETRANGE(NCEnabled,TRUE);
+               CurrentRecordNo := 1;
+           IF SHL.FINDSET THEN REPEAT
+               cucore.EXPORTSHL(SHL);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(8,ROUND(CurrentRecordNo / SHL.COUNTAPPROX * 10000,1));
+           UNTIL SHL.NEXT = 0;
+               Window.UPDATE(8,ROUND(SHL.COUNTAPPROX * 10000,1));
+          SINV.SETRANGE(NCEnabled,TRUE);
+               CurrentRecordNo := 1;
+           IF SINV.FINDSET THEN REPEAT
+               cucore.EXPORTSINV(SINV);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(9,ROUND(CurrentRecordNo / SINV.COUNTAPPROX * 10000,1));
+           UNTIL SINV.NEXT = 0;
+               Window.UPDATE(9,ROUND(SINV.COUNTAPPROX * 10000,1));
+          SINVL.SETRANGE(NCEnabled,TRUE);
+               CurrentRecordNo := 1;
+           IF SINVL.FINDSET THEN REPEAT
+               cucore.EXPORTSINVL(SINVL);
+               CurrentRecordNo += 1;
+               IF (CurrentRecordNo MOD 500) = 0 THEN
+               Window.UPDATE(10,ROUND(CurrentRecordNo / SINVL.COUNTAPPROX * 10000,1));
+           UNTIL SINVL.NEXT = 0;
+               Window.UPDATE(10,ROUND(SINVL.COUNTAPPROX * 10000,1));
+    END;
+    PROCEDURE DeleteAll@1000055();
+    VAR
+          Rc@1000056 : Record 50000;
+          rmap@1000057 : Record 50001;
+
+    BEGIN
+          Rc.DELETEALL;
+          rmap.DELETEALL;;
+    END;
+
+    BEGIN
+    {
+      DWG - Cyber Eagle Mgt
+      ----
+      01/04/14  CEINT1.00
+      Driver PreCodeunit, designed to run 50001 Integration Codeunit and log errors
+      Generated with Integration Engine V1.0.5204.39139
+    }
+    END.
+  }
+}
+
