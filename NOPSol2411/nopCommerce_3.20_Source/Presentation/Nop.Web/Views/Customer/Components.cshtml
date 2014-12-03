@@ -27,14 +27,14 @@
                     </div>
                     <ul class="info">
                         <li>
-                            Product Id: <b><u><a href="@Url.RouteUrl("Product", new { SeName = Component.ProductName.Replace(" ", string.Empty) })">@Component.ProductId</a></u></b>
+                            Product Id: <b><u><a href="@Url.RouteUrl("Product", new { SeName = Component.ProductName.Replace(" ", string.Empty).Replace("\"","_inch_").Replace("&",string.Empty).Replace(".","-").Replace("/","_").Replace("#","_").Replace("%",string.Empty).Replace("+","_") })">@Component.ProductId</a></u></b>
                         </li>
                         <li>
                             Product Name: @Component.ProductName</li>
                         <li>
                             Quantity: @Component.Quantity</li>
                         <li>
-                            Expiry Date: @Component.ExpiryDate</li>
+                            Expiry Date: @Component.ExpiryDate.ToString("dd-MMMM-yyyy")</li>
                         <li>
                             Parent Name: @Component.ParentItemName</li>
                         <li>

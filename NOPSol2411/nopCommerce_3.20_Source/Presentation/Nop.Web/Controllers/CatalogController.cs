@@ -3183,7 +3183,7 @@ namespace Nop.Web.Controllers
                         priceMax: maxPriceConverted,
                         keywords:model.Q,
                         searchDescriptions: searchInDescriptions,
-                        searchSku: searchInDescriptions,
+                        searchSku: true,
                         searchProductTags: searchInProductTags,
                         languageId:_workContext.WorkingLanguage.Id,
                         pageIndex: command.PageNumber - 1,
