@@ -936,6 +936,13 @@ namespace Nop.Web.Controllers
             var cartType = (ShoppingCartType)shoppingCartTypeId;
 
             var product = _productService.GetProductById(productId);
+            if (_workContext.CurrentCustomer.IsGuest())
+            {
+                return Json(new
+                {
+                    redirect = Url.RouteUrl("Login")
+                });
+            }
             if (product == null)
                 //no product found
                 return Json(new
@@ -1087,7 +1094,7 @@ namespace Nop.Web.Controllers
         //currently we use this method on the product details pages
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult AddProductToCart_Details(int productId, int shoppingCartTypeId, string ParentItemId, int ORQuantity, FormCollection form)
+        public ActionResult AddProductToCart_Details(int productId, int shoppingCartTypeId, string ParentItemId, FormCollection form, int ORQuantity = 0)
         {
             var product = _productService.GetProductById(productId);
             if (product == null)
